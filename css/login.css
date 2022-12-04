@@ -38,7 +38,7 @@ main{
     height: 500px;
 }
 
-form{
+.form-login{
     width: 400px;
     height: 490px;
     background-color: rgb(231, 224, 224);
@@ -101,11 +101,11 @@ button:hover{
     transition: 0.5s;
 }
 
-.email-senha{
+.login-email-senha{
     margin-top: 15px;
 }
 
-.botoes{
+.login-botoes, .cadastro-botoes{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -114,4 +114,38 @@ button:hover{
 .equeceu-senha{
     text-align: center;
     margin-top: 15px;
+}
+
+/* Tela de cadastro */
+
+.form-cadastro{
+    width: 600px;
+    height: 750px;
+    background-color: rgb(231, 224, 224);
+    border-radius: 12px;
+    margin: auto;
+    position: relative;
+    bottom: 200px;
+    padding: 15px; 
+    display: flex;
+    flex-direction: column;
+    padding-left:40px;
+    padding-right: 40px;
+    box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.475);
+}
+
+#termo-uso{
+    width: 20px;
+    align-items: center;
+
+}
+
+.termo-uso{
+   display: flex;
+   margin-top: 30px; 
+}
+
+#concordo-uso{
+    padding-top: 11px;
+    padding-left: 15px;
 }
