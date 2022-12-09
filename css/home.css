@@ -18,9 +18,9 @@ header{
     
     height: 80px;
     display: flex;
-    background-color: #CC655E;
+    background-color: #6c2e6a;
     align-items: center;
-    box-shadow: 2px 2px 7px 1px #cc655ec6;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
     justify-content: space-between;
 
 }
@@ -32,6 +32,7 @@ header{
 
 .logo img{
     width: 80px;
+    border-radius: 20px;
 }
 
 .menu{
@@ -57,7 +58,6 @@ header{
     align-content: center;
     align-items: center;
 }
-
 
 
 header form{
@@ -116,7 +116,7 @@ header button {
     list-style-type: none;
     padding: 0;
     display: flex;
-    background-color: #CC655E;
+    background-color: #6c2e6a;
     border-radius: 4px;    
 }
 
@@ -135,7 +135,7 @@ header button {
 }
 
 .menu ul li a:hover{
-   background-color: #7d3d38;
+   background-color: #915c8f;
    border-radius: 4px;
 }
 
@@ -166,7 +166,7 @@ header button {
 }
 
 .carrinho:hover{
-    background-color: #7d3d38;
+    background-color: #915c8f;
     border-radius: 40px;
     width: 50px;
     height: 50px;
@@ -203,7 +203,7 @@ span{
 }
 
 .login-home:hover{
-    background-color: #7d3d38;
+    background-color: #915c8f;
     transition: .6s all;
 }
 
@@ -234,9 +234,9 @@ span{
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 .lista-produtos  img{
     margin-top: 50px;
@@ -245,6 +245,7 @@ span{
     border-radius: 8px;
     cursor: pointer;
 }
+
 
 
 main .container{
@@ -262,9 +263,10 @@ main .container{
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     margin-top: 100px;
+    padding-bottom: 150px;
 }
 .lista-produtos1 img{
     margin-top: 50px;
@@ -293,9 +295,9 @@ a{
 .banner-produtos{
     width: 200px;
     height: 390px;
-    background-color: #e9b1ad;
+    background-color: #dab7da;
     border-radius: 8px;
-    box-shadow: 2px 2px 7px 1px #a57d7b;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
 }
 
 .banner-produtos img{
@@ -315,7 +317,7 @@ a{
 button{
     width: 180px;
     border: none;
-    background-color: #CC655E;
+    background-color: #6c2e6a;
     color: #F3E1E1;
 }
 
@@ -330,17 +332,17 @@ button{
 #compras:hover{
     width: 180px;
     border: none;
-    background-color: rgb(106, 217, 106);
+    background-color:#b589b4;
     color: #F3E1E1;
-    box-shadow: 2px 2px 7px 1px #cc655ec6;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
 }
 
 #adicionar-carrinho:hover{
     width: 180px;
     border: none;
-    background-color: rgb(106, 217, 106);
+    background-color: #b589b4;
     color: #F3E1E1;
-    box-shadow: 2px 2px 7px 1px #cc655ec6;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
 } 
 
 .vejaMais a{
@@ -350,21 +352,26 @@ button{
     font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0);
     font-weight: bolder;
+    color: #6c2e6a;
+    margin-bottom: 100px;  
+}
 
-    
+.vejaMais a:hover{
+    color: #b589b4;
 }
 
 .rodape{
     width: 100%;
-    height: 450px;
-    background-color: #CC655E;
+    height: 400px;
+    background-color: #6c2e6a;
     margin-top: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-
+    margin-top: 350px;
+    
 }
 
 .cards-info{
@@ -375,7 +382,7 @@ button{
 }
 
 .cards{
-    background-color: #e9b1ad;
+   
     width: 350px;
     height: 300px;
     padding: 15px;
@@ -390,6 +397,7 @@ button{
     text-align: center;
     margin-bottom: 30px;
     font-weight: bolder;
+    color: #dab7da;
 }
 
 .cards ul li{
@@ -399,12 +407,12 @@ button{
 
 .cards ul li a, p a{
     text-decoration: none;
-    color: black;
+    color: #b589b4;
     transition: 0.5s;
 }
 
 .cards ul li a:hover{
-    color: #803b36;
+    color: #dab7da;
     font-size: 17px;
     font-weight: bolder;
     transition: 0.5s;
@@ -413,14 +421,18 @@ button{
 
 
 .cards p a{
-    color: blue;
+    color: #b589b4;
 }
 
 .cards p a:hover{
-    color: #803b36;
+    color: #dab7da;
     font-size: 17px;
     font-weight: bolder;
     transition: 0.5s;
+}
+
+.cards p{
+    color: #b589b4;
 }
 
 .social-icons{
@@ -433,7 +445,7 @@ button{
 } 
 
 .social-icons a img{
-    width: 50px;
+    width: 25px;
     margin-left: 40px;
 }
 
