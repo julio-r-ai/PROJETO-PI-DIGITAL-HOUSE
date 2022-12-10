@@ -44,7 +44,7 @@ main{
     border-radius: 12px;
     margin: auto;
     position: relative;
-    bottom: 200px;
+    bottom: 100px;
     padding: 15px; 
     display: flex;
     flex-direction: column;
@@ -141,4 +141,15 @@ button:hover{
     text-align: center;
 }
 
+.cadastro-direitos-reservados{
+    background-color: #6c2e6a;
+    height: 100px;
+    margin-top: 300px;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
