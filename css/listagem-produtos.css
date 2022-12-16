@@ -22,9 +22,6 @@ header{
     align-items: center;
     box-shadow: 2px 2px 7px 1px #6c2e6a;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 2;
 
 }
 
@@ -451,4 +448,3 @@ button{
     width: 25px;
     margin-left: 40px;
 }
-

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+
+} 
+
+header{
+    height: 80px;
+    display: flex;
+    background-color: #6c2e6a;
+    align-items: center;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+    justify-content: space-between;
+}
+
+.logo{
+    padding-left: 50px;
+}
+
+
+.logo img{
+    width: 80px;
+}
+
+main{
+    background-color: white;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* *********************************** */
+.forma-pagamento{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(231, 224, 224);
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+#barra{
+    width: 800px;
+    height: 2px;
+    background-color: #6c2e6a;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.forma-pagamento h3{
+    margin-top: 30px;
+}
+
+#imagem-badeiras img{
+    width: 700px;
+    margin-top: 30px;
+}
+
+#botoes{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#botoes button{
+    width: 230px;
+    margin-top: 50px;
+}
+
+#botao-alterar-cartao{
+    margin-top: 30px;
+}
+
+#pix-boleto{
+    width: 500px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#pix-boleto img{
+    width: 50px;
+}
+
+#imagem-pix-boleto{
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+/* Endereço do pedido */
+
+.endereco-pedido{
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    background-color: rgb(231, 224, 224);
+}
+
+.endereco-pedido h1{
+    display: flex;
+    justify-content: center;
+}
+
+.colunas{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#coluna-1, #coluna-2{
+    width: 350px;
+    padding: 15px;
+}
+
+#coluna-1 input, #coluna-2 input{
+    width: 100%;
+}
+
+#coluna-1 label, #coluna-2 label{
+    display: flex;
+    padding-left: 15px;
+}
+
+input[type="radio"]{
+    width: 25px;
+    height: 30px; 
+    max-height: 100%;   
+}
+
+input[type="text"], input[type="tel"]{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 20px;
+    border: none; 
+} 
+
+button{
+    height: 45px;
+    width: 500px;
+    background-color: #6c2e6a;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+button:hover{
+    height: 45px;
+    width: 500px;
+    background-color: #915c8f;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 2px 2px 7px 1px #6c2e6a; 
+    transition: 0.5s;
+}
+
+#botao-confirmar{
+   display: flex;
+   justify-content: center;
+   margin-top: 80px;
+}
+
+.login-direitos-reservados{
+    background-color: #6c2e6a;
+    height: 100px;
+    margin-top: 950px;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;   
+}
