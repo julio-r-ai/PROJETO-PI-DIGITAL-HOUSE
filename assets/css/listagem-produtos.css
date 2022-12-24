@@ -22,9 +22,6 @@ header{
     align-items: center;
     box-shadow: 2px 2px 7px 1px #6c2e6a;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 2;
 
 }
 
@@ -226,9 +223,10 @@ span{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    
     flex-direction: column;
     margin-top: 120px;
+    
 }
 
 .lista-produtos{
@@ -239,16 +237,8 @@ span{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 300px;
+    margin-top: 150px;
 }
-.lista-produtos  img{
-    margin-top: 50px;
-    width: 200px;
-    border: solid 1px white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 
 
 main .container{
@@ -257,26 +247,6 @@ main .container{
     display: flex;
     align-items: flex-start;
     height: 2000px;
-}
-
-
-.lista-produtos1{
-    width: 100%;
-    height: 500px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 100px;
-    padding-bottom: 150px;
-}
-.lista-produtos1 img{
-    margin-top: 50px;
-    width: 200px;
-    border: solid 1px white;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 #paragrafo-produto{
@@ -296,15 +266,15 @@ a{
     text-decoration: none;
 }
 .banner-produtos{
-    width: 200px;
-    height: 390px;
+    width: 250px;
+    height: 440px;
     background-color: #dab7da;
     border-radius: 8px;
     box-shadow: 2px 2px 7px 1px #6c2e6a;
 }
 
 .banner-produtos img{
-    width: 200px;
+    width: 250px;
     margin-top: 0px;
 }
 
@@ -348,20 +318,6 @@ button{
     box-shadow: 2px 2px 7px 1px #6c2e6a;
 } 
 
-.vejaMais a{
-    margin-top: 50px;
-    text-decoration: none;  
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
-    color: #6c2e6a;
-    margin-bottom: 100px;  
-}
-
-.vejaMais a:hover{
-    color: #b589b4;
-}
 
 .rodape{
     width: 100%;
@@ -373,7 +329,7 @@ button{
     justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 350px;
+    margin-top: 1400px;
     
 }
 
