@@ -62,7 +62,7 @@ main{
 }
 
 #imagem-badeiras img{
-    width: 700px;
+    width: 400px;
     margin-top: 30px;
 }
 
@@ -185,7 +185,7 @@ button:hover{
 .login-direitos-reservados{
     background-color: #6c2e6a;
     height: 100px;
-    margin-top: 950px;
+    margin-top: 1040px;
     font-size: 25px;
     font-weight: bolder;
     display: flex;
