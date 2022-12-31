@@ -151,7 +151,7 @@ header .containe .header-botões {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 20px;
 
 }
 header .containe .header-botões span{
@@ -182,6 +182,11 @@ header .containe .header-botões span:hover{
     border: solid 2px white;
      
 }
+
+.menu button{
+    display: flex;
+    align-items: center;
+}
 /*=================== Header finaliza aqui  ====================*/
 
 main .containe{
@@ -192,7 +197,7 @@ main .containe{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom:1000px;
+    margin-bottom: 200px;
 }
 
 main{
@@ -241,7 +246,7 @@ main .containe .carousel-item img{
     height: 500px;
     justify-content: center;
     align-items: center;
-    width: 317px;
+    width: 318px;
     background-color: #a15b9f;
     border-radius: 17px;
     font-family: 'Arimo', sans-serif;
@@ -251,44 +256,44 @@ main .containe .carousel-item img{
     
     
 }
-.cards-produtos:hover{
+ main .cards-produtos:hover{
     border: 4px solid #42075e;
     transition: .6s all;
 
 
 }
-.cards-produtos img{
+main .cards-produtos img{
     border-radius: 12px;
     height: 192px;
     transition: .4s all;
 }
 
-.cards-produtos img:hover{
+main .cards-produtos img:hover{
     height: 210px;
     transform: scaleX(1.1);
 }
 
-.cards-produtos .titulo-bolo{
+main .cards-produtos .titulo-bolo{
     font-size: 18px;
     color: white;
     text-align: center;
     margin-top: 50px;
 }
 
-.cards-produtos .preço{
+main .cards-produtos .preço{
     color: white;
     margin-top: 20px;
     text-align: center;
 
 }
 
-.cards-produtos .botões-produtos{
+main .cards-produtos .botões-produtos{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.botões-produtos button{
+main .botões-produtos button{
     height: 40px;
     width: 40px;
     border-radius: 30px;
@@ -298,7 +303,7 @@ main .containe .carousel-item img{
     color: #42075e;
     
 }
-#comprar-produtos button{
+ main #comprar-produtos button{
     background-color: white;
     border: 2px solid white;
     color: #42075e;
@@ -307,7 +312,7 @@ main .containe .carousel-item img{
 }
 
 
-.btn-comprar-produto button{
+main .btn-comprar-produto button{
     width: 50px;
     height: 50px;
     background-color: white;
@@ -317,7 +322,7 @@ main .containe .carousel-item img{
     align-items: center;
     border: none;
 }
-.btn-comprar-produto button:hover{
+main .btn-comprar-produto button:hover{
     width: 50px;
     height: 50px;
     color: white;
@@ -330,7 +335,7 @@ main .containe .carousel-item img{
 
 }
 
-.botao-carrinho button{
+main .botao-carrinho button{
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -342,7 +347,7 @@ main .containe .carousel-item img{
     background-color: white;
 }
 
-.botao-carrinho button:hover{
+main .botao-carrinho button:hover{
     border: 2px solid white;
     color: white;
     background-color:#42075e;
@@ -363,7 +368,6 @@ footer{
 
     padding: 50px;
     width: 100%;
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -371,99 +375,104 @@ footer{
 }
 
 footer .containe .cards-info{
-
-     width: 70%;
+    width: 100%;
     flex-wrap: wrap;
-    gap: 50px;
-}
-
-
-
-
-
-.cards-info{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
+    justify-content: center;
+    gap: 16px;
 }
 
-.cards{
-   
-    width: 350px;
-    height: 300px;
-    padding: 15px;
 
-    text-align: justify;
-    font-family:'Roboto', sans-serif;
-    line-height: 2;
-  
+footer .cards{
+
+    display:flex;
+    flex-direction: column;
+    width: 304px;
+    background-color:#b589b4;
+    border-radius: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 21px;
 }
 
-.cards h4{
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bolder;
-    color: #dab7da;
-}
 
-.cards ul li{
+footer .cards ul{
     list-style: none;
-    
 }
 
-.cards ul li a, p a{
+footer a{
     text-decoration: none;
-    color: #b589b4;
-    font-size: 12px;
 }
 
-.cards ul li a:hover{
-    color: #dab7da;
-    font-size: 14px;
-    font-weight: bolder;
-    transition: 0.5s;
+a{
+    color: #42075e;
 }
 
+.cards a{
+    color: #42075e;
 
+}
+.cards li a p:hover{
+    color: green;
 
-.cards p a{
-    color: #b589b4;
 }
 
 .cards p a:hover{
-    color: #dab7da;
-    font-size: 17px;
-    font-weight: bolder;
-    transition: 0.5s;
-}
-
-.cards p{
-    color: #b589b4;
+    color:white
 }
 
 .midias-sociais{
-    display:flex;
-    justify-content: center;
-    gap:50px;
-}
-.midias-sociais img{
-    height: 25px;
-    width: 25px;
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
 
+}
+
+.midias-sociais img{
+    height: 30px;
+    width: 30px;
 }
 
 .bandeiras-pagamentos img{
-    height: 113px;
-
+    height: 200px;
 }
 
-@media (max-width: 983){
+@media (max-width: 980px){
+    header .containe form{
+
+        display: none;
+
+    }
     main .cards-produtos{
-        justify-content: center;
-        background-color: green;
-        
+
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px){
+    main .cards-produtos{
+        width: 200px;
+    }
+    header .containe .header-botões button{
+        display: none;
+
+    }
+
+    header .containe ul{
+        display: none;
+    }
+
+    main .cards-produtos{
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header .containe .header-botões .menu{
+        display:block;
     }
 
 }
+
 
