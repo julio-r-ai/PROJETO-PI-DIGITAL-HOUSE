@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -7,19 +8,30 @@
 }
 
 .container{
-    width: 1280px;
-    max-width: 100%;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 
 } 
 
 header{
-    height: 80px;
-    display: flex;
+    width: 100%;
     background-color: #6c2e6a;
-    align-items: center;
+    color: white;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
     box-shadow: 2px 2px 7px 1px #6c2e6a;
+}
+header .containe {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+   
 }
 
 .logo{
@@ -33,7 +45,6 @@ header{
 
 main{
     background-color: white;
-    height: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -47,6 +58,7 @@ main{
     background-color:  rgb(231, 224, 224);
     padding-top: 50px;
     padding-bottom: 60px;
+    margin-top: 120px;
 }
 
 #barra{
@@ -180,12 +192,13 @@ button:hover{
    display: flex;
    justify-content: center;
    margin-top: 80px;
+   margin-bottom: 40px;
 }
 
 .login-direitos-reservados{
     background-color: #6c2e6a;
     height: 100px;
-    margin-top: 1040px;
+    margin-top: ;
     font-size: 25px;
     font-weight: bolder;
     display: flex;
