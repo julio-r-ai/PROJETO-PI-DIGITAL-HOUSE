@@ -21,44 +21,64 @@
 </head>
 
 <body>
-    <header class="container">
-
-        <div class=" logo">
-            <img src="/assets/img/logo.png" alt="logo">
-        </div>
-
-        <div class="menu">
+    <header>
+        <div class="containe">
+            <div class="logo">
+                <img src="/assets/img/logo/logo.png" alt="Logo da empresa">
+                <a href="">
+                </a>
+            </div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Bolos</a>
-                    <ul>
-                        <li><a href="#">Festivos</a></li>
-                        <li><a href="#">Casamentos</a></li>
-                    </ul>
+                <li>
+                    <a href="">Home</a>
                 </li>
-                <li><a href="">Contato</a></li>
-                <li><a href="">Sobre</a></li>
+                <li>
+                    <a href="">Bolos</a>
+                </li>
+                <li>
+                    <a href="">Contato</a>
+                </li>
+                <li>
+                    <a href="">Sobre</a>
+                </li>
             </ul>
-        </div>
 
-        <form id="search">
-            <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
-            <button type="submit">
+            <form id="search">
+                <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
+                <button type="submit">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </form>
+
+            <div class="header-botões">
+                <button title="header-carrinho">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                </button>
+
+                <button title="Login">
+                    <span class="material-symbols-outlined">
+                        login
+                    </span>
+                </button>
+                <button class="menu">
                 <span class="material-symbols-outlined">
-                    search
-                </span>
-            </button>
-        </form>
+                    menu
+                    </span>
+                </button>
 
-        <div class="carrinho">
-            <a href="#"> <img src="/assets/img/carrinho.png" alt="carrinho"></a>
-        </div>
+
+            </div>
 
         </div>
+
     </header>
 
-    <main class="container">
-
+    <main >
+        <div class="containe">
         <section class="lista-compras">
            
             <div class="organização-elementos">
@@ -72,11 +92,12 @@
             </div>
             <div class="produtos-carrinho">
                 
-                <img src="/assets/img/bolo_2.jfif" alt="foto bolo carrinho">
+                <img src="/assets/img/bolos/bolo_1.jfif" alt="foto bolo carrinho">
                 
                 <span>Bolo de chocolate 2kg R$ 120,00</span>
                 <span>Edit</span>
             </div>
+            
            
 
 
@@ -86,35 +107,11 @@
                 <h6><a href="#">continuar comprando</a></h6>
 
             </div>
-            <div class="linha">
-                <hr>
+           <div class="continuar-pedido">
+            <div class="login-botoes">
+                <button id="#">continuar com pedido</button>
             </div>
-
-
-
-            <div class="analisando-dados">
-                <div class="cep">
-                    <span class="material-symbols-outlined">
-                        local_shipping
-                    </span>
-                    <label>Insira seu cep para calcular o frete </label>
-                    <input type="text" class="control">
-                </div>
-                
-                <div id="prazo-envio">
-                    <strong>Envio em até 3 Dias úteis: R$10,00</strong>
-                </div>
-                <div id="retirar-local">
-                    <strong>Retirar no local: Grátis </strong>
-                    
-                </div>
-                
-                <div id="retirar-local">
-                    <strong>Total: R$ 130,00</strong>
-                </div>
-                <div class="botão">
-                    <button id="comprar-produto">Continuar com pedido</button>
-                    
+           </div>
 
                 
 
@@ -123,83 +120,10 @@
             </div>
         
         </div>
-            <div class="produtos">
-
-                <div class="card-produtos">
-
-                    <article class="org-elementos">
-                        <div id="foto">
-                            <img src="/assets/img/bolo_1.jfif" alt="">
-
-                        </div>
-
-                        <p>Bolo de chocolate com morango</p>
-                                <div class="preço">
-                                    <p>R$ 80,00</p>
-                                </div>
-                        <div class="botões-produtos">
-
-                            <button><span class="material-symbols-outlined">
-                                shopping_cart
-                                </span></button>
-
-
-                        </div>
-
-
-
-                    </article>
-
-                    <article class="org-elementos">
-                        <div id="foto">
-                            <img src="/assets/img/bolo_2.jfif" alt="">
-                        </div>
-                        <p>Bolo de chocolate</p>
-                        <div class="preço">
-                            <p>R$ 150,00</p>
-                        </div>
-                        <div class="botões-produtos">
-
-                            <button><span class="material-symbols-outlined">
-                                shopping_cart
-                                </span></button>
-
-
-                    </article>
-
-                    <article class="org-elementos">
-                        <div id="foto">
-                            <img src="/assets/img/bolo_3.jpg" alt="">
-                        </div>
-                        <p>Bolo de Morango</p>
-                        <div class="preço">
-                            <p>R$ 180,00</p>
-                        </div>
-                        <div class="botões-produtos">
-
-                            <button><span class="material-symbols-outlined">
-                                shopping_cart
-                                </span></button>
-
-
-                    </article>
-
-
             
-
-                    
-                           
-
-                </div>
-
-            </div>
-
-
-
-
-            </div>
         </section>
 
+         </div>
 
 
 
@@ -207,49 +131,12 @@
 
 
 
-    <footer class="container">
-        <section class="rodape">
-            <div class="cards-info">
 
-                <article class="cards">
-                    <h4>Sobre nós</h4>
-
-                    <p>Somos MastersBolos
-                        começamos em 2022 sempre estamos disponivel para nossos Clientes nossa história começa<a
-                            href="#">aqui</a>
-                    </p>
-                </article>
-                <article class="cards">
-                    <h4>Atendimento</h4>
-                    <ul>
-                        <li><a href="#">Contato atravez do Whatsapp</a></li>
-                        <li><a href="#">Minha conta</a></li>
-                        <li><a href="#">Vale presente</a></li>
-                    </ul>
-                </article>
-                <article class="cards">
-                    <h4>Loja virtual</h4>
-
-                    <ul>
-                        <li><a href="#">Prazo de entrega</a></li>
-                        <li><a href="#">Forma de pagamento</a></li>
-                        <li><a href="#">Politica de troca de devolução</a></li>
-                        <li><a href="#">Política de privacidade</a></li>
-                        <li><a href="#">Termos de condições</a></li>
-                    </ul>
-                </article>
-
+    <footer>
+        <div class="containe">
+            <div class="login-direitos-reservados">
+                © Product Bolos Gourmet 2023 - Direitos reservados pela empresa Bolos Gourmet
             </div>
-
-            <div class="social-icons">
-                <a href="https://www.instagram.com/" target="_blank"><img src="img/incons/instagram.png" alt=""><a>
-                        <a href="https://web.whatsapp.com/" target="_blank"><img src="img/incons/whatsapp.png"
-                                alt=""></a>
-                        <a href="https://www.facebook.com/" target="_blank"><img src="img/incons/facebook.png"
-                                alt=""></a>
-            </div>
-
-        </section>
     </footer>
 
 </body>

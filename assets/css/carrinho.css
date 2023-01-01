@@ -1,600 +1,343 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,700;1,600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
-
-.container{
-    width: 1280px;
-    max-width: 100%;
+.containe {
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
-} 
+    
+}
 
-/* Determinando responsividade do site */
+ header a{
+    text-decoration: none;
+}
+
+
+img{
+    cursor: pointer;
+    height: 70px;
+}
+
 
 header{
-    
-    height: 80px;
-    display: flex;
+    width: 100%;
     background-color: #6c2e6a;
-    align-items: center;
-    box-shadow: 2px 2px 7px 1px #6c2e6a;
-    justify-content: space-between;
-
-}
-
-.logo{
-    padding-left: 50px;
-}
-
-
-.logo img{
-    width: 80px;
-    border-radius: 20px;
-}
-
-.menu{
-    display: flex;
-    align-content: flex-start;
-}
-.menu ul{
-    display: flex;
-    gap: 60px;
-    margin: 0 3rem;
-
-}
-
-.menu li,a{
-    display: flex;
-    text-align: center;
-    text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    align-content: center;
-    align-items: center;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
 }
 
+header .containe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+   
+}
 
-header form{
+header .containe .logo a, header li a{
+    color: inherit;
+}
+
+header .containe form{
     background-color: white;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-delay: 40s;
-    transition: 0.5s all;
-
-}
-header form:hover , header form ul li a{
-    width: 400px;
-    border-radius: 45px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     transition: .6s all;
 }
-header form button{
-    display: grid;
-    place-items: center;
+
+header .containe form button{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s all;
+
 }
 
-header form input [type="text"]:placeholder-shown{
-    display: none;
-    width: 110%;
+
+
+header .containe form:hover{
+    width: 30%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .active{
     display: block;
 }
 
-header form.active:hover input[type="text"]:placeholder-shown{
+header .containe form.active:hover input[type="text"]:placeholder-shown{
     display: block;
 }
 
-header form input[type="text"]{
+header .containe form input[type="text"]{
+    color:#6c2e6a;
     background: none;
-    border:none;
     outline: none;
-    width: 110%;
+    border: none;
+    width: 100%;
 }
 
-header button {
+header .containe form span{
+    color: #6c2e6a;
+    cursor: pointer;
+    
+}
+
+header .containe ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+header .containe ul li{ 
+    border-radius: 20px;
+    transition: .6s all;
+}
+
+header .containe ul li:hover{
+    font-size: 20px;
+    width: 90px;
+    background-color: #fafafa7a;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+  
+    
+}
+ ul a:hover{
+    color: white;
+}
+
+header .containe button{
     background: none;
     border: none;
+    cursor: pointer;
 }
 
-.menu ul{
-    
-    list-style-type: none;
-    padding: 0;
+header .containe span{
+    color: white;
+}
+
+header .containe .header-botões {
     display: flex;
-    background-color: #6c2e6a;
-    border-radius: 4px;    
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+header .containe .header-botões span{
+    color: #6c2e6a;
 }
 
-.menu ul li{
-    display: inline;
-    position:relative;
-}
-
-.menu ul li a{
-    color: #F3E1E1;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    text-align: justify;
-    
-}
-
-.menu ul li a:hover{
-   background-color: #915c8f;
-   border-radius: 4px;
-}
-
-/* Sub-manu */
-
-.menu ul ul{
-    display: none;
-    position: absolute;
-    right: -280px;
-    
-}
-
-.menu ul li:hover ul{
-    display: block;
-    width: 300px;
-}
-
-.carrinho{
-    background-color: #F3E1E1;
-    border-radius: 40px;
+header .containe .header-botões button{
     width: 50px;
     height: 50px;
+    background-color: white;
+    border-radius: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: .6s all;
-    margin: 0  50px;
+    align-items: center; 
 }
 
-.carrinho:hover{
-    background-color: #915c8f;
-    border-radius: 40px;
+
+header .containe .header-botões span:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color:white;
     width: 50px;
     height: 50px;
+    outline: none;
+    background-color:#42075e;
+    border: solid 2px white;
+     
+}
+
+.menu button{
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: .6s all;
-    margin: 0 50px;
 }
+/*=================== Header finaliza aqui  ====================*/
 
-.carrinho a img {
-    width: 30px;
+main .containe{
     display: flex;
-    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+    
 
-span{
-    width: 30px;
-    color: black; 
-}
-
-
-/* Carousel */
-
-
-main .container{
-    max-width: 1280px;
+main{
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    height: 2000px;
-    justify-content: center;
 }
 
 .lista-compras{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 150px;
-    height: 2000px;
-    background-color:#c0afc0;
-    border-radius: 12px;
-
-}
-.organização-elementos{
-    display:flex;
+    padding-top: 44px;
+    margin-top: 100px;
     justify-content: center;
-    margin-top: 150px;
-    height: 1800px;
-    width: 800px;
-    background-color:#e4d7e4;
     border-radius: 12px;
-    box-shadow: 3px 3px 3px 1px #6c2e6a;
-
-    
-
+    background-color: #b589b4;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+    margin-bottom: 100px;
+    width: 70%;
 }
-.org-elementos .suas-compras{
-    font-size: 70px;
-    color: #6c2e6a;
 
+.organização-elementos{
+    background-color: #b589b4;
+    justify-content: center;
+    display: flex;
 }
+
 .suas-compras{
     display: flex;
-    padding-top: 50px;
-    justify-content: center;
-    height: 150px;
-    width: 500px;
-    font-family: 'Sarabun', sans-serif;
-    text-transform: uppercase;
-    gap:20px;
+    gap: 30px;
+    color: #42075e;
+    
 }
-.suas-compras h1{
-    padding-top: 10px;
-    color: #6c2e6a;
-}
-
-
 
 .suas-compras span{
-    
-    font-size: 80px;
-    color: #6c2e6a;
+    font-size: 50px;
 }
 
 .produtos-carrinho{
+    margin-top: 152px;
     display: flex;
-    margin-top: 500px;
-    height: 50px;
-    width: 700px;
-    border-radius: 12px;
-    background-color:#6c2e6a;
+    justify-content: space-between;
     align-items: center;
-    gap: 150px;
-    font-family: 'Sarabun', sans-serif;
-    position: absolute;
-    
-}
-.produtos-carrinho img{
-    height: 50px;
-    border-radius: 12px;
-
-}
-.produtos-carrinho span{
-    width: 250px;
-    color: #dab7da;
-    text-transform: uppercase;
-    
-
-}
-
-.descrição-produto{
-    display: flex;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    color: #F3E1E1;
-    text-transform: uppercase;
-
-}
-.incremento-unidade{
-    z-index: 2;
-
-    padding-top: 350px;
-    padding-right: 300px;
-    position: absolute;
+    background-color: rgb(181, 137, 180);
+    padding: 0px 10px;
+    color: rgb(66, 7, 94);
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .continuar-comprando{
-    height: 50px;
-    padding-top: 700px;
-    padding-left: 550px;
-    padding-bottom: 100px;
-    position: absolute;
-    
-    
-}
-.continuar-comprando a{
-
-    text-decoration: none;
-    text-transform: none;
-    font-family: 'Sarabun', sans-serif;
-    color: #6c2e6a;
-}
-.linha hr {
-    
-    border-top: 1px solid #6c2e6a;
-}
-.linha{
-    margin-top: 800px;
-    width: 800px;
-    position: absolute;
-
-}
-
-
-.analisando-dados{
-    width: 700px;
-    height: 340px;
-    border-radius: 12px;
-    background-color:#b589b4;
-    position: absolute;
-    margin-top: 900px;
-    box-shadow: 4px 4px 1px 3px #6c2e6a;
-
-    
-}
-
-.cep{
     display: flex;
-    padding-top: 30px;
-    padding-left: 30px;
-    text-transform: uppercase;
-    font-family: 'Sarabun', sans-serif;
-    gap:50px;
-    color:#F3E1E1
-
-}
-.cep input{
-    outline: none;
-    text-decoration: none;
-    border: solid 2px #6c2e6a;
-    border-radius: 4px;
-    width: 150px;
-}
-.analisando-dados .cep .material-symbols-outlined{
-    position: absolute;
-    padding-left:320px;
-    color: #6c2e6a;
-    
-}
-#prazo-envio{
-    font-family: 'Sarabun', sans-serif;
-    padding-top: 30px;
-    padding-left: 30px;
-    color: #F3E1E1;
+    justify-content: end;
+    margin-top: 20px;
 }
 
-#retirar-local{
-    color: #F3E1E1;
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-#retirar-local  strong p{
-    padding-top: 30px;
-    padding-left: 30px;
-    font-family: 'Sarabun', sans-serif;
-}
-
-.botão{
-    padding-top: 50px;
-    padding-left: 400px;
-
-}
-.botão button{
-    height: 50px;
-    width: 200px;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-family: 'Sarabun', sans-serif;
-    color: #6c2e6a;
-    transition: .6s all;
-    box-shadow: 1px 1px 2px 3px #6c2e6a;
-
-}
-.botão button:hover{
-    color: #F3E1E1;
-    background-color: #6c2e6a;
-    transition: .6s all;
-}
-
-
-.produtos{
-    font-display:flex;
-    flex-direction: column;
-    margin-top: 1400px;
-    height: 400px;
-    width: 990px;
-    position: absolute;
-    
-}
-.card-produtos{
+.continuar-pedido{
+    margin-top: 80px;
     display: flex;
     justify-content: center;
-    
+    margin-bottom: 100px;
 }
-.produtos .card-produtos{
+
+.continuar-pedido button{
+    border: none;
+    color:#42075e;
+    font-weight: bolder;
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+    transition: .6s all;
+}
+.continuar-pedido button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color: #42075e;
+    transition: .6s all;
+}
+
+.login-direitos-reservados{
+    text-transform: uppercase;
+    color: white;
+}
+
+
+
+
+/*==========main finaliza aqui*/
+footer .containe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    height: 300px;
-    gap: 30px;
     
-}
-.org-elementos{
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    height: 280px;
-    background-color:#b589b4;
-    border-radius: 12px;
-    text-transform: uppercase;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 10px;
-    box-shadow: 4px 4px 1px 3px #6c2e6a;
-    padding-top: 30px;
+    }
 
-    
-}
-
-.org-elementos img{
-    height: 100px;
-    border-radius: 12px;
-}
-
-
-
-
- .card-produtos p{
-    margin-top: 120px;
-    position: absolute;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 11px;
-    height: 20px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    color: white;
-
- }
- .botões-produtos{
-    display: flex;
-    margin-top: 190px;
-    position: absolute;
-    gap: 20px;
- }
- .botões-produtos button{
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    transition: .6s all;
-
- }
- 
-
-
- .botões-produtos button:hover{
-    border-radius: 100px;
+footer{
     background-color: #6c2e6a;
-    transition: .6s all;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
 
-
-
- }
- .org-elementos .preço{
-    position: absolute;
-    padding-top: 40px;
-    padding-right: 200px;
- }
-
-
-    
-
-
-
-
-
-
-
-
-
-
-.rodape{
+    padding: 50px;
     width: 100%;
-    height: 300px;
-    background-color: #6c2e6a;
-    margin-top: 180px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 350px;
-    
-}
-
-.cards-info{
-    margin-top: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-.cards{
-   
-    width: 350px;
-    height: 300px;
-    padding: 15px;
-
-    text-align: justify;
-    font-family:'Roboto', sans-serif;
-    line-height: 2;
-  
-}
-
-.cards h4{
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bolder;
-    color: #dab7da;
-}
-
-.cards ul li{
-    list-style: none;
-    
-}
-
-.cards ul li a, p a{
-    text-decoration: none;
-    color: #b589b4;
-    transition: 0.5s;
-}
-
-.cards ul li a:hover{
-    color: #dab7da;
-    font-size: 17px;
-    font-weight: bolder;
-    transition: 0.5s;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 
-.cards p a{
-    color: #b589b4;
+@media (max-width: 980px){
+    header .containe form{
+
+        display: none;
+
+    }
+    main .cards-produtos{
+
+        width: 250px;
+    }
 }
 
-.cards p a:hover{
-    color: #dab7da;
-    font-size: 17px;
-    font-weight: bolder;
-    transition: 0.5s;
+@media (max-width: 768px){
+    main .cards-produtos{
+        width: 200px;
+    }
+    header .containe .header-botões button{
+        display: none;
+
+    }
+
+    header .containe ul{
+        display: none;
+    }
+
+    main .cards-produtos{
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header .containe .header-botões .menu{
+        display:block;
+    }
+
 }
 
-.cards p{
-    color: #b589b4;
-}
-
-.social-icons{
-    display: flex;
-    justify-content: center;
-    
-    color: white;
-    width: 100%;
-    margin-top: 30px;
-} 
-
-.social-icons a img{
-    width: 25px;
-    margin-left: 40px;
-}
 
