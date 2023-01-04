@@ -8,7 +8,7 @@
 }
 
 .container{
-    max-width: 1400px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 
@@ -25,13 +25,15 @@ header{
     top: 0;
     box-shadow: 2px 2px 7px 1px #6c2e6a;
 }
-header .containe {
+
+header .container{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: center;
     color: white;
-   
+    
 }
 
 .logo{
@@ -44,16 +46,20 @@ header .containe {
 }
 
 main{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
-/* *********************************** */
+main .container{
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+}
+
 .forma-pagamento{
-    width: 100%;
+    width: 100;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color:  rgb(231, 224, 224);
     padding-top: 50px;
@@ -61,11 +67,10 @@ main{
     margin-top: 120px;
 }
 
-#barra{
-    width: 800px;
-    height: 2px;
-    background-color: #6c2e6a;
-    margin: auto;
+hr{
+    border: 2px solid #6c2e6a;
+    border-radius: 600px;
+    width: 600px;
     margin-top: 30px;
 }
 
@@ -78,10 +83,8 @@ main{
     margin-top: 30px;
 }
 
-#botoes{
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
+#confirmar{
+    margin-top: 30px;
 }
 
 #botoes button{
@@ -89,12 +92,8 @@ main{
     margin-top: 50px;
 }
 
-#botao-alterar-cartao{
-    margin-top: 30px;
-}
-
 #pix-boleto{
-    width: 500px;
+    width: 600px;
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
@@ -104,7 +103,7 @@ main{
     width: 50px;
 }
 
-#imagem-pix-boleto{
+#imagem-pix-boleto-cartao{
     align-items: center;
     display: flex;
     gap: 15px;
@@ -113,8 +112,7 @@ main{
 /* Endereço do pedido */
 
 .endereco-pedido{
-    margin-top: 50px;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     width: 100%;
     display: flex;
@@ -195,14 +193,19 @@ button:hover{
    margin-bottom: 40px;
 }
 
-.login-direitos-reservados{
+footer{
     background-color: #6c2e6a;
     height: 100px;
-    margin-top: ;
     font-size: 25px;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;   
+    width: 100%;
+}
+
+.direitos-reservados{
+    display: flex;
+    justify-content: center;
 }
