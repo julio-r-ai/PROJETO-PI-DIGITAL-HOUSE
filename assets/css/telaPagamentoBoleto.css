@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -13,13 +14,25 @@
 } 
 
 header{
-
-    height: 300px;
-    display: flex;
+    width: 100%;
     background-color: #6c2e6a;
-    padding-top: 25px;
-    justify-content: space-between;
+    color: white;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+}
 
+header .container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+    
 }
 
 .logo{
@@ -37,21 +50,20 @@ main{
 }
 
 .pagamento-boleto{
-    width: 600px;
-    height: 680px;
+    width: 100%;
+    max-width: 600px;
     background-color: rgb(231, 224, 224);
     border-radius: 12px;
     margin: auto;
-    position: relative;
-    bottom: 100px;
-    padding-top: 80px;
-    gap: 30px;
+    gap:15px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding-left:40px;
-    padding-right: 40px;
+    text-align: center;
     box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.475);
+
+    margin-top: 200px;
+    padding: 30px;
 }
 
 .cabecalho-boleto{
@@ -100,7 +112,7 @@ button{
 }
 
 button:hover{
-    height: 40px;
+    height: 45px;
     width: 500px;
     background-color: #915c8f;
     border: none;
@@ -111,14 +123,21 @@ button:hover{
     transition: 0.5s;
 }
 
-.login-direitos-reservados{
+footer{
     background-color: #6c2e6a;
     height: 100px;
-    margin-top: 300px;
     font-size: 25px;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white;   
+    width: 100%;
+
+    margin-top: 90px;
+}
+
+.direitos-reservados{
+    display: flex;
+    justify-content: center;
 }

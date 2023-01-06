@@ -15,13 +15,25 @@
 
 
 header{
-
-    height: 300px;
-    display: flex;
+    width: 100%;
     background-color: #6c2e6a;
-    padding-top: 25px;
-    justify-content: space-between;
+    color: white;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+}
 
+header .container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+    
 }
 
 .logo{
@@ -50,7 +62,10 @@ main{
     flex-direction: column;
     padding-left:40px;
     padding-right: 40px;
+    padding-bottom: 40px;
     box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.475);
+
+    margin-top: 300px;
 }
 
 form div h2{
@@ -120,15 +135,21 @@ button:hover{
     transition: 0.5s;
 }
 
-.login-direitos-reservados{
+footer{
     background-color: #6c2e6a;
     height: 100px;
-    margin-top: 300px;
     font-size: 25px;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white;   
+    width: 100%;
+
+    margin-top: 250px;
 }
 
+.direitos-reservados{
+    display: flex;
+    justify-content: center;
+}
