@@ -11,106 +11,98 @@
 </head>
 <body>
 
-    <header class="container">
+    <header>
 
-        <div class="logo">
-            <img src="../img/logo.png" alt="logo">
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo">
+            </div>
         </div>
         
     </header>
 
-    <main class="container">
+    <main>
 
-        <div class="forma-pagamento">
-            <div>
-                <h1>Forma de pagamento</h1>
-            </div>
-
-            <div id="barra"></div>
-
-            <div>
-                <h3>Forma de pagamento no cartão</h3>
-            </div>
-
-            <div id="imagem-badeiras">
-                <img src="img/bandeirasCartoes.jpg" alt="imagem-Badeiras">
-            </div>
-
-            <div id="botoes">
+        <div class="container">
+            <div class="forma-pagamento">
                 <div>
-                    <button>Crédito</button>
+                    <h1>Formas de pagamentos</h1>
                 </div>
+
+                <hr>
+
+                <div id="pix-boleto">
+                    <div id="imagem-pix-boleto-cartao">
+                        <div><input type="radio" name="forma"></div> 
+                        <div><p>pix</p></div>
+                        <div><img src="../img/incons/img-pix.png" alt="imagem-pix"></div>
+                    </div>
+
+                    <div id="imagem-pix-boleto-cartao">
+                        <input type="radio" name="forma"> 
+                        <p>Boleto</p>
+                        <img src="../img/incons/img-boleto.png" alt="imagem-boleto">
+                    </div>
+
+                    <div id="imagem-pix-boleto-cartao">
+                        <input type="radio" name="forma">
+                        <p>Cartão</p>
+                        <img src="../img/incons/img-cartao.png" alt="">
+                    </div>
+
+                </div>
+
+              <hr>
 
                 <div>
-                    <button>Débito</button>
-                </div>
-            </div>
-
-            <div id="botao-alterar-cartao">
-                <button>Alterar cartão</button>
-            </div>
-
-            <div id="barra"></div>
-
-            <div><h3>Pix ou Boleto</h3></div>
-
-            <div id="pix-boleto">
-                <div id="imagem-pix-boleto">
-                    <div><input type="radio" name="forma"></div> 
-                    <div><p>pix</p></div>
-                    <div><img src="img/pix-logo.png" alt="imagem-pix"></div>
+                    <button id="confirmar">Confirmar</button>
                 </div>
 
-                <div id="imagem-pix-boleto">
-                    <input type="radio" name="forma"> 
-                    <p>Boleto</p>
-                    <img src="img/boleto.png" alt="imagem-boleto">
-                </div>
-            </div>
-        </div>
-       
-        <div class="endereco-pedido">
-
-            <div>
-                <h1>Endereço de entrega</h1>
-            </div>
-
-            <div id="barra"></div>
             
-            <div class="colunas">
-                <div id="coluna-1">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="#">
 
-                    <label for="rua">Rua</label>
-                    <input type="text" id="#">
-
-                    <label for="numero">Número</label>
-                    <input type="text" id="#">
+                <div class="endereco-entrega">
+                    <h1>Endereço de entrega</h1>
                 </div>
 
-                <div id="coluna-2">  
-                    <label >Cidade</label>
-                    <input type="text" id="#">
+            
+                
+                <div class="colunas">
+                    <div id="coluna-1">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="#">
 
-                    <label for="rua">Cep</label>
-                    <input type="text" id="#">
-                               
-                    <label for="numero">Telefone</label>
-                    <input type="tel" id="#">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="#">
+
+                        <label for="numero">Número</label>
+                        <input type="text" id="#">
+                    </div>
+
+                    <div id="coluna-2">  
+                        <label >Cidade</label>
+                        <input type="text" id="#">
+
+                        <label for="rua">Cep</label>
+                        <input type="text" id="#">
+                                
+                        <label for="numero">Telefone</label>
+                        <input type="tel" id="#">
+                    </div>
                 </div>
+
+                <div id="botao-confirmar">
+                    <button>Confirmar pedido</button>
+                </div>
+
             </div>
-
-        </div>
-
-        <div id="botao-confirmar">
-            <button>Confirmar pedido</button>
         </div>
     </main>
     
-    <footer class="container">
-        <div class="login-direitos-reservados">
-            © Product Bolos Gourmet 2023 - Direitos reservados pela empresa Bolos Gourmet
+    <footer>
+        <div class="container">
+            <div class="direitos-reservados">
+                © Product Bolos Gourmet 2023 - Direitos reservados pela empresa Bolos Gourmet
+            </div>
         </div>
     </footer>
 
