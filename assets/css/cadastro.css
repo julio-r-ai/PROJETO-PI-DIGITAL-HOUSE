@@ -215,3 +215,20 @@ input{
 }
 
 
+/* Menssagem erros */
+#error{
+    border: solid 2px red;
+    height: 400px;
+    border-radius: 12px;
+    color: red;
+    background-color: #c0a0bf;
+    margin-top: 220px;
+    margin-left: 30px;
+    width: 502px;
+    padding: 50px;
+
+}
+
+#no-error{
+    display: none;
+}
