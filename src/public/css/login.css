@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+} 
+
+
+header{
+
+    height: 300px;
+    display: flex;
+    background-color: #6c2e6a;
+    padding-top: 25px;
+    justify-content: space-between;
+
+}
+
+.logo{
+    padding-left: 50px;
+}
+
+
+.logo img{
+    width: 80px;
+}
+
+main{
+    background-color: white;
+    height: 500px;
+}
+
+.form-login{
+    width: 400px;
+    height: 490px;
+    background-color: rgb(231, 224, 224);
+    border-radius: 12px;
+    margin: auto;
+    position: relative;
+    bottom: 100px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left:40px;
+    padding-right: 40px;
+    box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.475);
+}
+
+form div h2{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 20px;
+    border: none;
+}
+
+label{
+    margin-top: 40px;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+button{
+    height: 40px;
+    margin-top: 20px;
+    background-color: #6c2e6a;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+button:hover{
+    height: 40px;
+    margin-top: 20px;
+    background-color: #915c8f;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 2px 2px 7px 1px #6c2e6a; 
+    transition: 0.5s;
+}
+
+.login-email-senha{
+    margin-top: 15px;
+}
+
+.login-botoes{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.esqueceu-senha{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-direitos-reservados{
+    background-color: #6c2e6a;
+    height: 100px;
+    margin-top: 300px;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
