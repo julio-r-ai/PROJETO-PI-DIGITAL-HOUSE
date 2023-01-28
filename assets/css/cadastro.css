@@ -87,6 +87,12 @@ main .containe{
     align-self: center;
 }
 
+/* DOM aviso campos */
+#avisoCamposPreenchido{
+   margin: auto;
+   color: red;
+}
+
 .termo-uso{
     display: flex;
     padding-left: 100px;

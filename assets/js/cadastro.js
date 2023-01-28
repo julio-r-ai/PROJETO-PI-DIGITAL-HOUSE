@@ -3,51 +3,91 @@ window.addEventListener('load', ()=>{
     let reservationForm = document.querySelector('form.form-cadastro');
 
     reservationForm.addEventListener('submit', (event)=>{
+        
 
-        let errosMessages = [];
+        let avisoCamposPreenchido = document.getElementById('avisoCamposPreenchido');
 
-        let fieldName = document.getElementById('name');
-        if(fieldName.value == ''){
-            errosMessages.push('O campo nome nao foi prenchido')
-        };
+        /* Campo nome */
 
-        let fieldTelefone = document.getElementById('telefone');
-        if(fieldTelefone.value == ''){
-            errosMessages.push('O campo Telefone nao foi prenchido')
-        };
+        let nomeAviso = document.getElementById('nomeAviso');
+        let nomeInput = document.getElementById('name');
 
-        let fieldEmail = document.getElementById('email');
-        if(fieldEmail.value == ''){
-            errosMessages.push('O campo email nao foi prenchido')
-        };
-
-        let fieldCpf = document.getElementById('cpf');
-        if(fieldCpf.value == ''){
-            errosMessages.push('O campo CPF nao foi prenchido')
-        };
-
-        let fieldPassword = document.getElementById('cadastrar-password');
-        if(fieldPassword.value == ''){
-            errosMessages.push('O campo Senha nao foi prenchido')
-        };
-
-        let fieldConferirPassword = document.getElementById('conferir-password');
-        if(fieldConferirPassword.value == ''){
-            errosMessages.push('O campo conferir senha nao foi prenchido')
-        };
-
-        if(errosMessages.length > 0) {
+        if(nomeInput.value.length == 0){
             event.preventDefault();
-        }else{
-            alert('Formulario enviado...')
-        };
 
-        let ulErrors = document.querySelector('div#error ul');
-        for(let i = 0; i < errosMessages.length; i++){
-
-            ulErrors.innerHTML = '<li>' + errosMessages[i] +'</li>'; 
-
+            avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+            nomeAviso.innerHTML = '*Nome completo';
+            nomeAviso.style.color = 'red';
         }
+
+        /* Campo contato */
+
+        let telAviso = document.getElementById('telAviso');
+        let telInput= document.getElementById('telefone');
+
+        if(telInput.value.length == 0){
+            event.preventDefault();
+
+            avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+            telAviso.innerHTML = '*Numero de contato';
+            telAviso.style.color = 'red';
+        }
+
+        /* Campo email */
+
+        let emailAviso = document.getElementById('emailAviso');
+        let emailInput= document.getElementById('email');
+
+        if(emailInput.value.length == 0){
+            event.preventDefault();
+
+            avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+            emailAviso.innerHTML = '*Email';
+            emailAviso.style.color = 'red';
+        }
+
+         /* Campo CPF */
+
+         let cpfAviso = document.getElementById('cpfAviso');
+         let cpfInput= document.getElementById('cpf');
+ 
+         if(cpfInput.value.length == 0){
+             event.preventDefault();
+ 
+             avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+             cpfAviso.innerHTML = '*CPF';
+             cpfAviso.style.color = 'red';
+         }
+        
+        /* Campo senha */
+
+        let senhaAviso = document.getElementById('senhaAviso');
+        let senhaInput= document.getElementById('password');
+
+        if(senhaInput.value.length == 0){
+            event.preventDefault();
+
+            avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+            senhaAviso.innerHTML = '*Senha';
+            senhaAviso.style.color = 'red';
+        }
+
+        /* Campo CPF */
+
+        let conferirAviso = document.getElementById('conferirAviso');
+        let conferirInput= document.getElementById('conferir-password');
+
+        if(conferirInput.value.length == 0){
+            event.preventDefault();
+
+            avisoCamposPreenchido.innerHTML = '<p>' + 'Preencha todos os campos' + '</p>';
+            conferirAviso.innerHTML = '*Digite novamente sua senha';
+            conferirAviso.style.color = 'red';
+        }
+
+        
+        
+       
 
     })
 
