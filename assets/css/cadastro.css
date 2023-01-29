@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #6c2e6a;
+    color: white;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+}
+
+header .container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+
+
+}
+
+img{
+    cursor: pointer;
+    height: 70px;
+}
+
+main .containe{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #bd7bba;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 16px;
+
+}
+
+.form-cadastro{
+    background-color: #c0a0bf;
+    border-radius: 12px;
+    display: flex;
+    color: #7c0078;
+    flex-direction: column;
+    margin-top: 220px;
+    align-items: flex-start;
+    width: 502px;
+    padding-bottom: 70px;
+    margin-bottom: 365px;
+    text-align: center;
+}
+.formulario-cadastro{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+.formulario-cadastro label{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formulario-cadastro{
+    display: flex;
+    align-self: center;
+}
+
+.termo-uso{
+    display: flex;
+    padding-left: 100px;
+    padding-top: 20px;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+}
+.termo-uso a{
+    text-decoration: none;
+}
+
+.cadastro-botoes{
+    display: flex;
+    padding-left: 200px;
+    margin-top: 50px;
+}
+
+.cadastro-botoes button{
+    width: 110px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background-color:white;
+    color:#6c2e6a;
+    font-size: 20px;
+    font-weight:bolder;
+    transition: .6s all;
+}
+.cadastro-botoes button:hover{
+    color: white;
+    background-color: #6c2e6a;
+    transition: .6s all;
+
+
+}
+
+.form-cadastro input{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.form-cadastro:hover{
+    border: 2px solid #7c0078;
+}
+.login-email-senha{
+    padding: 20px;
+    border: none;
+}
+
+.login-email-senha{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.titulo-login{
+    margin-top: 40px;
+}
+
+footer .containe{
+    background-color: #6c2e6a;;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 114px;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    }
+
+footer{
+    width: 100%;
+    background-color: #6c2e6a;
+}
+
+input{
+    border: none;
+    border-radius: 3px;
+}
+.cadastro-botoes button{
+    color:#6c2e6a;
+    margin: 10px;
+    width: 100px;
+    border: none;
+    border: 2px solid  #6c2e6a;
+    border-radius: 8px;
+    font-weight: bolder;
+    transition: .6s all;
+
+}
+.cadastro-botoes button:hover{
+    border: 2px solid white;
+    background-color: #6c2e6a;
+    color: white;
+    transition: .6s all;
+
+}
+.esqueceu-senha a{
+    text-decoration: none;
+}
+
+.esqueceu-senha a{
+    color: #6c2e6a;
+}
+
+
+
+
+@media (max-width: 850px){
+    footer .containe{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px){
+    .form-cadastro{
+        width: 400px;
+        justify-content: center;
+    }
+}
+
+
