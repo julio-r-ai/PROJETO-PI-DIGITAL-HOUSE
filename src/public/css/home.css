@@ -416,6 +416,9 @@ a{
     color: green;
 
 }
+.cards p{
+    color: #42075e;
+}
 
 .cards p a:hover{
     color:white
