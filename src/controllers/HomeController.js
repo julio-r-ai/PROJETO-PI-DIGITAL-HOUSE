@@ -26,6 +26,10 @@ const HomeController = {
     cadastro:(req, res)=>{
         res.render('cadastro')
     },
+
+    admin:(req, res)=>{
+        res.render('admin')
+    }
 }
 
 

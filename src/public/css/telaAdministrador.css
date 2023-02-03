@@ -44,6 +44,10 @@ header .containe .logo a, header li a{
   color: inherit;
 }
 
+.logo img{
+  width: 80px;
+}
+
 header .containe form{
   background-color: white;
   width: 60px;
@@ -179,7 +183,7 @@ button {
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 130px;
   width: 90%;
   height: 80%;
   border-radius: 10px;
@@ -313,6 +317,7 @@ tbody tr td.acao {
   z-index: 999;
   align-items: center;
   justify-content: center;
+
 }
 
 .modal {
@@ -323,6 +328,7 @@ tbody tr td.acao {
   background-color: white;
   border-radius: 10px;
   width: 50%;
+ 
 }
 
 .modal label {
