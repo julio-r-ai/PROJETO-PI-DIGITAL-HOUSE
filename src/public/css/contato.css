@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.dados-formulario{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 800px;
+    padding-right: 50px;
+    background-color:#42075e;
+    width: 100%;
+
+}
+.localizacao{
+    color:#e9c5e8;
+
+}
+.localizacao h1{
+    display: flex;
+    
+
+}
+
+
+.incons{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+
+}
+.incons img{
+    width: 30px;
+}
+
+form{
+    display: flex;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 12px;
+    background-color:#e9c5e8;
+    box-shadow: 5px 5px 5px 3px #e9c5e8;
+    width: 500px;
+    height: 500px;
+    color: #42075e;
+    border:none;
+}
+
+form textarea{
+    margin-top: 50px;
+    resize: none;
+   
+    height: 100px;
+}
+
+form input, textarea{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+form button{
+    margin-top: 50px;
+    border: none;
+    height: 50px;
+    background-color: #842fac;
+    color: #e9c5e8;
+    font-size: 28px;
+    transition: .6s all;
+}
+
+form button:hover{
+    background-color:#42075e;
+    color: white;
+    transition: .6s all;
+}

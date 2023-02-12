@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.containe {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+ header a{
+    text-decoration: none;
+}
+
+
+img{
+    cursor: pointer;
+    height: 70px;
+}
+
+
+header{
+    width: 100%;
+    background-color: #6c2e6a;
+    color: white;
+    padding: 16px;
+   
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+}
+
+header .containe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+   
+}
+
+header .containe .logo a, header li a{
+    color: inherit;
+}
+
+header .containe form{
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s all;
+}
+
+header .containe form button{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s all;
+
+}
+
+
+
+header .containe form:hover{
+    width: 30%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.active{
+    display: block;
+}
+
+header .containe form.active:hover input[type="text"]:placeholder-shown{
+    display: block;
+}
+
+header .containe form input[type="text"]{
+    color:#6c2e6a;
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+header .containe form span{
+    color: #6c2e6a;
+    cursor: pointer;
+    
+}
+
+header .containe ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+header .containe ul li{ 
+    border-radius: 20px;
+    transition: .6s all;
+}
+
+header .containe ul li:hover{
+    font-size: 20px;
+    width: 90px;
+    background-color: #fafafa7a;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+  
+    
+}
+ ul a:hover{
+    color: white;
+}
+
+header .containe button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .containe span{
+    color: white;
+}
+
+header .containe .header-botões {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+header .containe .header-botões span{
+    color: #6c2e6a;
+}
+
+header .containe .header-botões button{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+header .containe .header-botões span:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color:white;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    background-color:#42075e;
+    border: solid 2px white;
+     
+}
+
+.menu button{
+    display: flex;
+    align-items: center;
+}
+/*=================== Header finaliza aqui  ====================*/
+
+main .containe{
+
+    margin-top: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+main h1{
+    font-family: 'Arimo', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #42075e;
+}
+
+main{
+    width: 100%;
+}
+
+
+
+ main .produtos{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+}
+
+ main .cards-produtos{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    width: 318px;
+    background-color: #a15b9f;
+    border-radius: 17px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bolder;
+    border: 1px solid #f0f0f0;
+    transition: .6s all;
+    
+    
+}
+ main .cards-produtos:hover{
+    border: 4px solid #42075e;
+    transition: .6s all;
+
+
+}
+main .cards-produtos img{
+    border-radius: 12px;
+    height: 192px;
+    transition: .4s all;
+}
+
+main .cards-produtos img:hover{
+    height: 210px;
+    transform: scaleX(1.1);
+}
+
+main .cards-produtos .titulo-bolo{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+main .cards-produtos .preço{
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+main .cards-produtos .botões-produtos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main .botões-produtos button{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #42075e;
+    
+}
+ main #comprar-produtos button{
+    background-color: white;
+    border: 2px solid white;
+    color: #42075e;
+
+
+}
+
+
+main .btn-comprar-produto button{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+main .btn-comprar-produto button:hover{
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+
+}
+
+main .botao-carrinho button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border: none;
+    background-color: white;
+}
+
+main .botao-carrinho button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color:#42075e;
+}
+
+/*==========main finaliza aqui*/
+footer .containe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+footer{
+    background-color: #6c2e6a;
+    box-shadow: 2px 2px 7px 1px #6c2e6a;
+
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .containe .cards-info{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+footer .cards{
+
+    display:flex;
+    flex-direction: column;
+    width: 304px;
+    background-color:#b589b4;
+    border-radius: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 21px;
+}
+
+
+footer .cards ul{
+    list-style: none;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+a{
+    color: #42075e;
+}
+
+.cards a{
+    color: #42075e;
+
+}
+.cards li a p:hover{
+    color: green;
+
+}
+.cards p{
+    color: #42075e;
+}
+
+.cards p a:hover{
+    color:white
+}
+
+.midias-sociais{
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+
+}
+
+.midias-sociais img{
+    height: 30px;
+    width: 30px;
+}
+
+.bandeiras-pagamentos img{
+    height: 200px;
+}
+
+@media (max-width: 980px){
+    header .containe form{
+
+        display: none;
+
+    }
+    main .cards-produtos{
+
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px){
+    main .cards-produtos{
+        width: 200px;
+    }
+    header .containe .header-botões button{
+        display: none;
+
+    }
+
+    header .containe ul{
+        display: none;
+    }
+
+    main .cards-produtos{
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header .containe .header-botões .menu{
+        display:block;
+    }
+
+}
+
+
