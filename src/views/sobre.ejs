@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- CSS only -->
@@ -20,76 +20,68 @@
 </head>
 
 <body>
-    <header>
-        <div class="containe">
-            
-                <h1>Como Você prefere falar com agente?</h1>
-            
-           
-    
-        </div>
-    
-    </header>
+          
+
+    <%- include("./components/header.ejs")  %>
 
 
     <main>
         <div class="containe">
 
-            <Section class="produtos">
-                <div class="cards-produtos">
-
-                    <article>
-                        <div class="duvidas">
-                            <span class="material-symbols-outlined">
-                                mail
-                                </span>
-                                <span>E-mail</span>
-                                <p>Tem alguma dúvida?</p>
-
-                                <p>meajuda@bolosgourmet.com</p>
-                               
-                        </div>
-                        
-                           
-                        </div>
-                         
-                    </article>
-
-                    <div class="cards-produtos">
-
-                        <article>
-                            <div class="duvidas">
-                                <span class="material-symbols-outlined">
-                                    call
-                                    </span>
-
-                                    <span>Telefone</span>
-
-                                    <p>Você pode ligar a qualquer hora</p>
-                                    <p>0800 590 2017</p>
-                                   
-                                </div>
-                                   
-                            </div>
-                            
-                             
-                             
-                        </article>
-                </Section>
-                </div>
-
-
+            <section class="sobre-nos">
                 
+                    <img src="/img/bolos/sobre.jpg" alt="">
+                    <p>A Bolos Goumert é uma marca de bolos que tem os melhores bolos a oferecer. Nossa história começou, recentemente,
+                    começamos em Julho de 2022, como uma forma de renda extra, mas como estava no começo não pensavamos em retorno de imediato,
+                    foi mais como uma coisa que gostavamos de fazer e vender para os vizinhos, em janeiro de 2023.
+                    Foi que nós tomamos conta da situação e vimos uma grande forma de empreender, os resultados não eram grandes,
+                    mas tinhamos certeza que iria da certo, e no ano de 2023 construimos a nossa primeira unidade.
+
+   
+                    </p>
+                <img src="/img/loja/fachada.jpg" alt="loja-fachada">
+                    <div class="paragrafo">
+                        <p>Fachada da entrada da loja</p>
+                    </div>
+
+                    <img src="/img/loja/loja1.jpg" alt="loja-produtos">
+                    <div class="paragrafo">
+                        <p>Frente da loja</p>
+
+                    </div>
+                    <div class="galeria">
+                        <article>
+                            <img src="/img/loja/loja3.jpg" alt="loja-ambiente">
+                            <div class="paragrafo">
+
+                            <img src="/img/loja/loja4.jpg" alt="loja-ambiente">
+                            <div class="paragrafo">
+                            </article>
+
+                            <article>
+                                <img src="/img/loja/loja5.jpg" alt="loja-ambiente">
+                                <div class="paragrafo">
                                 
-                        
+                                <img src="/img/loja/loja6.jpg" alt="loja-ambiente">
+                                <div class="paragrafo">
+                            </article>
+
+                            
+
+                        </div>
+
+            </section>
+        </div>
+        
+                
             
+            
+    
     
     </main>
 
-    <%- include("./components/footer.ejs") %> 
 
-
-
+    <%- include("./components/footer.ejs") %>
 </body>
 
 </html>
