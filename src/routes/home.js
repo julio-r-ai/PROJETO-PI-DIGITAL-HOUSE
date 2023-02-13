@@ -13,6 +13,7 @@ router.get('/sobre', HomeController.sobre);
 router.get('/carrinho', HomeController.carrinho);
 router.get('/login', HomeController.login);
 router.get('/cadastro', HomeController.cadastro);
+router.get('/painelUsuario', HomeController.painelUsuario);
 
 module.exports = router;
 

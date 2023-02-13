@@ -26,6 +26,10 @@ const HomeController = {
     cadastro:(req, res)=>{
         res.render('cadastro')
     },
+
+    painelUsuario:(req, res)=>{
+        res.render('painelUsuario')
+    },
 }
 
 
