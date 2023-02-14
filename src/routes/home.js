@@ -13,7 +13,9 @@ router.get('/sobre', HomeController.sobre);
 router.get('/carrinho', HomeController.carrinho);
 router.get('/login', HomeController.login);
 router.get('/cadastro', HomeController.cadastro);
-router.get('/admin', HomeController.admin);
+
+
+router.post('/admin/login', HomeController.adminLogin);
 
 module.exports = router;
 

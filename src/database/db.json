@@ -1,0 +1,39 @@
+{
+
+    "users": [
+
+        {
+            "id": "ddimvifmvif-dsdasadad-sdsaddasd" ,
+            "name": "Felipe Carvalho",
+            "email": "felipe@mail.com",
+            "password": "123456",
+            "isAdmin": true
+        },
+
+        {
+            "id": "dandadadadamfecimieeodx" ,
+            "name": "Julio Reis",
+            "email": "julio@mail.com",
+            "password": "323234",
+            "isAdmin": false
+        },
+
+        {
+            "id": "ujdnnuin493nmd9dmqwwq" ,
+            "name": "Luiz Silva",
+            "email": "luiz@mail.com",
+            "password": "488474",
+            "isAdmin": false
+        },
+
+        {
+            "id": "jadjejde8jdejmedi8m43nnsdna" ,
+            "name": "João Rodrigues",
+            "email": "joao@mail.com",
+            "password": "124938",
+            "isAdmin": false
+        }  
+
+    ]
+
+}

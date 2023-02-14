@@ -1,3 +1,4 @@
+const database = require('../database/db.json');
 
 const HomeController = {
     home: (req, res) =>{
@@ -27,8 +28,28 @@ const HomeController = {
         res.render('cadastro')
     },
 
-    admin:(req, res)=>{
-        res.render('admin')
+    adminLogin:(req,res)=>{
+        const users = database.users
+        const {email, password, isAdmin} = req.body
+
+        const userFound = users.find((user) => user.email === email);
+        
+        if(!userFound){
+            console.log('e-mail ou senha invalida')
+            return
+        }
+
+        const isValidPassword = userFound.password === password
+
+        if(!isValidPassword){
+            console.log('E-mail ou senha invalido')
+            return
+        }
+
+        if(!userFound.isAdmin){
+            
+        }
+ 
     }
 }
 
