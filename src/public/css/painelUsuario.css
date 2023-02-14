@@ -209,6 +209,20 @@ header .containe .header-botões span:hover{
 }
 
 
+/* painel do usuario */
+
+.btn-group{
+    margin-top: 90px;
+    float: right;
+    z-index: 100;
+    width: 180px;
+    background-color: #a15b9f;
+
+}
+.dropdown-menu{
+    background-color: #a15b9f;
+}
+
  
 
 
