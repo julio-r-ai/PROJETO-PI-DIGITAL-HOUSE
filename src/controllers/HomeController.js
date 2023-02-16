@@ -20,7 +20,7 @@ const HomeController = {
         return res.render('carrinho')
     },
 
-    login:(req, res)=>{
+    showLogin:(req, res)=>{
         res.render('login')
     },
 
@@ -28,29 +28,32 @@ const HomeController = {
         res.render('cadastro')
     },
 
-    adminLogin:(req,res)=>{
+    admin:(req, res)=>{
+        res.render('admin')
+    },
+
+    login:(req, res)=>{
+
         const users = database.users
-        const {email, password, isAdmin} = req.body
-
-        const userFound = users.find((user) => user.email === email);
+        const {email, password} = req.body
         
-        if(!userFound){
-            console.log('e-mail ou senha invalida')
+        const usersFound = users.find((user)=>user.email === email)
+        if(!usersFound){
+            console.log('E-mail ou senha nao existe')
             return
         }
 
-        const isValidPassword = userFound.password === password
-
+        const isValidPassword = usersFound.password === password
         if(!isValidPassword){
-            console.log('E-mail ou senha invalido')
-            return
+            console.log('E-mail ou senha nao existe')
         }
 
-        if(!userFound.isAdmin){
-            
+        if(!usersFound.isAdmin){
+            return res.redirect('/admin')
         }
- 
+
     }
+    
 }
 
 

@@ -15,7 +15,7 @@
             "name": "Julio Reis",
             "email": "julio@mail.com",
             "password": "323234",
-            "isAdmin": false
+            "isAdmin": true
         },
 
         {
