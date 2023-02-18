@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Págiana do administrador</title>
+  <link rel="stylesheet" href="css/telaAdministrador.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+  <script src="../views/js/crud.js" defer></script> 
+  
+</head>
+
+<body>
+
+
+  <header>
+    <div class="containe">
+        <div class="logo">
+            <img src="../public/css/" alt="Logo da empresa">
+            <a href="">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Bolos</a>
+            </li>
+            <li>
+                <a href="">Contato</a>
+            </li>
+            <li>
+                <a href="">Sobre</a>
+            </li>
+        </ul>
+
+        <form id="search">
+            <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
+            <button type="submit">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </form>
+
+        <div class="header-botões">
+            <button title="header-carrinho">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+            <button title="Login">
+                <span class="material-symbols-outlined">
+                    login
+                </span>
+            </button>
+            <button class="menu">
+            <span class="material-symbols-outlined">
+                menu
+                </span>
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+  <div id="form">
+
+
+    <form action="" >
+
+        <div><h2> Adicionar um produto</h2></div>
+
+        <div>
+          <input type="text" name="descricao" placeholder="Digite nome do produto">
+        </div>
+
+        <div>
+          <input type="text" name="produto" placeholder="Adicione preco do produto">
+        </div>
+
+        <div>
+          <input type="file" name="imagem">
+        </div>
+
+        <div>
+          <button type="submit">Inserir</button>
+        </div>
+
+    </form>
+
+  </div>  
+
+  <div id="table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Imagem</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Status</th>
+            <th scope="col">Estoque</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr></tr>
+            <td>1</td>
+            <td><img src="img/bolos/bolo_1.jfif" alt="imagem-bolo"></td>
+            <td>Bolo de chocolate com morango</td>
+            <td>60.00</td>
+            <td>Habilitado</td>
+            <td>Em estoque</td>
+            <td>
+              <button id="botaoAbrir">Abrir</button>
+              <button id="botaoEditar">Editar</button>
+              <button id="botaoDeletar">Deletar</button>
+            </td>
+          </tr>
+
+          <tr></tr>
+            <td>1</td>
+            <td><img src="img/bolos/bolo_1.jfif" alt="imagem-bolo"></td>
+            <td>Bolo de chocolate com morango</td>
+            <td>60.00</td>
+            <td>Habilitado</td>
+            <td>Em estoque</td>
+            <td>
+              <button id="botaoAbrir">Abrir</button>
+              <button id="botaoEditar">Editar</button>
+              <button id="botaoDeletar">Deletar</button>
+            </td>
+          </tr>
+
+          <tr></tr>
+            <td>1</td>
+            <td><img src="img/bolos/bolo_1.jfif" alt="imagem-bolo"></td>
+            <td>Bolo de chocolate com morango</td>
+            <td>60.00</td>
+            <td>Habilitado</td>
+            <td>Em estoque</td>
+            <td>
+              <button id="botaoAbrir">Abrir</button>
+              <button id="botaoEditar">Editar</button>
+              <button id="botaoDeletar">Deletar</button>
+            </td>
+          </tr>
+
+          <tr></tr>
+            <td>1</td>
+            <td><img src="img/bolos/bolo_1.jfif" alt="imagem-bolo"></td>
+            <td>Bolo de chocolate com morango</td>
+            <td>60.00</td>
+            <td>Habilitado</td>
+            <td>Em estoque</td>
+            <td>
+              <button id="botaoAbrir">Abrir</button>
+              <button id="botaoEditar">Editar</button>
+              <button id="botaoDeletar">Deletar</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+
+
+  
+
+</body>
+</html>
