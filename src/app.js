@@ -2,6 +2,7 @@ const express = require('express');
 const methodOverride = require('method-override')
 
 const path = require('path');
+const { home } = require('./controllers/HomeController');
 const homeRouter = require('./routes/home')
 
 const app = express();
