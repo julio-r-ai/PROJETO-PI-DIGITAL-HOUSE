@@ -36,6 +36,10 @@ const HomeController = {
         res.render('telaAdministrador')
     },
 
+    descricaoProduto:(req, res)=>{
+        res.render('descricaoProduto')
+    },
+
     loginAdmin:(req,res)=>{ // Validando usuario admin ou usuario normal
         const users = database.users
         const {email, password} = req.body

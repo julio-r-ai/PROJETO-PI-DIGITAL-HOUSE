@@ -14,6 +14,7 @@ router.get('/carrinho', HomeController.carrinho);
 router.get('/login', HomeController.login);
 router.get('/cadastro', HomeController.cadastro);
 router.get('/painelUsuario', HomeController.painelUsuario);
+router.get('/descricaoProduto', HomeController.descricaoProduto)
 router.get('/telaAdministrador', HomeController.telaAdministrador)
 
 router.post('/login', HomeController.loginAdmin);
