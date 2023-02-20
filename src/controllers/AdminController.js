@@ -6,6 +6,11 @@ const AdminController = {
         res.render('login')
     },
 
+    showAdmin:(req, res)=>{
+        res.render('admin/cadastro')
+    },
+
+
     login:(req,res)=>{ // Validando usuario admin ou usuario normal
         const users = database.users
         const {email, password} = req.body
