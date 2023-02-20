@@ -4,8 +4,6 @@ const AdminController = require('../controllers/AdminController');
 const router = express.Router();
 
 router.get('/admin/login', AdminController.showLogin);
-router.get('/admin', AdminController.showAdmin);
-
-router.post('/admin/login', AdminController.login);
+router.post('/admin/cadastro', AdminController.showCadastro);
 
 module.exports = router;

@@ -56,81 +56,22 @@ main .containe{
 
 }
 
-.form-cadastro{
+.form-login{
     background-color: #c0a0bf;
     border-radius: 12px;
     display: flex;
     color: #7c0078;
     flex-direction: column;
     margin-top: 220px;
-    align-items: flex-start;
-    width: 502px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
     padding-bottom: 70px;
     margin-bottom: 365px;
-    text-align: center;
-}
-.formulario-cadastro{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-
-}
-.formulario-cadastro label{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    border: 2px solid white;
 }
 
-.formulario-cadastro{
-    display: flex;
-    align-self: center;
-}
-
-.termo-uso{
-    display: flex;
-    padding-left: 100px;
-    padding-top: 20px;
-    align-items: center;
-    font-size: 18px;
-    gap: 10px;
-}
-.termo-uso a{
-    text-decoration: none;
-}
-
-.cadastro-botoes{
-    display: flex;
-    padding-left: 200px;
-    margin-top: 50px;
-}
-
-.cadastro-botoes button{
-    width: 110px;
-    height: 50px;
-    border: none;
-    border-radius: 12px;
-    background-color:white;
-    color:#6c2e6a;
-    font-size: 20px;
-    font-weight:bolder;
-    transition: .6s all;
-}
-.cadastro-botoes button:hover{
-    color: white;
-    background-color: #6c2e6a;
-    transition: .6s all;
-
-
-}
-
-.form-cadastro input{
-    display: flex;
-    justify-content: flex-start;
-}
-
-
-.form-cadastro:hover{
+.form-login:hover{
     border: 2px solid #7c0078;
 }
 .login-email-senha{
@@ -168,22 +109,22 @@ footer{
 }
 
 input{
+    width: 249px;
     border: none;
     border-radius: 3px;
 }
-.cadastro-botoes button{
+.login-botoes button{
     color:#6c2e6a;
     margin: 10px;
     width: 100px;
-    border: none;
-    border: 2px solid  #6c2e6a;
-    border-radius: 8px;
+    border: 1px solid #6c2e6a;
+    border-radius: 4px;
     font-weight: bolder;
     transition: .6s all;
 
 }
-.cadastro-botoes button:hover{
-    border: 2px solid white;
+.login-botoes button:hover{
+    border: 1px solid white;
     background-color: #6c2e6a;
     color: white;
     transition: .6s all;
@@ -202,14 +143,6 @@ input{
 
 @media (max-width: 850px){
     footer .containe{
-        justify-content: center;
-    }
-}
-
-
-@media (max-width: 768px){
-    .form-cadastro{
-        width: 400px;
         justify-content: center;
     }
 }

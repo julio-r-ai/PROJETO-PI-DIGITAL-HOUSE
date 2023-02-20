@@ -3,10 +3,10 @@ const database = require('../database/db.json');
 const AdminController = {
 
     showLogin:(req, res)=>{
-        res.render('login')
+        res.render('admin/login')
     },
 
-    showAdmin:(req, res)=>{
+    showCadastro:(req, res)=>{
         res.render('admin/cadastro')
     },
 
