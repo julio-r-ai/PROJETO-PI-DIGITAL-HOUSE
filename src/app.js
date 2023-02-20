@@ -1,8 +1,11 @@
 const express = require('express');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 
 const path = require('path');
-const homeRouter = require('./routes/home')
+const homeRouter = require('./routes/homeRouter');
+
+
+const adminRouter = require('./routes/adminRouter');
 
 const app = express();
 const port = 3000;
@@ -16,6 +19,7 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.resolve("src", "public")));
 
 app.use(homeRouter);
+app.use(adminRouter);
 
 app.get('/', (req, res) =>{
     res.render("home.ejs");
