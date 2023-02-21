@@ -5,7 +5,8 @@ const path = require('path');
 const { home } = require('./controllers/HomeController');
 const homeRouter = require('./routes/homeRouter')
 const UsersRouter = require('./routes/usersRouter')
-const AdminRouter = require('./routes/adminRouter');
+const AdminRouter = require('./routes/adminRouter.js')
+
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(homeRouter);
 app.use(UsersRouter);
 app.use(AdminRouter);
+
 
 
 

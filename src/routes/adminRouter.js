@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get('/admin/auth/login', AdminController.showLogin);
 router.get('/admin/cadastro', AdminController.showCadastro);
-
-router.post('/admin/auth/login', AdminController.login);
+router.get('/admin', AdminController.showAdmin);
 
 module.exports = router;
