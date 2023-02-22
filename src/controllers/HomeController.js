@@ -21,11 +21,11 @@ const HomeController = {
     },
 
     login:(req, res)=>{
-        res.render('login')
+        res.render('/login')
     },
 
     cadastro:(req, res)=>{
-        res.render('cadastro')
+        res.render('/cadastro')
     },
 
     painelUsuario:(req, res)=>{
@@ -36,9 +36,6 @@ const HomeController = {
         res.render('telaAdministrador')
     },
 
-    descricaoProduto:(req, res)=>{
-        res.render('descricaoProduto')
-    }
 } 
 
 
