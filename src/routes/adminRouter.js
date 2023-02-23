@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/admin/login', AdminController.showLogin);
 router.get('/admin/cadastro', AdminController.showCadastro);
-router.get('/admin', AdminController.showAdmin);
+router.get('/admin/home', AdminController.showHome)
 
 router.post('/admin/login', AdminController.login)
 

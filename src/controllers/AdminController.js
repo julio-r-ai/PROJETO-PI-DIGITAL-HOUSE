@@ -17,8 +17,9 @@ const AdminController = {
     showLogin:(req, res)=>{
         res.render('admin/login')
     },
-    showAdmin:(req, res)=>{
-        res.render('admin/telaAdministrador')
+    showHome: (req,res)=>{
+        res.render('admin/home')
+
     },
     login: (req, res)=>{
         const users = database.users
