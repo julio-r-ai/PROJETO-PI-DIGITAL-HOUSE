@@ -17,6 +17,10 @@ const AdminController = {
     showLogin:(req, res)=>{
         res.render('admin/login')
     },
+    showProdutos: (req, res)=>{
+        res.render('admin/produtos')
+
+    },
     showHome: (req,res)=>{
         res.render('admin/home')
 
