@@ -8,7 +8,6 @@ const AdminController = {
     showCadastro:(req, res)=>{
         res.render('admin/cadastro')
     },
-    
 
 
     showCadastro:(req, res)=>{
