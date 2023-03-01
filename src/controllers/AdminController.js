@@ -2,24 +2,24 @@ const database = require('../database/db.json');
 
 const AdminController = {
 
-    showLogin:(req, res)=>{
-        res.render('admin/login-admin')
-    },
-    showCadastro:(req, res)=>{
-        res.render('admin/cadastro')
+    showCadastroProduto:(req, res)=>{
+        res.render('admin/cadastroProduto')
     },
 
-
-    showCadastro:(req, res)=>{
-        res.render('admin/cadastro')
-    },
     showLogin:(req, res)=>{
         res.render('admin/login')
     },
+
+    showProdutos: (req, res)=>{
+        res.render('admin/produtos')
+
+    },
+
     showHome: (req,res)=>{
         res.render('admin/home')
 
     },
+
     login: (req, res)=>{
         const users = database.users
         const {email, password} = req.body
@@ -43,10 +43,14 @@ const AdminController = {
             return res.redirect('/')
         }
         return res.redirect('/admin/home')
-    }
+
+    },
 
 
-    };
+
+
+
+};
 
     module.exports = AdminController;
 
