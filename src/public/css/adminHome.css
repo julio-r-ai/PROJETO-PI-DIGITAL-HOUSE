@@ -11,7 +11,8 @@
 }
 
 body{
-    background-color: #dfe9f5;
+    background-color: #a15b9f;
+
 }
 img{
     width: 50px;
@@ -98,9 +99,6 @@ h1{
     background-color: #a15b9f;
 }
 
-body{
-    background-color: #DFE9F5;
-}
 body a {
     text-decoration: none;
     color: white;

@@ -12,6 +12,9 @@ router.get('/sobre', HomeController.sobre);
 router.get('/carrinho', HomeController.carrinho);
 router.get('/painelUsuario', HomeController.painelUsuario);
 
+//listagem produtos
+router.get('/listagemProdutos', HomeController.listaProduto);
+
 
 module.exports = router;
 

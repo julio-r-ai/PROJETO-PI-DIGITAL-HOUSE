@@ -8,10 +8,7 @@ router.get('/admin/produtos', AdminController.showProdutos);
 router.get('/admin/cadastrarProduto', AdminController.showCadastroProduto);
 
 router.post('/admin/login', AdminController.login)
-
-
-
-
+router.post('/admin/produtos/cadastro', AdminController.cadastroProduto);
 
 
 module.exports = router;        

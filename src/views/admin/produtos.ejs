@@ -32,52 +32,30 @@
             <th scope="col">ID</th>
             <th scope="col">Imagem</th>
             <th scope="col">Nome</th>
-            <th scope="col">Preco</th>
+            <th scope="col">Preço</th>
             <th scope="col">Status</th>
             <th scope="col">Estoque</th>
-            <th scope="col">Acoes</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td><img src="/src/public/img/bolos/bolo_4.jfif" alt=""></td>
-            <td>Bolo de chocolate</td>
-            <td>R$ 15.00</td>
-            <td>Abilitado</td>
-            <td>Em estoque</td>
-            <td>
-                <button>Abrir</button>
-                <button>Editar</button>
-                <button>Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td><img src="/src/public/img/bolos/bolo_4.jfif" alt=""></td>
-            <td>Bolo de chocolate</td>
-            <td>R$ 15.00</td>
-            <td>Abilitado</td>
-            <td>Em estoque</td>
-            <td>
-                <button>Abrir</button>
-                <button>Editar</button>
-                <button>Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td><img src="/src/public/img/bolos/bolo_4.jfif" alt=""></td>
-            <td>Bolo de chocolate</td>
-            <td>R$ 15.00</td>
-            <td>Abilitado</td>
-            <td>Em estoque</td>
-            <td>
-                <button>Abrir</button>
-                <button>Editar</button>
-                <button>Excluir</button>
-            </td>
-          </tr>
+          
+          <% products.forEach(product => { %>
+            <tr>
+              <th scope="row">1</th>
+              <td><img src="<%= product.image%>" alt=""></td>
+              <td><%= product.name%></td>
+              <td><%= product.price%></td>
+              <td><%= product.active ? "habilitado":"Desabilitado" %></td>
+              <td><%= product.stock ? "Em stock":"Sem stock" %></td>
+              <td>
+                  <button>Abrir</button>
+                  <button>Editar</button>
+                  <button>Excluir</button>
+              </td>
+            </tr>
+          <%});%>
+
         </tbody>
       </table>
    </div>

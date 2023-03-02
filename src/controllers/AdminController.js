@@ -1,4 +1,5 @@
 const database = require('../database/db.json');
+const {randomUUID} = require('crypto')
 
 const AdminController = {
 
@@ -11,14 +12,16 @@ const AdminController = {
     },
 
     showProdutos: (req, res)=>{
-        res.render('admin/produtos')
-
+        const products = database.products;
+        res.render('admin/produtos', {products})
     },
 
     showHome: (req,res)=>{
         res.render('admin/home')
 
     },
+
+
 
     login: (req, res)=>{
         const users = database.users
@@ -46,7 +49,23 @@ const AdminController = {
 
     },
 
+    cadastroProduto: (req, res)=>{
 
+        const newProduct = {
+            id: randomUUID(),
+            name: req.body.name,
+            price:req.body.price,
+            image:req.body.image,
+            active:req.body.active,
+            stock:req.body.stock,
+            description:req.body.description
+        }
+         
+        database.products.push(newProduct)
+        
+        res.redirect('/admin/produtos')
+        
+    }
 
 
 
