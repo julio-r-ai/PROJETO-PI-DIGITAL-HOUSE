@@ -23,23 +23,25 @@
 <body>
     
     <%- include("./components/header.ejs") %> 
+    
 
     <main>
         <div class="containe">
-               
-            <Section class="produtos">
+            
+            <% products.forEach(product => { %>
+                        
                 <div class="cards-produtos">
                     <article>
                         <div>
-                            <img src="/assets/img/bolos/bolo_1.jfif" alt="Bolo">
+                            <img src="<%= product.image %>" alt="Bolo">
                        </div>
 
                        <div class="titulo-bolo">
-                              <span>Bolo de morango</span>
+                              <span><%= product.name %></span>
                         </div>
 
                         <div class="preço">
-                            <p>R$ 80,00</p>
+                            <p>R$ <%= product.price %></p>
                         </div>
 
                         <div class="botões-produtos">
@@ -55,13 +57,26 @@
                             </div>
                         </div>
                     </article>
-                 </div>         
+                </div>
+                    
+                <%});%>
+    
+
+
+            </section>    
+                       
         </div>
+
+                           
+          
 
 
     </main>
 
+
+
     <%- include("./components/footer.ejs") %> 
+
 
 
 </body>

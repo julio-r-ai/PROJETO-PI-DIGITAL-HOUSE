@@ -40,10 +40,9 @@ const HomeController = {
     //Listagem de produtos
 
     listaProduto: (req,res)=>{
-        res.render('listagemProdutos')
+        const products = database.products;
+        res.render('listagemProdutos', {products})
     }
-
-
 
 } 
 
