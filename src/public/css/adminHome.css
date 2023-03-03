@@ -11,6 +11,7 @@
 }
 
 body{
+
     background-color: #dfe9f5;
 
 }
@@ -93,4 +94,31 @@ nav:hover{
 
 h1{
     font-size: 100px;
+}
+
+.box-tabela{
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 30px;
+    background-color: #a15b9f;
+}
+
+body a {
+    text-decoration: none;
+    color: white;
+}
+body a:hover {
+    color: white;
+}
+body li{
+    list-style: none;
+}
+
+.formulario{
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    background-color:  #a15b9f;
+    padding: 15px;
+    border-radius: 8px;
 }

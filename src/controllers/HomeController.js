@@ -36,6 +36,15 @@ const HomeController = {
         res.render('telaAdministrador')
     },
 
+
+    //Listagem de produtos
+
+    listaProduto: (req,res)=>{
+        res.render('listagemProdutos')
+    }
+
+
+
 } 
 
 
