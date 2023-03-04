@@ -8,7 +8,7 @@
         },
         {
             "id": "2cd9b5db-386b-4ed5-a77c-0aa612312714ac",
-            "name": "Felipe Carvalho",
+            "name": "Felipe De Almeida Carvalho ",
             "email": "felipe@gmail.com",
             "password": "123456",
             "isAdmin": true
@@ -50,7 +50,17 @@
             "image": "https://s2.glbimg.com/_9Gs4YecKE8AA5E7WEP9tGFXwxI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/9/Z/gh0wHHQ7iE4SeEPcATQA/bolo-de-chocolate-fofinho-receita-2.jpg",
             "active": false,
             "stock": false
-        }
-       
+        },
+
+        {
+        "id": "00002",
+        "name": "Bolo de chocolate",
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "price": "R$ 50,00",
+        "image": "https://s2.glbimg.com/_9Gs4YecKE8AA5E7WEP9tGFXwxI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/9/Z/gh0wHHQ7iE4SeEPcATQA/bolo-de-chocolate-fofinho-receita-2.jpg",
+        "active": false,
+        "stock": false
+
+    }
     ]
 }

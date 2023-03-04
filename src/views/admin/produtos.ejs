@@ -59,9 +59,11 @@
               <td><%= product.active ? "habilitado":"Desabilitado" %></td>
               <td><%= product.stock ? "Em stock":"Sem stock" %></td>
               <td>
-                  <button>Abrir</button>
-                  <button>Editar</button>
-                  <button>Excluir</button>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary" type="button">Abrir</button>
+                  <button type="button" class="btn btn-warning">Editar</button>
+                  <button type="button" class="btn btn-danger">Excluir</button>
+                </div>
               </td>
             </tr>
           <%});%>
