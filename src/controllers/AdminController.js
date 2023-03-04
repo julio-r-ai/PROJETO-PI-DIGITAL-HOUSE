@@ -13,15 +13,17 @@ const AdminController = {
 
     showProdutos: (req, res)=>{
         const products = database.products;
+       
         res.render('admin/produtos', {products})
     },
 
     showHome: (req,res)=>{
         res.render('admin/home')
-
     },
 
-
+    showEditarProduto:(req,res)=>{
+        res.render('admin/editar')
+    },
 
     login: (req, res)=>{
         const users = database.users
@@ -65,9 +67,11 @@ const AdminController = {
         
         res.redirect('/admin/produtos')
         
+    },
+
+    updateProduto:(req,res)=>{
+        res.render('admin/editar')
     }
-
-
 
 };
 
