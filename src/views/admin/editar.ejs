@@ -15,7 +15,7 @@
         <%- include('./components/sideBar.ejs') %>
         <div class="form">
     
-            <form class="formulario" action="/admin/product/id:/editar" method="post">
+            <form class="formulario" action="/admin/produtos<%= product.id %>/editar?_method=PUT" method="POST">
     
                 <h2>Editar produto</h2>
                 
@@ -52,7 +52,7 @@
                     <label for="description">Descrição do produto</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
                   </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Editar</button>
             </form>
     
     

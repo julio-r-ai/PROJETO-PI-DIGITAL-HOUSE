@@ -14,7 +14,8 @@ const AdminController = {
     showProdutos: (req, res)=>{
         const products = database.products;
        
-        res.render('admin/produtos', {products})
+        res.render('admin/produtos', {products});
+
     },
 
     showHome: (req,res)=>{
@@ -22,7 +23,11 @@ const AdminController = {
     },
 
     showEditarProduto:(req,res)=>{
-        res.render('admin/editar')
+
+        const {id} = req.params
+        const productFound = database.products.find(product => product.id === id)
+        return res.render('admin/editar', { product: productFound});
+
     },
 
     login: (req, res)=>{
@@ -52,15 +57,16 @@ const AdminController = {
     },
 
     cadastroProduto: (req, res)=>{
+        const {name, price, image, active, stock, description} = req.body
 
-        const newProduct = {
+        const editedProduct = {
             id: randomUUID(),
-            name: req.body.name,
-            price:req.body.price,
-            image:req.body.image,
-            active:req.body.active,
-            stock:req.body.stock,
-            description:req.body.description
+            name,
+            price,
+            image,
+            active,
+            stock,
+            description
         }
          
         database.products.push(newProduct)
@@ -70,7 +76,12 @@ const AdminController = {
     },
 
     updateProduto:(req,res)=>{
-        res.render('admin/editar')
+        const {name, price, image, active, stock, description} = req.body
+        const {id} = req.params
+
+        const indexProduct = database.products.findIndex(product => product.id === id)
+        database.products.splice(indexProduct, 1)
+
     }
 
 };

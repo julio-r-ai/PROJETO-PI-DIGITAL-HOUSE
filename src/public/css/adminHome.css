@@ -122,9 +122,18 @@ body li{
     padding: 15px;
     border-radius: 8px;
 }
+
+
 form textarea{
     margin-top: 20px;
     margin-bottom: 20px;
     resize: none;
     height: 100px;
+}
+
+
+.botoes-produto{
+    display: flex;
+    width: 100px;
+    gap: 5px;
 }

@@ -48,6 +48,7 @@
             <th scope="col">Ações</th>
           </tr>
         </thead>
+
         <tbody>
           
           <% products.forEach(product => { %>
@@ -59,11 +60,12 @@
               <td><%= product.active ? "habilitado":"Desabilitado" %></td>
               <td><%= product.stock ? "Em stock":"Sem stock" %></td>
               <td>
-                <div class="d-grid gap-2 d-md-block">
-                  <button  class="btn btn-primary" type="button">Abrir</button>
-                  <a href="/admin/product/<%= product.id %>/editar" style="width: 80px;" type="button" class="btn btn-warning">Editar</a>
-                  <button type="button" class="btn btn-danger">Excluir</button>
-                </div>
+                <div class="botoes-produto">
+                <a href='/admin/produtos'><button type="button" class="btn btn-primary">Abrir</button></a>
+                <a href="/admin/produtos/<%= product.id %>/editar" type="button" class="btn btn-warning">
+                  Editar</a>
+                <button type="button" class="btn btn-danger">Excluir</button>
+              </div>
               </td>
             </tr>
           <%});%>
