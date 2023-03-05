@@ -11,6 +11,7 @@ router.get('/contato', HomeController.contato);
 router.get('/sobre', HomeController.sobre);
 router.get('/carrinho', HomeController.carrinho);
 router.get('/painelUsuario', HomeController.painelUsuario);
+router.get('/descricaoProduto', HomeController.descricaoProduto);
 
 //listagem produtos
 router.get('/listagemProdutos', HomeController.listaProduto);

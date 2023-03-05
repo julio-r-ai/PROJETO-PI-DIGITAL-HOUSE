@@ -11,6 +11,7 @@ router.get('/admin/produtos/:id/editar', AdminController.showEditarProduto);
 router.post('/admin/login', AdminController.login)
 router.post('/admin/produtos/cadastro', AdminController.cadastroProduto);
 router.put('/admin/produtos/:id/editar', AdminController.updateProduto);
+router.delete('/admin/produtos/:id/deletar', AdminController.deleteProduto);
 
 
 module.exports = router;        

@@ -62,9 +62,12 @@
               <td>
                 <div class="botoes-produto">
                 <a href='/admin/produtos'><button type="button" class="btn btn-primary">Abrir</button></a>
-                <a href="/admin/produtos/<%= product.id %>/editar" type="button" class="btn btn-warning">
-                  Editar</a>
-                <button type="button" class="btn btn-danger">Excluir</button>
+                <a href="/admin/produtos/<%= product.id %>/editar" type="button" class="btn btn-warning">Editar</a>
+                
+                <form action="/admin/produtos/<%= product.id %>/deletar?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+                
               </div>
               </td>
             </tr>

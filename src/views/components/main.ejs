@@ -34,16 +34,18 @@
 
         </section>
         <Section class="produtos">
+           <% products.forEach(product => { %>
+                
             <div class="cards-produtos">
                 <article>
                     <div>
-                        <img src="/img/bolos/bolo_1.jfif" alt="Bolo">
+                        <img src="<%= product.image %>" alt="Bolo">
                     </div>
                     <div class="titulo-bolo">
-                        <span>Bolo de morango</span>
+                        <span> <%= product.name %> </span>
                     </div>
                     <div class="preço">
-                        <p>R$ 80,00</p>
+                        <p><%= product.price %></p>
                         </div>
                         <div class="botões-produtos">
                             <div class="btn-comprar-produto">
@@ -57,89 +59,10 @@
                                 </span></button>
                     </div>
                 </article>
-                </div>
-
-                <div class="cards-produtos">
-                    <article>
-                        <div>
-                            <img src="/img/bolos/bolo_1.jfif" alt="Bolo">
-                        </div>
-                        <div class="titulo-bolo">
-                            <span>Bolo de morango</span>
-                        </div>
-                        <div class="preço">
-                            <p>R$ 80,00</p>
-                            </div>
-                            <div class="botões-produtos">
-                                <div class="btn-comprar-produto">
-                                    <button id="comprar-produto">$</button>
-                                </div>
-                                    <div class="botao-carrinho">
-                                    <button id="adicionar-carrinho"><span class="material-symbols-outlined">
-                                        <div>
-
-                                    shopping_cart
-                                    </span></button>
-                        </div>
-                    </article>
-                    </div>
-
-                    <div class="cards-produtos">
-                        <article>
-                            <div>
-                                <img src="/img/bolos/bolo_1.jfif" alt="Bolo">
-                            </div>
-                            <div class="titulo-bolo">
-                                <span>Bolo de morango</span>
-                            </div>
-                            <div class="preço">
-                                <p>R$ 80,00</p>
-                                </div>
-                                <div class="botões-produtos">
-                                    <div class="btn-comprar-produto">
-                                        <button id="comprar-produto">$</button>
-                                    </div>
-                                        <div class="botao-carrinho">
-                                        <button id="adicionar-carrinho"><span class="material-symbols-outlined">
-                                            <div>
-
-                                        shopping_cart
-                                        </span></button>
-                            </div>
-                        </article>
-                        </div>
-
-                        <div class="cards-produtos">
-                            <article>
-                                
-                                    <img src="/img/bolos/bolo_1.jfif" alt="Bolo">
-                
-                                <div class="titulo-bolo">
-                                    <span>Bolo de morango</span>
-                                </div>
-                                <div class="preço">
-                                    <p>R$ 80,00</p>
-                                    </div>
-                                    <div class="botões-produtos">
-                                        <div class="btn-comprar-produto">
-                                            <button id="comprar-produto">$</button>
-                                        </div>
-                                            <div class="botao-carrinho">
-                                            <button id="adicionar-carrinho"><span class="material-symbols-outlined">
-                                                <div>
-    
-                                            shopping_cart
-                                            </span></button>
-
-                                            
-                                </div>
-                            </div>
-                            </article>
-                            </div>
-                            
-                       
+            </div>
 
 
+           <% }); %>
         </Section>
 
     </div>
