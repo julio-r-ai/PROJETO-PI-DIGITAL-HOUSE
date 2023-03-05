@@ -59,7 +59,9 @@ const AdminController = {
     cadastroProduto: (req, res)=>{
         const {name, price, image, active, stock, description} = req.body
 
-        const editedProduct = {
+        const newProduct = {
+
+
             id: randomUUID(),
             name,
             price,
@@ -81,6 +83,18 @@ const AdminController = {
 
         const indexProduct = database.products.findIndex(product => product.id === id)
         database.products.splice(indexProduct, 1)
+
+        const editedProduct = {
+            id,
+            name,
+            price,
+            image,
+            active,
+            stock,
+            description
+        }
+
+        database.products.push(editedProduct)
 
     }
 

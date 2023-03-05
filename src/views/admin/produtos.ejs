@@ -54,7 +54,7 @@
           <% products.forEach(product => { %>
             <tr>
               <th scope="row"> 1 </th>
-              <td><img src="<%= product.image%>" alt=""></td>
+              <td><img class="thum" src="<%= product.image%>" alt=""></td>
               <td><%= product.name%></td>
               <td>R$<%= product.price%></td>
               <td><%= product.active ? "habilitado":"Desabilitado" %></td>
@@ -64,11 +64,11 @@
                 <a href='/admin/produtos'><button type="button" class="btn btn-primary">Abrir</button></a>
                 <a href="/admin/produtos/<%= product.id %>/editar" type="button" class="btn btn-warning">
                   Editar</a>
-                <button type="button" class="btn btn-danger">Excluir</button>
+                <button type="submit" class="btn btn-danger">Excluir</button>
               </div>
               </td>
             </tr>
-          <%});%>
+          <% });%>
 
         </tbody>
       </table>
