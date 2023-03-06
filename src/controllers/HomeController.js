@@ -2,7 +2,9 @@ const database = require('../database/db.json')
 
 const HomeController = {
     home: (req, res) =>{
-        return res.render('home')
+        const products = database.products;
+
+        return res.render('home', {products})
     },
 
     bolos: (req, res) =>{
@@ -34,6 +36,16 @@ const HomeController = {
 
     telaAdministrador:(req, res)=>{
         res.render('telaAdministrador')
+    },
+
+    descricaoProduto:(req,res)=>{
+
+        const products = database.products;
+        res.render('descricaoProduto', {products})
+    },
+
+    inseirCartao: (req, res)=>{
+        res.render('inserirCartao')
     },
 
 

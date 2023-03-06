@@ -14,109 +14,32 @@
     <title>descrição produto</title>
 </head>
 <body>
-    <header>
-        <div class="containe">
-            <div class="logo">
-                <img src="/img/logo/logo.png" alt="Logo da empresa">
-                <a href="">
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Bolos</a>
-                </li>
-                <li>
-                    <a href="">Contato</a>
-                </li>
-                <li>
-                    <a href="">Sobre</a>
-                </li>
-            </ul>
-
-            <form id="search">
-                <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
-                <button type="submit">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
-                </button>
-            </form>
-
-            <div class="header-botões">
-                <button title="header-carrinho">
-                    <span class="material-symbols-outlined">
-                        shopping_cart
-                    </span>
-                </button>
-
-                <button title="Login">
-                    <span class="material-symbols-outlined">
-                        login
-                    </span>
-                </button>
-                <button class="menu">
-                <span class="material-symbols-outlined">
-                    menu
-                    </span>
-                </button>
-
-
-            </div>
-
-        </div>
-
-    </header>
+    <%- include("./components/header.ejs")%>
+        
 
 
     <main>
         <div class="containe">
 
         <section class="descrição-produto">
+
+
+        <% products.forEach(product => { %>
         <article class="produto">
-            <img src="/img/bolos/bolo_2.jfif" alt="Foto Bolo">
-
-            <form class="formulario">
-                <h6>Escolha o recheio</h6>
-                <INPUT TYPE="radio" NAME="sabor" VALUE="cobert">
-                <label for="">Morango</label>
-                <br>
-                <INPUT TYPE="radio" NAME="sabor" VALUE="cobert">
-                <label for="">Chocolate</label>
-                <br>
-                <INPUT TYPE="radio" NAME="sabor" VALUE="cobert">
-                <label for="">Prestigio</label>
-            </form>
-
-           
+            <img src="<%= product.image  %>" alt="Foto Bolo">
         </article>
-
-        
-
         <article class="descrição-bolo">
-            <h2>Bolo de chocolate com morango</h2>
+            <h2><%= product.name %></h2>
             <div id="paragrafo">
-                <p>Bolo de morango com cobertura de chocolate, recheio trufado</p>
-                <p>Peso: 2kg  serve no máximo 10 pessoas</p>
-                <h4>R$ 80,00</h4>
+                <span><%= product.description %></span>
+                <h4>product.price</h4>
             </div>
-            
-           
-            <div class="botões">
-                <div class="btn-comprar">
-                <button id="comprar-produto">$</button>
-            </div>
-            
-            <div class="adicionar-carrinho">
-                <button id="carrinho-produto"><span class="material-symbols-outlined">
-                shopping_cart
-                </span></button>
+            <div class="botoes">
+                <a href="/inserirCartao"><button>Comprar</button></a>
             </div>
             </div>
 
-               
+        <% }); %>
 
 
         </section>

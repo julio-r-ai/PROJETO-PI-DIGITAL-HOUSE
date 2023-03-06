@@ -248,6 +248,14 @@ main{
     margin-top: 20px;
 }
 
+.continuar-comprando a{
+    text-decoration: none;
+    color: #42075e;
+}
+.continuar-comprando a:hover{
+    color: white;
+}
+
 .continuar-pedido{
     margin-top: 80px;
     display: flex;
@@ -276,6 +284,8 @@ main{
     text-transform: uppercase;
     color: white;
 }
+
+
 
 
 

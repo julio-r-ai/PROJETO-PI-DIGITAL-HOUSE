@@ -230,48 +230,36 @@ main{
     justify-content: center;
     gap:50px
 }
-
-.botões button{
+.botoes{
+    margin-top: 50px;
+}
+.botoes button{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-    border-radius: 200px;
-    width: 50px;
+    border: solid 2px;
+    border-radius: 10px;
+    width: 100px;
     height: 50px;
-}
-
-.btn-comprar button{
-    border-radius: 200px;
-    width: 50px;
-    font-size: 15px;
-
-}
-.btn-comprar button:hover{
-    border: 2px solid white;
-    background-color: green;
+    transition: 4s all;
+    background-color:#42075e;
     color: white;
-    font-size: 20px;
+    transition: 0.6s all;
+}
+.botoes button:hover{
+    border: solid white  2px;
+    background-color:#6c2e6a;
+    transition: 0.6s all;
+
+
 
 }
-.adicionar-carrinho button{
-    border-radius: 200px;
-    width: 50px;
-    color: #42075e;
-    font-size: 15px;
-}
-.adicionar-carrinho button:hover{
-    background-color: #42075e;
-    border: 2px solid white;
-    color: white;
-    border-radius: 200px;
-    font-size: 20px;
+.botoes a{
+    text-decoration: none;
 }
 
-.formulario{
-    color: white;
-    font-family: 'Roboto', sans-serif;;
-}
+
+
 
 
 

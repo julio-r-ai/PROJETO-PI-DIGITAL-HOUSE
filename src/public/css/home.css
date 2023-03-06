@@ -186,6 +186,7 @@ header .containe .header-botões span:hover{
      
 }
 
+
 .menu button{
     display: flex;
     align-items: center;
@@ -295,66 +296,35 @@ main .cards-produtos .botões-produtos{
     justify-content: center;
     gap: 20px;
 }
-
-main .botões-produtos button{
-    height: 40px;
-    width: 40px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #42075e;
-    
-}
- main #comprar-produtos button{
-    background-color: white;
-    border: 2px solid white;
-    color: #42075e;
-
-
+.botões-produtos{
+    margin-top: 50px;
 }
 
-
-main .btn-comprar-produto button{
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50px;
+.botões-produtos button{
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-decoration: none;
     border: none;
-}
-main .btn-comprar-produto button:hover{
-    width: 50px;
     height: 50px;
-    color: white;
-    background-color: green;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    border: 2px solid white;
-
-}
-
-main .botao-carrinho button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
-    border: none;
-    background-color: white;
-}
-
-main .botao-carrinho button:hover{
-    border: 2px solid white;
+    width: 180px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #42075e;
     color: white;
-    background-color:#42075e;
+    transition: .4s all;
 }
+.botões-produtos button:hover{
+    background-color: #6c2e6a;
+    transition: .4s all;
+
+}
+
+main .botões-produtos a {
+    text-decoration: none;
+}
+
+
 
 /*==========main finaliza aqui*/
 footer .containe{
@@ -389,6 +359,7 @@ footer .containe .cards-info{
 footer .cards{
 
     display:flex;
+    height: 200px;
     flex-direction: column;
     width: 304px;
     background-color:#b589b4;
@@ -443,6 +414,9 @@ a{
 .bandeiras-pagamentos img{
     height: 200px;
 }
+
+
+
 
 @media (max-width: 980px){
     header .containe form{

@@ -57,10 +57,11 @@ const AdminController = {
     },
 
     cadastroProduto: (req, res)=>{
+
+        console.log(req.file);
         const {name, price, image, active, stock, description} = req.body
 
         const newProduct = {
-
 
             id: randomUUID(),
             name,
@@ -81,8 +82,32 @@ const AdminController = {
         const {name, price, image, active, stock, description} = req.body
         const {id} = req.params
 
-        const indexProduct = database.products.findIndex(product => product.id === id)
+        const   indexProduct = database.products.findIndex(product => product.id === id)
+
+        const editedProduct = {
+            id,
+            name,
+            price,
+            image,
+            active,
+            stock,
+            description
+        }
+
+        database.products.splice(indexProduct, 1, editedProduct);
+
+        //database.products.push(editedProduct);
+        return res.redirect('/admin/produtos')
+
+    },
+
+    deleteProduto:(req, res)=>{
+        const {id} = req.params
+
+        const   indexProduct = database.products.findIndex(product => product.id === id)
+        
         database.products.splice(indexProduct, 1)
+
 
         const editedProduct = {
             id,
@@ -96,9 +121,26 @@ const AdminController = {
 
         database.products.push(editedProduct)
 
+        return res.redirect('/admin/produtos')
+
+
+
+    },
+
+    deleteProduto:(req, res)=>{
+        const {id} = req.params
+
+        const   indexProduct = database.products.findIndex(product => product.id === id)
+
+        database.products.splice(indexProduct, 1)
+
+        return res.redirect('/admin/produtos')
+
+
     }
 
 };
+
 
     module.exports = AdminController;
 
