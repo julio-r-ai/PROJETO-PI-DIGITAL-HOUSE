@@ -15,7 +15,7 @@ router.post('/admin/login', AdminController.login)
 
 const storage = multer.diskStorage({
     destination: (req, file, callback)=>{
-    callback(null, '/src/public/img/teste');
+    callback(null, '/img/teste');
     },
     filename: (re, file, callback)=>{
         let persistedFilename = `${Date.now()}_product_${file.originalname}`;

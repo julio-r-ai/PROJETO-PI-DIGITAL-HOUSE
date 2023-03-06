@@ -268,13 +268,14 @@ main .containe .carousel-item img{
 }
 main .cards-produtos img{
     border-radius: 12px;
-    height: 192px;
-    transition: .4s all;
+    height: 120px;
+    transition: 0.6s all;
 }
 
 main .cards-produtos img:hover{
-    height: 210px;
+    height: 150px;
     transform: scaleX(1.1);
+    transition: 0.6s all;
 }
 
 main .cards-produtos .titulo-bolo{
