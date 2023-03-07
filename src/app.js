@@ -7,7 +7,9 @@ const homeRouter = require('./routes/homeRouter');
 const usersRouter = require('./routes/usersRouter');
 const authRouter =  require('./routes/authRouter');
 const adminRouter = require('./routes/adminRouter');
+const requestLog = require('./middlewares/requestLog')
 const path = require('path');
+const { request } = require('http');
 
 const app = express();
 const port = 3000;
@@ -22,6 +24,8 @@ app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 
 app.use(express.static(path.resolve("src", "public")));
+
+app.use(requestLog);
 
 app.use(homeRouter);
 app.use(usersRouter);

@@ -58,7 +58,6 @@ const AdminController = {
 
     cadastroProduto: (req, res)=>{
 
-        console.log(req.file);
         const {name, price, image, active, stock, description} = req.body
 
         const newProduct = {
