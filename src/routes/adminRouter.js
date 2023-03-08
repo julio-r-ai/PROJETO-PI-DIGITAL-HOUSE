@@ -17,3 +17,4 @@ router.put('/admin/produtos/:id/editar', AdminController.updateProduto);
 router.delete('/admin/produtos/:id/deletar', AdminController.deleteProduto);
 
 module.exports = router;        
+ 

@@ -32,6 +32,10 @@ app.use(usersRouter);
 app.use(authRouter);
 app.use(adminRouter);
 
+app.use((req, res, next)=>{
+    return res.status(404).render('not-found')
+});
+
 
 /* app.get('/', (req, res) =>{
     res.render("home.ejs");
