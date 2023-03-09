@@ -1,1 +1,86 @@
-{"users":[{"id":"2cd9b5db-386b-4ed5-a77c-0aa6ac6714ac","name":"Julio Cesar","email":"julio@gmail.com","password":"123456","isAdmin":true},{"id":"2cd9b5db-386b-4ed5-a77c-0aa612312714ac","name":"Felipe De Almeida Carvalho ","email":"felipe@gmail.com","password":"123456","isAdmin":true},{"id":"2cd9b5db-386b-4ed5-a77c-0aa612312714ac","name":"Lucas","email":"lucas@gmail.com","password":"123456","isAdmin":false},{"id":"65af5a5c-e751-4968-8034-aa3e43361537","name":"Wendel","email":"wendel@mail.com","password":"$2a$10$eDB.pn.wD247Vc8/Y0Nz2.WOtrWsqezV2ewY.pPPApyyOl7qiCYce","isAdmin":false},{"id":"759a24d3-f418-4eb7-adfb-dbc51ff46101","name":"Henrique","email":"henrique@mail.com","password":"$2a$10$Ewye9hbWpbRP9fQxEVNlheooxvl4wHw2vavvWOCr1mAqYcUsJALUm","isAdmin":false},{"id":"817d2b4c-d94f-4cd1-9b16-b5eca18733ac","name":"emerson","email":"emerson@mail.com","password":"$2a$10$FadOsNLM0OtcXMJlGsmP2uGc6a7/J3fIVJ9vaqMaNjA/ydiAwz9je","isAdmin":false}],"products":[{"id":"00001","name":"Bolo de chocolate","description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","price":" 50,00","image":"https://s2.glbimg.com/_9Gs4YecKE8AA5E7WEP9tGFXwxI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/9/Z/gh0wHHQ7iE4SeEPcATQA/bolo-de-chocolate-fofinho-receita-2.jpg","active":false,"stock":false},{"id":"859be5c1-16a1-46db-afc5-229ca82098c0","name":"Bolo normal","price":"2.50","image":"/images/$(req.file.filename)","active":"on","stock":"on","description":"dasdsa"}]}
+{
+  "users": [
+    {
+      "id": "2cd9b5db-386b-4ed5-a77c-0aa6ac6714ac",
+      "name": "Julio Cesar",
+      "email": "julio@gmail.com",
+      "password": "123456",
+      "isAdmin": true
+    },
+    {
+      "id": "2cd9b5db-386b-4ed5-a77c-0aa612312714ac",
+      "name": "Felipe De Almeida Carvalho ",
+      "email": "felipe@gmail.com",
+      "password": "123456",
+      "isAdmin": true
+    },
+    {
+      "id": "2cd9b5db-386b-4ed5-a77c-0aa612312714ac",
+      "name": "Lucas",
+      "email": "lucas@gmail.com",
+      "password": "123456",
+      "isAdmin": false
+    },
+    {
+      "id": "65af5a5c-e751-4968-8034-aa3e43361537",
+      "name": "Wendel",
+      "email": "wendel@mail.com",
+      "password": "$2a$10$eDB.pn.wD247Vc8/Y0Nz2.WOtrWsqezV2ewY.pPPApyyOl7qiCYce",
+      "isAdmin": false
+    },
+    {
+      "id": "759a24d3-f418-4eb7-adfb-dbc51ff46101",
+      "name": "Henrique",
+      "email": "henrique@mail.com",
+      "password": "$2a$10$Ewye9hbWpbRP9fQxEVNlheooxvl4wHw2vavvWOCr1mAqYcUsJALUm",
+      "isAdmin": false
+    },
+    {
+      "id": "817d2b4c-d94f-4cd1-9b16-b5eca18733ac",
+      "name": "emerson",
+      "email": "emerson@mail.com",
+      "password": "$2a$10$FadOsNLM0OtcXMJlGsmP2uGc6a7/J3fIVJ9vaqMaNjA/ydiAwz9je",
+      "isAdmin": false
+    }
+  ],
+
+
+  "products": [
+    {
+      "id": "00001",
+      "name": "Bolo de chocolate",
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "price": " 50,00",
+      "image": "https://s2.glbimg.com/_9Gs4YecKE8AA5E7WEP9tGFXwxI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/9/Z/gh0wHHQ7iE4SeEPcATQA/bolo-de-chocolate-fofinho-receita-2.jpg",
+      "active": false,
+      "stock": false
+    },
+    {
+      "id": "859be5c1-16a1-46db-afc5-229ca82098c0",
+      "name": "Bolo normal",
+      "price": "2.50",
+      "image": "/images/$(req.file.filename)",
+      "active": "on",
+      "stock": "on",
+      "description": "dasdsa"
+    },
+    {
+      "id": "1de158bb-3802-435c-b54a-7f594a98d3fb",
+      "name": "bolo10",
+      "price": "60",
+      "image": "/images/$(req.file.filename)",
+      "active": "on",
+      "stock": "on",
+      "description": "bla"
+    },
+    {
+      "id": "8b4ccf28-4e0f-4b34-ae09-7e3b1e7abf7a",
+      "name": "bolo10",
+      "price": "60",
+      "image": "/images/${req.file.filename}",
+      "active": "on",
+      "stock": "on",
+      "description": "bolo"
+    }
+  ]
+}

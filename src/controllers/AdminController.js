@@ -20,6 +20,7 @@ const AdminController = {
 
     showHome: (req,res)=>{
         res.render('admin/home')
+        
     },
 
     showEditarProduto:(req,res)=>{
@@ -60,7 +61,7 @@ const AdminController = {
 
         const {name, price, active, stock, description} = req.body
 
-        const image = `/images/$(req.file.filename)`
+        const image = `/images/${req.file.filename}`
 
         const newProduct = {
 
