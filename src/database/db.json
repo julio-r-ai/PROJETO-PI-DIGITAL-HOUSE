@@ -54,33 +54,9 @@
       "image": "https://s2.glbimg.com/_9Gs4YecKE8AA5E7WEP9tGFXwxI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/9/Z/gh0wHHQ7iE4SeEPcATQA/bolo-de-chocolate-fofinho-receita-2.jpg",
       "active": false,
       "stock": false
-    },
-    {
-      "id": "859be5c1-16a1-46db-afc5-229ca82098c0",
-      "name": "Bolo normal",
-      "price": "2.50",
-      "image": "/images/$(req.file.filename)",
-      "active": "on",
-      "stock": "on",
-      "description": "dasdsa"
-    },
-    {
-      "id": "1de158bb-3802-435c-b54a-7f594a98d3fb",
-      "name": "bolo10",
-      "price": "60",
-      "image": "/images/$(req.file.filename)",
-      "active": "on",
-      "stock": "on",
-      "description": "bla"
-    },
-    {
-      "id": "8b4ccf28-4e0f-4b34-ae09-7e3b1e7abf7a",
-      "name": "bolo10",
-      "price": "60",
-      "image": "/images/${req.file.filename}",
-      "active": "on",
-      "stock": "on",
-      "description": "bolo"
     }
+   
+  
+ 
   ]
 }
