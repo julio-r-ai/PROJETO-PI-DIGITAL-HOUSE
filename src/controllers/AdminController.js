@@ -1,5 +1,5 @@
-const database = require('../database/db.json')
 const {randomUUID} = require('crypto')
+const productModel = require('../model/productsModel');
 
 
 const AdminController = {
@@ -13,8 +13,8 @@ const AdminController = {
     },
 
     showProdutos: (req, res)=>{
-        const products = database.products;
-        //const products = productModel.findAll(); o que é 
+    
+        const products = productModel.findAll();
        
         res.render('admin/produtos', {products});
 
@@ -70,12 +70,12 @@ const AdminController = {
             name,
             price,
             image,
-            active,
-            stock,
+            active: active === "on"? true : false,
+            stock: stock === "on"? true : false,
             description
         }
          
-        database.products.push(newProduct);
+        productModel.create(newProduct);
         
         res.redirect('/admin/produtos')
         
