@@ -28,7 +28,7 @@ const AdminController = {
     showEditarProduto:(req,res)=>{
 
         const {id} = req.params
-        const productFound = database.products.find(product => product.id === id)
+        const productFound = productModel.findAll().find(product => product.id === id)
         return res.render('admin/editar', { product: productFound});
 
     },

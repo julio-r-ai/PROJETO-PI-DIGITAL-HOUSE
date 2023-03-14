@@ -22,7 +22,7 @@ const productsModel = {
 
         const dbJson = JSON.stringify(database);
         fs.writeFileSync(pathDb, dbJson, "utf-8")
-    },
+    }, 
 
     update: (id, product) => {
         const indexProduct = database.products.findIndex(product => product.id === id)
@@ -30,7 +30,7 @@ const productsModel = {
         
 
         const dbJson = JSON.stringify(database, null, 4);
-        fs.writeFileSync(pathDb, dbJson);
+        fs.writeFileSync(pathDb, dbJson)
 
         return;
     },
@@ -43,7 +43,7 @@ const productsModel = {
         const dbJson = JSON.stringify(database);
         fs.writeFileSync(pathDb, dbJson, "utf-8")
     }
-};
+}; 
 
 
 module.exports = productsModel;

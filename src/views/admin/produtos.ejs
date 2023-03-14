@@ -34,6 +34,10 @@
 
 
     <button class="botao-cadastrar">Cadastrar</button>
+
+
+    
+
       
    <div class="box-tabela">
     <table class="table">
@@ -51,9 +55,11 @@
 
         <tbody>
           
+          <% var i = 1 %>
+
           <% products.forEach(product => { %>
             <tr>
-              <th scope="row"> 1 </th>
+              <th scope="row"> <%= i++ %> </th>
               <td><img class="thum" src="<%= product.image%>" alt=""></td>
               <td><%= product.name%></td>
               <td>R$<%= product.price%></td>
