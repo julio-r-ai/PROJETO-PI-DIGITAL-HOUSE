@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/descrição-produto.css">
+    <link rel="stylesheet" href="/css/descricao-produto.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- CSS only -->
@@ -20,34 +20,26 @@
 
     <main>
         <div class="containe">
-
+            
+        
         <section class="descrição-produto">
-
-
-     
-        <article class="produto">
-            <img src="<%= product.image  %>" alt="Foto Bolo">
-        </article>
-        <article class="descrição-bolo">
-            <h2><%= product.name %></h2>
-            <div id="paragrafo">
+            <article class="produto">
+                <img src="<%= product.image  %>" alt="Foto Bolo">
+            </article>
+            <article class="descrição-bolo">
+                <h2><%= product.name %></h2>
+                <div id="paragrafo">
                 <span><%= product.description %></span>
                 <h4><%=product.price%></h4>
-            </div>
+                </div>
             <div class="botoes">
-                <a href="/carrinho"><button>Comprar</button></a>
+                <a href="/carrinho/<%= product.id %>"><button>Comprar</button></a>
             </div>
             </div>
-
         </section>
         
-
-
-    </div>
-
-
-       
-
+      
+        
     </main>
     
 

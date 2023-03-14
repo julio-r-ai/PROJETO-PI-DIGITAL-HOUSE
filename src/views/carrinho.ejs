@@ -21,66 +21,15 @@
 </head>
 
 <body>
-    <header>
-        <div class="containe">
-            <div class="logo">
-                <img src="/img/logo/logo.png" alt="Logo da empresa">
-                <a href="">
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Bolos</a>
-                </li>
-                <li>
-                    <a href="">Contato</a>
-                </li>
-                <li>
-                    <a href="">Sobre</a>
-                </li>
-            </ul>
-
-            <form id="search">
-                <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
-                <button type="submit">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
-                </button>
-            </form>
-
-            <div class="header-botões">
-                <button title="header-carrinho">
-                    <span class="material-symbols-outlined">
-                        shopping_cart
-                    </span>
-                </button>
-
-                <button title="Login">
-                    <span class="material-symbols-outlined">
-                        login
-                    </span>
-                </button>
-                <button class="menu">
-                <span class="material-symbols-outlined">
-                    menu
-                    </span>
-                </button>
-
-
-            </div>
-
-        </div>
-
-    </header>
+   
+    <%- include('./components/header.ejs')  %>
 
     <main >
+
         <div class="containe">
         <section class="lista-compras">
-           
+            
+          
             <div class="organização-elementos">
                 <div class="suas-compras">
                     <H1>suas compras</H1>
@@ -90,19 +39,19 @@
                     </span>
                 </div>
             </div>
+            
             <div class="produtos-carrinho">
                 
-                <img src="/img/bolos/bolo_1.jfif" alt="foto bolo carrinho">
+                <img src="<%= product.image  %>" alt="foto bolo carrinho">
                 
-                <span>Bolo de chocolate 2kg R$ 120,00</span>
+                <span><%= product.name %></span>
+                <span><%= product.price  %></span>
                 <span>Edit</span>
             </div>
+           
+           
             
            
-
-
-
-
             <div class="continuar-comprando">
                 <h6><a href="/home">continuar comprando</a></h6>
 
@@ -120,11 +69,11 @@
 
             </div>
         
-        </div>
+        
             
         </section>
 
-         </div>
+         
 
 
 

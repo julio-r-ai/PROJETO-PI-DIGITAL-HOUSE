@@ -9,18 +9,19 @@ const productsModel = {
     }, 
 
     findByPk: (id) => {
-        const product = database.products.find(product => product.id === id)
+
+        const product = database.products.find(product => product.id === id);
         return product;
     },
 
     create: (product) => {
         database.products.push(product);
 
-        const dbjson = JSON.stringify(database);
-        fs.writeFileSync(pathDb, dbjson, "utf-8")
+        const dbJson = JSON.stringify(database);
+        fs.writeFileSync(pathDb, dbJson, "utf-8")
     },
 
-    upDate: (id, product) => {
+    update: (id, product) => {
 
     },
 
