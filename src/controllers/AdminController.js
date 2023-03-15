@@ -34,6 +34,7 @@ const AdminController = {
     },
 
     login: (req, res)=>{
+        
         const users = usersModel.users();
         const {email, password} = req.body
 
@@ -61,6 +62,7 @@ const AdminController = {
 
     cadastroProduto: (req, res)=>{
 
+
         const {name, price, active, stock, description} = req.body
 
         const image = `/images/${req.file.filename}`
@@ -78,12 +80,15 @@ const AdminController = {
          
         productModel.create(newProduct);
         
-        res.redirect('/admin/produtos')
+        res.redirect('/admin/produtos') 
         
     },
 
     updateProduto:(req, res)=>{
-        const {id, name, price, image, active, stock, description} = req.body;
+        
+        const { name, price, active, stock, description} = req.body;
+        const image = `/images/${req.file.filename}`
+        const {id} = req.params
         
 
         const editedProduct = {
