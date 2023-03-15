@@ -37,9 +37,7 @@
 
     <main>
             <div class="containe">
-                <form class="form-cadastro">
-
-                   
+                <form class="form-cadastro" action="/admin/usuarios/cadastro" method="post" >                   
                     
                     <div class="formulario-cadastro">
                         <div class="titulo-login">
@@ -48,29 +46,29 @@
 
                         
                         <label for="name">Nome completo</label>
-                        <input type="text" id="name" name="nome" placeholder="Digite nome completo...">
+                        <input type="text" id="name" name="name" placeholder="Digite nome completo...">
                     
                     
                         <label for="tel">Numero de contato</label>
                         <input type="tel" id="telefone" name="tel" placeholder="(xx) 0 0000-0000 ">
         
                         <label for="email">Email</label>
-                        <input type="email" id="name" name="name" placeholder="Digite seu e-mail...">
+                        <input type="email" id="name" name="email" placeholder="Digite seu e-mail...">
         
                         <label for="cpf">CPF</label>
                         <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF (333.333.333-33)">
         
                         <label for="password">Senha</label>
-                        <input type="password" id="cadastrar-password" name="lname" placeholder="Digite sua senha...">
+                        <input type="password" id="cadastrar-password" name="password" placeholder="Digite sua senha...">
         
                         <label for="password">Digite novamente sua senha</label>
-                        <input type="password" id="cadastrar-password" name="password" placeholder="Digite senha novamente...">
+                        <input type="password" id="cadastrar-password"  placeholder="Digite senha novamente...">
                         </div>
 
 
                         <div class="termo-uso">
                             <div>
-                                <input type="checkbox" id="termo-uso">
+                                <input type="checkbox" id="termo-uso" name="termo">
                             </div>
                             <div id="concordo-uso">
                                 Concordo com os termos de uso: <a href="#">termos</a>
@@ -79,11 +77,15 @@
                         
                     
                     <div class="cadastro-botoes">
-                        <button id="#">Cadastrar</button>
+                        <button type="submit">Cadastrar</button>
                     </div>
 
 
+                    <% if(typeof error != "undefined") { %>
 
+                        <h4 style="color: red;"><%= error %></h4>
+
+                    <% } %>
 
 
 

@@ -23,13 +23,13 @@
 <body>
     <header>
         <div class="containe">
-            <div class="logo">
-                <a href="./">
-                    <img src="/img/logo/logo.png" alt="Logo da empresa">
-                </a>
-            </div>
+            <a class="logo" href="/home">
+                
+                <img src="/img/logo/logo.png" alt="Logo da empresa">
 
-            </div>
+            </a>
+
+           
 
         </div>
 
@@ -37,7 +37,7 @@
 
     <main>
             <div class="containe">
-                <form class="form-login" action="" method="post">
+                <form class="form-login"  action="/admin/login" method="POST">
 
                     <div class="titulo-login">
                         <H2>Olá, Bem vindo</H2>
@@ -45,19 +45,27 @@
                     
                     <div class="login-email-senha">
                         <label for="email">E-mail, usuário ou telefone</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail ou usuário...">
+                        <input type="email" id="email-login" name="email" placeholder="Digite seu e-mail ou usuário...">
                         
                         <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" placeholder="Digite sua senha...">
+                        <input type="password" id="password-login" name="password" placeholder="Digite sua senha...">
                     </div>
                     <div class="login-botoes">
-                        <button type="submit" id="#">Entrar</button>
-                        <button id="#">Criar conta</button>
+                        <button type="submit" id="entrar-login">Entrar</button>
+                        <button >
+                            <a href="/admin/usuariosCadastro">Criar conta</a>
+                        </button>
                     </div>
         
                     <div class="esqueceu-senha">
                         <a href="/cadastro">Esqueci minha senha</a>
                     </div>
+
+
+                    <% if(typeof error !== "undefined") { %>
+                        <h4 style="color: red;"> <%= error %> </h4>
+                    <% } %>
+
                 </form>
                 
                 
@@ -72,7 +80,7 @@
             <div class="login-direitos-reservados">
                 © Product Bolos Gourmet 2023 - Direitos reservados pela empresa Bolos Gourmet
             </div>
-    </div>
+</div>
     </footer>
 
 

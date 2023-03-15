@@ -2,20 +2,36 @@ const database = require('../database/db.json');
 const fs = require('fs');
 const path = require('path');
 const pathDb = path.resolve("src", "database", "db.json");
+const crypto = require('crypto')
 
-const usersModel = {
+const User = {
 
-    findAll: () => {
+    findAll: ()=>{
         return database.users;
     },
 
-    create: (user) => {
-        database.users.push(user);
+    findOne: (email) => {
+        const User = database.users.find(user => user.email === email);
 
-        const dbJson = JSON.stringify(database);
+        return User;
+    },
+
+    create: (user) => {
+        const newUsuario = {
+            id: user.id =  crypto.randomUUID(),
+            name: user.name,
+            tel: user.tel,
+            email: user.email,
+            cpf: user.cpf,
+            password: user.password,
+            termo: user.termo
+        };
+
+        database.users.push(newUsuario);
+        const dbJson = JSON.stringify(database, null, 4);
         fs.writeFileSync(pathDb, dbJson, "utf-8")
     }, 
 
 }
 
-module.exports = usersModel; 
+module.exports = User; 
