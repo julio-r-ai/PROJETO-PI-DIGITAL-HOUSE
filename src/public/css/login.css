@@ -130,6 +130,21 @@ input{
     transition: .6s all;
 
 }
+
+button a {
+    text-decoration: none;
+    color: #6c2e6a;
+}
+
+button a:hover{
+    border: 1px solid white;
+    background-color: #6c2e6a;
+    color: white;
+    transition: .6s all;
+    border: none;
+}
+
+
 .esqueceu-senha a{
     text-decoration: none;
 }

@@ -1,1 +1,31 @@
-{"users":[{"id":"2cd9b5db-386b-4ed5-a77c-0aa6ac6714ac","name":"Julio Cesar","email":"julio@gmail.com","password":"123456","isAdmin":true},{"id":"2cd9b5db-386b-4ed5-a77c-0aa612312714ac","name":"Felipe De Almeida Carvalho ","email":"felipe@gmail.com","password":"123456","isAdmin":true},{"id":"2cd9b5db-386b-4ed5-a77c-0aa612312714ac","name":"Lucas","email":"lucas@gmail.com","password":"123456","isAdmin":false},{"id":"65af5a5c-e751-4968-8034-aa3e43361537","name":"Wendel","email":"wendel@mail.com","password":"$2a$10$eDB.pn.wD247Vc8/Y0Nz2.WOtrWsqezV2ewY.pPPApyyOl7qiCYce","isAdmin":false},{"id":"759a24d3-f418-4eb7-adfb-dbc51ff46101","name":"Henrique","email":"henrique@mail.com","password":"$2a$10$Ewye9hbWpbRP9fQxEVNlheooxvl4wHw2vavvWOCr1mAqYcUsJALUm","isAdmin":false},{"id":"817d2b4c-d94f-4cd1-9b16-b5eca18733ac","name":"emerson","email":"emerson@mail.com","password":"$2a$10$FadOsNLM0OtcXMJlGsmP2uGc6a7/J3fIVJ9vaqMaNjA/ydiAwz9je","isAdmin":false},{"id":"f2f85699-67ec-4c93-b55a-936ea20d354c","name":"Julio","tel":"1235","cpf":"123546","password":"123456","termo":"on"},{"id":"c94075bf-29de-44d1-b2a8-517c4f7d22e1","name":"teste","tel":"teste","cpf":"teste","password":"teste","termo":"on"},{"id":"f5246e1b-7baa-4be4-aff9-b5c9b33c449a","name":"julio","tel":"1651","cpf":"41561","password":"123456"},{"id":"14156906-f6fc-43cd-a90f-a5fb5e72519b","name":"sdad","tel":"dsadsds","cpf":"dsdasds","password":"123456sdads"},{"id":"a40a4648-a4b1-4794-9804-ddd6e638c2d5","name":"sdad","tel":"dsadsds","cpf":"dsdasds","password":"123456sdads"},{"id":"3d24d65b-eb46-4a93-9f3d-89764eb41915","name":"dsads","tel":"dasda","cpf":"dasdasd","password":"123456"},{"id":"b04212b6-d469-41f6-a247-2818c669d0b1","name":"dsads","tel":"dasda","cpf":"dasdasd","password":"123456"},{"id":"a293ad76-ae77-4420-9d6d-f6a1f2cd5e68","name":"Raimundo Dafonseca","tel":"88888888","cpf":"2546446587","password":"123","termo":"on"},{"id":"95f91b71-5a2c-49bc-afbd-f660f1b0c91c","name":"Raimundo Dafonseca","tel":"88888888","email":"raimundo@gmail.com","cpf":"2546446587","password":"123","termo":"on"}],"products":[{"id":"5403bc41-0460-470f-beb4-6f2e33b67724","name":"Bolo normal","price":"12","image":"/images/1678768200396_products_bolo_simples.jpg","active":true,"stock":true,"description":"dsad"},{"id":"68297846-c096-445e-8009-a2a1b97f31a6","name":"Bolo normal","price":"123","image":"/images/1678768222181_products_bolo_simples.jpg","active":true,"stock":false,"description":"sdad"}]}
+{
+    "users": [
+        {
+            "id": "2cd9b5db-386b-4ed5-a77c-0aa6ac6714ac",
+            "name": "Julio Cesar",
+            "email": "julio@gmail.com",
+            "password": "123456",
+            "isAdmin": true
+        }
+    ],
+    "products": [
+        {
+            "id": "5403bc41-0460-470f-beb4-6f2e33b67724",
+            "name": "Bolo normal",
+            "price": "12",
+            "image": "/images/1678768200396_products_bolo_simples.jpg",
+            "active": true,
+            "stock": true,
+            "description": "dsad"
+        },
+        {
+            "id": "68297846-c096-445e-8009-a2a1b97f31a6",
+            "name": "Bolo normal",
+            "price": "123",
+            "image": "/images/1678768222181_products_bolo_simples.jpg",
+            "active": true,
+            "stock": false,
+            "description": "sdad"
+        }
+    ]
+}
