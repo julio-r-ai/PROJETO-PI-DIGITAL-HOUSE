@@ -31,10 +31,6 @@ const HomeController = {
         res.render('/login')
     },
 
-    cadastro:(req, res)=>{
-        res.render('/cadastro')
-    },
-
     painelUsuario:(req, res)=>{
         res.render('painelUsuario')
     },

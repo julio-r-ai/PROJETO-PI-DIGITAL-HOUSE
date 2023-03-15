@@ -33,11 +33,17 @@ const AdminController = {
 
     },
 
+    showCadastroUsuario: (req, res) => {
+
+        res.render('admin/cadastro')
+    },
+
+
     login: (req, res)=>{
         
-        const users = usersModel.users();
+        const users = usersModel.findAll();
         const {email, password} = req.body
-
+        
         const userFound = users.find((user)=> user.email === email)
 
         if(!userFound){
@@ -57,6 +63,28 @@ const AdminController = {
             return res.redirect('/')
         }
         return res.redirect('/admin/home')
+
+    },
+
+    cadastroUsuario:(req, res) => {
+        const {name, tel, email, cpf, password, termo} = req.body;
+
+        const newUsuario = {
+            id:  randomUUID(),
+            name,
+            tel,
+            email,
+            cpf,
+            password,
+            termo
+        };
+
+        usersModel.create(newUsuario);
+
+
+    
+        res.redirect('/admin/login');
+        
 
     },
 
