@@ -170,8 +170,6 @@ header .containe .header-botões button{
 }
 
 
-
-
 header .containe .header-botões span:hover{
     display: flex;
     justify-content: center;
@@ -319,6 +317,12 @@ main .cards-produtos .botões-produtos{
     background-color: #6c2e6a;
     transition: .4s all;
 
+}
+
+.tituloBolos{
+    margin-top: 200px;
+    margin-bottom: 150px;
+    color: #42075e;
 }
 
 main .botões-produtos a {

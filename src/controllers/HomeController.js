@@ -9,7 +9,9 @@ const HomeController = {
     },
 
     bolos: (req, res) =>{
-        return res.render('bolos')
+        const products = productModel.findAll();
+
+        return res.render('bolos', {products})
     },
     
     contato: (req, res)=>{
@@ -19,12 +21,21 @@ const HomeController = {
     sobre: (req, res)=>{
         return res.render('sobre')
     },
-    carrinho: (req, res)=>{
+
+    seusPedidos: (req, res)=>{
         const {id} = req.params;
         const product = productModel.findByPk(id)
         
 
-        return res.render('carrinho', {product})
+        return res.render('seusPedidos', {product})
+    },
+
+    pedidosFinalizados: (req, res)=>{
+        const {id} = req.params;
+        const product = productModel.findByPk(id)
+        
+
+        return res.render('pedidosFinalizados', {product});
     },
 
     login:(req, res)=>{

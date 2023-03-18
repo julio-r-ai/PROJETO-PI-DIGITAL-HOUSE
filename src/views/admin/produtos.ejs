@@ -25,9 +25,7 @@
     <title>Produtos</title>
 </head>
 <body>
-    <%- include('./components/sideBar.ejs') %>
-
-    <button class="botao-cadastrar">Cadastrar</button>    
+    <%- include('./components/sideBar.ejs') %> 
       
    <div class="box-tabela">
     <table class="table">
@@ -57,7 +55,7 @@
               <td><%= product.stock ? "Em stock":"Sem stock" %></td>
               <td>
                 <div class="botoes-produto">
-                <a href='/admin/produtos'><button type="button" class="btn btn-primary">Abrir</button></a>
+               <!--  <a href='/admin/produtos'><button type="button" class="btn btn-primary">Abrir</button></a> -->
   
                 <a href="/admin/produtos/<%= product.id %>/editar" type="button" class="btn btn-warning">Editar</a>
                 

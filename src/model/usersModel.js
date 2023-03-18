@@ -11,9 +11,9 @@ const User = {
     },
 
     findOne: (email) => {
-        const User = database.users.find(user => user.email === email);
+        const user = database.users.find(user => user.email === email);
 
-        return User;
+        return user;
     },
 
     create: (user) => {

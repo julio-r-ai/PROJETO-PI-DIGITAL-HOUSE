@@ -199,7 +199,8 @@ main .containe{
 main{
     width: 100%;
 }
- .descrição-produto{
+
+.descrição-produto{
     display: flex;
     margin-top: 100px;
     background-color: #b589b4;
@@ -208,6 +209,7 @@ main{
     margin-bottom: 100px;
     padding: 30px;
     gap: 50px;
+    width: 800px;
 }
 
 .produto{
@@ -257,16 +259,6 @@ main{
 .botoes a{
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 footer .containe{
