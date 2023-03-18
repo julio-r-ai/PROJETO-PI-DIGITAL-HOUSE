@@ -1,1 +1,152 @@
-{"users":[{"id":"8f0117c1-72c9-4ee4-b9b4-556cb8cbb341","name":"felipe","tel":"1515151","email":"felipe@gmail.com","cpf":"12344344","termo":"on"},{"id":"794ba005-c8d3-4f30-9fcd-37c25b5ae172","name":"julio cesar","tel":"123566","email":"julio@gmail.com","cpf":"123546498","termo":"on"},{"id":"7bd0ed8a-2e88-4c20-8ceb-0e03ed626039","name":"bruno","tel":"123433535","email":"bruno@gmail.com","cpf":"4344343","password":"123","termo":"on"}],"products":[{"id":"a8739307-4be7-4ebb-9fd6-25c7e758b4c0","name":"Bolo normal","price":"60.00","image":"/images/1679107689648_products_bolo_simples.jpg","active":true,"stock":true,"description":"Bolo de milho com recheio de chocolate."},{"id":"c5a42c9b-258a-4782-a488-88fb023d6bf6","name":"Bolo simples","price":"15.00","image":"/images/1679108756575_products_bolo-simples.webp","active":true,"stock":true,"description":"Bolo simples "},{"id":"e3eff98a-7fd3-4738-9c4f-9cd7ef29fa82","name":"Bolo de chocolate","price":"25.00","image":"/images/1679108804636_products_download (1).jpg","active":true,"stock":true,"description":"Bolo com cobertura de chocolate"},{"id":"0b2ad9c1-c92b-4898-a9dd-4c3c3933fc82","name":"Bolo de chocolate","price":"60.00","image":"/images/1679108882085_products_download (2).jpg","active":true,"stock":true,"description":"Bolo de chocolate com morango\r\n"},{"id":"0c1777cb-affc-4aa8-8345-03dbd4e51918","name":"Bolo de chocolate","price":"50.00","image":"/images/1679108904084_products_download.jpg","active":false,"stock":false,"description":""},{"id":"8b1ce05b-f950-4bb4-a0e2-16bd85015384","name":"Bolo de normal","price":"30.00","image":"/images/1679108960962_products_images (1).jpg","active":true,"stock":true,"description":"Bolo normal com cobertura de mel"},{"id":"f9b3a512-1c33-462c-ab88-69646c62e46b","name":"Bolo de morango","price":"90.00","image":"/images/1679109084968_products_images (3).jpg","active":true,"stock":true,"description":"Bolo de morango"},{"id":"d722830e-8280-43c8-b3ad-e5bbe3770402","name":"Bolo de cenoura","price":"50.00","image":"/images/1679109141174_products_images (4).jpg","active":true,"stock":false,"description":"Bolo de cenoura com cobertura de amexa com leite condensado"},{"id":"0627c37e-d6cc-427d-b0ab-ebbe3626d693","name":"Bolo de chocolate","price":"60.00","image":"/images/1679109773627_products_images (7).jpg","active":true,"stock":false,"description":""}]}
+{
+    "users": [
+        {
+            "id": "8f0117c1-72c9-4ee4-b9b4-556cb8cbb341",
+            "name": "felipe",
+            "tel": "1515151",
+            "email": "felipe@gmail.com",
+            "cpf": "12344344",
+            "termo": "on"
+        },
+        {
+            "id": "794ba005-c8d3-4f30-9fcd-37c25b5ae172",
+            "name": "julio cesar",
+            "tel": "123566",
+            "email": "julio@gmail.com",
+            "cpf": "123546498",
+            "termo": "on"
+        },
+        {
+            "id": "7bd0ed8a-2e88-4c20-8ceb-0e03ed626039",
+            "name": "bruno",
+            "tel": "123433535",
+            "email": "bruno@gmail.com",
+            "cpf": "4344343",
+            "password": "123",
+            "termo": "on"
+        },
+        {
+            "id": "c0893b25-f554-4450-8711-2ecf68651c5e",
+            "name": "Jubileu",
+            "tel": "82949494949",
+            "email": "jubileu@gmail.com",
+            "cpf": "1239485393874",
+            "termo": "on"
+        },
+        {
+            "id": "5250b57b-0cbd-4d5d-b918-d353b27e0436",
+            "name": "jubileu",
+            "tel": "934994",
+            "email": "jubileu@qa.com",
+            "cpf": "38944"
+        },
+        {
+            "id": "fc695fb4-a313-4ce9-842e-8244f31d07f0",
+            "name": "Andre",
+            "tel": "82949494949",
+            "email": "andre@gmail.com",
+            "cpf": "",
+            "password": "213445",
+            "termo": "on"
+        },
+        {
+            "id": "f6f8851e-8937-493f-99b4-5f9e054ad9db",
+            "name": "teste1",
+            "tel": "dsds",
+            "email": "bla@gmail.com",
+            "cpf": "12344"
+        },
+        {
+            "id": "f27fb19f-7c55-4da1-9b1c-b747780f10e4",
+            "name": "Jesus Cristo",
+            "tel": "978548584",
+            "email": "jesus@gmail.com",
+            "cpf": "123434343",
+            "password": "123456",
+            "termo": "on"
+        }
+    ],
+    "products": [
+        {
+            "id": "a8739307-4be7-4ebb-9fd6-25c7e758b4c0",
+            "name": "Bolo normal",
+            "price": "60.00",
+            "image": "/images/1679107689648_products_bolo_simples.jpg",
+            "active": true,
+            "stock": true,
+            "description": "Bolo de milho com recheio de chocolate."
+        },
+        {
+            "id": "c5a42c9b-258a-4782-a488-88fb023d6bf6",
+            "name": "Bolo simples",
+            "price": "15.00",
+            "image": "/images/1679108756575_products_bolo-simples.webp",
+            "active": true,
+            "stock": true,
+            "description": "Bolo simples "
+        },
+        {
+            "id": "e3eff98a-7fd3-4738-9c4f-9cd7ef29fa82",
+            "name": "Bolo de chocolate",
+            "price": "25.00",
+            "image": "/images/1679108804636_products_download (1).jpg",
+            "active": true,
+            "stock": true,
+            "description": "Bolo com cobertura de chocolate"
+        },
+        {
+            "id": "0b2ad9c1-c92b-4898-a9dd-4c3c3933fc82",
+            "name": "Bolo de chocolate",
+            "price": "60.00",
+            "image": "/images/1679108882085_products_download (2).jpg",
+            "active": true,
+            "stock": true,
+            "description": "Bolo de chocolate com morango\r\n"
+        },
+        {
+            "id": "0c1777cb-affc-4aa8-8345-03dbd4e51918",
+            "name": "Bolo de chocolate",
+            "price": "50.00",
+            "image": "/images/1679108904084_products_download.jpg",
+            "active": false,
+            "stock": false,
+            "description": ""
+        },
+        {
+            "id": "8b1ce05b-f950-4bb4-a0e2-16bd85015384",
+            "name": "Bolo de normal",
+            "price": "30.00",
+            "image": "/images/1679108960962_products_images (1).jpg",
+            "active": true,
+            "stock": true,
+            "description": "Bolo normal com cobertura de mel"
+        },
+        {
+            "id": "f9b3a512-1c33-462c-ab88-69646c62e46b",
+            "name": "Bolo de morango",
+            "price": "90.00",
+            "image": "/images/1679109084968_products_images (3).jpg",
+            "active": true,
+            "stock": true,
+            "description": "Bolo de morango"
+        },
+        {
+            "id": "d722830e-8280-43c8-b3ad-e5bbe3770402",
+            "name": "Bolo de cenoura",
+            "price": "50.00",
+            "image": "/images/1679109141174_products_images (4).jpg",
+            "active": true,
+            "stock": false,
+            "description": "Bolo de cenoura com cobertura de amexa com leite condensado"
+        },
+        {
+            "id": "0627c37e-d6cc-427d-b0ab-ebbe3626d693",
+            "name": "Bolo de chocolate",
+            "price": "60.00",
+            "image": "/images/1679109773627_products_images (7).jpg",
+            "active": true,
+            "stock": false,
+            "description": ""
+        }
+    ]
+}

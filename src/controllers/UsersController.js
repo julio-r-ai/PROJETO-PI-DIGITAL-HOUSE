@@ -20,9 +20,7 @@ const UsersController = {
       const userFound = users.find((user)=>  user.id === id )
 
       if(!userFound){
-
          res.status(404).json({message: "Não existe nenhum usuário com esse id"});
-
       }
 
       return res.json(userFound)

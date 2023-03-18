@@ -1,5 +1,5 @@
 const User = require('../model/usersModel')
-const bcrypt = require('bcryptjs');
+//const bcrypt = require('bcryptjs');
 
 const AuthController ={
 
@@ -11,6 +11,10 @@ const AuthController ={
        return  res.render('auth/login')
     },
 
+    showAdminLogin: (req, res) => {
+        return res.render('loginAdmin')
+    },
+
     createUsuarios:(req, res) => {
         const {name, tel, email, cpf, password, termo} = req.body;
 
@@ -20,31 +24,35 @@ const AuthController ={
             return res.render('auth/cadastro', {error: "Nao e possivel realizar operacao"})
         }
 
-        const hash = bcrypt.hashSync(password, 10); 
+        //const psw = bcrypt.hashSync(password, 10); 
 
-        const newUser = {name, tel, email, cpf, hash, termo};
+        const newUser = {
+            name, 
+            tel, 
+            email, 
+            cpf, 
+            password, 
+            termo
+        };
         User.create(newUser);
 
-        return res.redirect('/admin/login'); 
-
+        return res.redirect('/admin/login');  
     },
 
     login: (req, res)=>{
-
         const {email, password} = req.body;
 
-      
         const user = User.findOne(email);
-        const verifyPassword = bcrypt.compareSync(password, user.password);
+        const psw = User.verifyPassword(password)
 
-        if(!user || !verifyPassword){
+        //const verifyPassword = bcrypt.compareSync(password, user.password);
+
+        if(!user || !psw){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
         }
 
         return res.redirect('/');
-         
     }
-
 
 }
 

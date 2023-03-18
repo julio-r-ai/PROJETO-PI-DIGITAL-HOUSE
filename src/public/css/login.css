@@ -144,6 +144,22 @@ button a:hover{
     border: none;
 }
 
+.botaoAdmin{
+    color:#6c2e6a;
+    margin: 10px;
+    width: 225px;
+    border: 1px solid #6c2e6a;
+    border-radius: 4px;
+    font-weight: bolder;
+    transition: .6s all;
+}
+
+.botaoAdmin:hover{
+    border: 1px solid white;
+    background-color: #6c2e6a;
+    color: white;
+    transition: .6s all;
+}
 
 .esqueceu-senha a{
     text-decoration: none;

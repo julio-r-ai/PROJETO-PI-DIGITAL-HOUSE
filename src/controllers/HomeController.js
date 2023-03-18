@@ -1,6 +1,5 @@
 const productModel = require('../model/productsModel');
 
-
 const HomeController = {
     home: (req, res) =>{
         const products = productModel.findAll();
@@ -25,7 +24,6 @@ const HomeController = {
     seusPedidos: (req, res)=>{
         const {id} = req.params;
         const product = productModel.findByPk(id)
-        
 
         return res.render('seusPedidos', {product})
     },
@@ -34,7 +32,6 @@ const HomeController = {
         const {id} = req.params;
         const product = productModel.findByPk(id)
         
-
         return res.render('pedidosFinalizados', {product});
     },
 
@@ -51,22 +48,15 @@ const HomeController = {
     },
 
     descricaoProduto:(req,res)=>{
-        const { id } = req.params;
-
+        const { id } = req.params
         const product = productModel.findByPk(id)
         
         res.render('descricaoProduto', {product});
-       
-        
     },
     
-   
     inseirCartao: (req, res)=>{
         res.render('inserirCartao')
     },
-
-
-    //Listagem de produtos
 
     listaProduto: (req,res)=>{
         const products = database.products;

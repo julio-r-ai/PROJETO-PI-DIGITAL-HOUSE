@@ -16,6 +16,12 @@ const User = {
         return user;
     },
 
+    verifyPassword: (senha) => {
+        const psw = database.users.find(psw => psw.password === senha)
+
+        return psw;
+    },
+
     create: (user) => {
         const newUsuario = {
             id: user.id =  crypto.randomUUID(),
