@@ -1,5 +1,5 @@
 const User = require('../model/usersModel')
-//const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 
 const AuthController ={
 
@@ -16,7 +16,7 @@ const AuthController ={
     },
 
     createUsuarios:(req, res) => {
-        const {name, tel, email, cpf, password, termo} = req.body;
+        const {fullname, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode} = req.body;
 
         const verifyExists = User.findOne(email);
 
@@ -24,16 +24,21 @@ const AuthController ={
             return res.render('auth/cadastro', {error: "Nao e possivel realizar operacao"})
         }
 
-        //const psw = bcrypt.hashSync(password, 10); 
+        const psw = bcrypt.hashSync(password, 10);              
 
         const newUser = {
-            name, 
+            fullname, 
             tel, 
             email, 
-            cpf, 
-            password, 
-            termo
+            psw, 
+            publicplace, 
+            number, 
+            complement, 
+            neighborhood, 
+            reference, 
+            zipcode
         };
+
         User.create(newUser);
 
         return res.redirect('/admin/login');  

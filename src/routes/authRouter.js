@@ -4,9 +4,9 @@ const router = express.Router();
 
 router.get('/admin/login', AuthController.showLogin);
 router.get('/admin/auth/adminLogin', AuthController.showAdminLogin);
-router.get('/admin/usuariosCadastro', AuthController.showCadastroUsuario);
+router.get('/cadastro', AuthController.showCadastroUsuario);
 
-router.post('/admin/usuarios/cadastro', AuthController.createUsuarios);
+router.post('/cadastro', AuthController.createUsuarios);
 router.post('/admin/login', AuthController.login)
 
 module.exports = router;

@@ -1,69 +1,53 @@
 {
     "users": [
         {
-            "id": "8f0117c1-72c9-4ee4-b9b4-556cb8cbb341",
-            "name": "felipe",
-            "tel": "1515151",
-            "email": "felipe@gmail.com",
-            "cpf": "12344344",
-            "termo": "on"
+            "id": "3fa55ef6-3678-4fa2-8f16-c9b9c9feb67f",
+            "fullname": "teste",
+            "tel": "teste",
+            "email": "teste@gmail.com",
+            "password": "$2a$10$Gz6xMCWVxaHY14g0d8ZmfOATgvScVG2ghYvhKppFYmnswNGphdo8S",
+            "publicplace": "dfmsdf",
+            "number": "23",
+            "neighborhood": "dasdsd",
+            "reference": "asdsad",
+            "zipcode": "dsadsad",
+            "isAdmin": true
         },
         {
-            "id": "794ba005-c8d3-4f30-9fcd-37c25b5ae172",
-            "name": "julio cesar",
-            "tel": "123566",
+            "id": "8b109e8e-9ee4-4821-aa5d-282f1efc36f8",
+            "fullname": "Jubileu voce nao sabe nem eu",
+            "tel": "234324455",
+            "email": "srf@gmail.com",
+            "password": "$2a$10$.1wNXIHSxqfVVBE7RTV3Q.lc3hFDPyANbSDsTFDrTHQ4YdOLdORca",
+            "publicplace": "dsadasd",
+            "number": "233",
+            "neighborhood": "sdadsd",
+            "reference": "dasdasd",
+            "zipcode": "dsadsads"
+        },
+        {
+            "id": "781f084b-e0c4-4f67-a1a6-782ee0ef1b81",
+            "fullname": "",
+            "tel": "",
             "email": "julio@gmail.com",
-            "cpf": "123546498",
-            "termo": "on"
+            "password": "$2a$10$23EBtiCQNQtSbDSr3ZnBT.lKDER7N89E5KmjlgjtiF41aMpeqaXm.",
+            "publicplace": "",
+            "number": "",
+            "neighborhood": "",
+            "reference": "",
+            "zipcode": ""
         },
         {
-            "id": "7bd0ed8a-2e88-4c20-8ceb-0e03ed626039",
-            "name": "bruno",
-            "tel": "123433535",
-            "email": "bruno@gmail.com",
-            "cpf": "4344343",
-            "password": "123",
-            "termo": "on"
-        },
-        {
-            "id": "c0893b25-f554-4450-8711-2ecf68651c5e",
-            "name": "Jubileu",
-            "tel": "82949494949",
-            "email": "jubileu@gmail.com",
-            "cpf": "1239485393874",
-            "termo": "on"
-        },
-        {
-            "id": "5250b57b-0cbd-4d5d-b918-d353b27e0436",
-            "name": "jubileu",
-            "tel": "934994",
-            "email": "jubileu@qa.com",
-            "cpf": "38944"
-        },
-        {
-            "id": "fc695fb4-a313-4ce9-842e-8244f31d07f0",
-            "name": "Andre",
-            "tel": "82949494949",
-            "email": "andre@gmail.com",
-            "cpf": "",
-            "password": "213445",
-            "termo": "on"
-        },
-        {
-            "id": "f6f8851e-8937-493f-99b4-5f9e054ad9db",
-            "name": "teste1",
-            "tel": "dsds",
-            "email": "bla@gmail.com",
-            "cpf": "12344"
-        },
-        {
-            "id": "f27fb19f-7c55-4da1-9b1c-b747780f10e4",
-            "name": "Jesus Cristo",
-            "tel": "978548584",
-            "email": "jesus@gmail.com",
-            "cpf": "123434343",
-            "password": "123456",
-            "termo": "on"
+            "id": "847e733b-85d9-4d8c-aace-32f8a91cfc58",
+            "fullname": "",
+            "tel": "",
+            "email": "teste3@gmail.com",
+            "password": "$2a$10$C4gXW48W3Ww2A8sfTlWyM.CtldryYKYbxsI6J514zz14sniVa3afK",
+            "publicplace": "",
+            "number": "",
+            "neighborhood": "",
+            "reference": "",
+            "zipcode": ""
         }
     ],
     "products": [

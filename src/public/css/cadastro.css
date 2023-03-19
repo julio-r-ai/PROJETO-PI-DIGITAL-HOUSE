@@ -149,6 +149,13 @@ main .containe{
     margin-top: 40px;
 }
 
+.alerteCadastro p{
+    color: red;
+    display: flex;
+    width: 100%;
+    padding-left: 120px;
+}
+
 footer .containe{
     background-color: #6c2e6a;;
     display: flex;

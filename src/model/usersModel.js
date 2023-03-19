@@ -25,12 +25,15 @@ const User = {
     create: (user) => {
         const newUsuario = {
             id: user.id =  crypto.randomUUID(),
-            name: user.name,
+            fullname: user.fullname,
             tel: user.tel,
             email: user.email,
-            cpf: user.cpf,
-            password: user.password,
-            termo: user.termo
+            password: user.psw,
+            publicplace: user.publicplace,
+            number: user.number,
+            neighborhood: user.neighborhood,
+            reference: user.reference,
+            zipcode: user.zipcode
         };
 
         database.users.push(newUsuario);

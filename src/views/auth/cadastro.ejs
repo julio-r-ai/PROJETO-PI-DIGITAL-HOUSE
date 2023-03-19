@@ -24,92 +24,75 @@
     <header>
         <div class="containe">
             <a class="logo" href="/home">
-            
-                <img src="/img/logo/logo.png" alt="Logo da empresa">
-                
 
-                </a>
-            </div>
+                <img src="/img/logo/logo.png" alt="Logo da empresa">
+
+
+            </a>
+        </div>
 
         </div>
 
     </header>
 
     <main>
-            <div class="containe">
-                <form class="form-cadastro" action="/admin/usuarios/cadastro" method="post" >                   
-                    
-                    <div class="formulario-cadastro">
-                        <div class="titulo-login">
-                            <H2>Cadastrar Usuário</H2>
-                        </div>
+        <div class="containe">
+            <form class="form-cadastro" action="/cadastro" method="post">
 
-                        
-                        <label for="name">Nome completo</label>
-                        <input type="text" id="name" name="name" placeholder="Digite nome completo...">
-                    
-                    
-                        <label for="tel">Numero de contato</label>
-                        <input type="tel" id="telefone" name="tel" placeholder="(xx) 0 0000-0000 ">
-        
-                        <label for="email">Email</label>
-                        <input type="email" id="name" name="email" placeholder="Digite seu e-mail...">
-        
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF (333.333.333-33)">
-        
-                        <label for="password">Senha</label>
-                        <input type="password" id="cadastrar-password" name="password" placeholder="Digite sua senha...">
-        
-                        <label for="password">Digite novamente sua senha</label>
-                        <input type="password" id="cadastrar-password"  placeholder="Digite senha novamente...">
-                        </div>
-
-
-                        <div class="termo-uso">
-                            <div>
-                                <input type="checkbox" id="termo-uso" name="termo">
-                            </div>
-                            <div id="concordo-uso">
-                                Concordo com os termos de uso: <a href="#">termos</a>
-                            </div>
-                        </div>    
-                        
-                    
-                    <div class="cadastro-botoes">
-                        <button type="submit">Cadastrar</button>
+                <div class="formulario-cadastro">
+                    <div class="titulo-login">
+                        <H2>Cadastrar Cliente</H2>
                     </div>
+                    <label for="fullname">Nome completo</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Digite nome completo...">
+                    <label for="tel">Numero de contato</label>
+                    <input type="tel" id="tel" name="tel" placeholder="(xx) 0 0000-0000 ">
+                    <label for="email">Email</label>
+                    <input type="email" id="name" name="email" placeholder="Digite seu e-mail...">
+                    <label for="password">Senha</label>
+                    <input type="password" id="cadastrar-password" name="password" placeholder="Digite sua senha...">
+                    <label for="passwordCheck">Digite novamente sua senha</label>
+                    <input type="password" name="passworCheck" id="cadastrar-password"
+                        placeholder="Digite senha novamente...">
+                    <label for="publicplace">Logradouro</label>
+                    <input type="text" id="publicplace" name="publicplace"
+                        placeholder="Digite seu endereço completo ...">
+                    <label for="number">Numero</label>
+                    <input type="number" id="number" name="number" placeholder="Digite o número do estabelecimento..">
+                    <label for="number">Complemento</label>
+                    <input type="text" id="complement" name="complement" placeholder="Digite complemeto...">
+                    <label for="neighborhood">Bairro</label>
+                    <input type="text" id="neighborhood" name="neighborhood" placeholder="Nome do bairro">
+                    <label for="reference">Referencia</label>
+                    <input type="text" id="reference" name="reference" placeholder="Ponto de referencia...">
+                    <label for="zipcode">Cep</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Digite CEP...">
+                </div>
 
+                <div class="cadastro-botoes">
+                    <button type="submit">Cadastrar</button>
+                </div>
 
-                    <% if(typeof error != "undefined") { %>
+                <div class="alerteCadastro">
+                    <% if(typeof error != "undefined" ) { %>
 
-                        <h4 style="color: red;"><%= error %></h4>
-
-                    <% } %>
-
-
-
-                </form>
-
-               
-        
-        
-                
-
-
+                        <p>
+                           * <%= error %>
+                        </p>
+    
+                    <% } %>    
+                </div>
+            
+            </form>
     </main>
 
-
-
-    <footer >
+    <footer>
         <div class="containe">
             <div class="login-direitos-reservados">
                 © Product Bolos Gourmet 2023 - Direitos reservados pela empresa Bolos Gourmet
             </div>
-</div>
+        </div>
     </footer>
-
-
 
 </body>
 
