@@ -1,6 +1,6 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const expressSession = require('express-session');
+const session = require('express-session');
 const flash = require('connect-flash');
 
 
@@ -21,7 +21,9 @@ app.set("views", path.resolve("src", "views"));
 
 //Configurando 
 app.use(session({
-    secret: "projetoconfeitaria"
+    secret: "projetoconfeitaria",
+    resave: true,       
+    saveUninitialized: true
 }))
 
 app.use(express.json());
