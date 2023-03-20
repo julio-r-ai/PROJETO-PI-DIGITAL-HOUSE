@@ -1,6 +1,6 @@
 const {randomUUID} = require('crypto')
-const productModel = require('../model/productsModel');
-const usersModel = require('../model/usersModel');
+const productModel = require('../database/productsModel');
+const usersModel = require('../database/usersModel');
 
 
 const AdminController = {

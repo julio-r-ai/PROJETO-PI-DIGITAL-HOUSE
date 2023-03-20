@@ -8,47 +8,61 @@
             <li>
                 <a href="/home">Home</a>
             </li>
+
             <li>
                 <a href="/bolos">Bolos</a>
             </li>
+            <!--
             <li>
                 <a href="/contato">Contato</a>
             </li>
+        -->
             <li>
+                
                 <a href="/sobre">Sobre</a>
             </li>   
         </ul>
 
-        <form id="search">
+        <!-- <form id="search">
             <input type="text" name="q" id="search" autocomplete="off" placeholder="Buscar...">
             <button type="submit">
                 <span class="material-symbols-outlined">
                     search
                 </span>
             </button>
-        </form>
+        </form> -->
+
+        <% if(locals.user && user) { %>
+            <h6> Seja bem vindo <%= user.name %></h6>
+       <% } %>
 
         <div class="header-botões">
+            
             <button  title="header-carrinho">
-            <a href="/carrinho">
+            <a href="/">
                 <span class="material-symbols-outlined">
                     shopping_cart
                 </span>
             </a>
             </button>
+            
 
-            <button type="button"><a href="admin/login">
+            <button type="button"><a href="/login">
                 <span  class="material-symbols-outlined">
                     login
                 </span>
             </a>
             </button>
-
-            <button  title="carrinho" class="menu">
+            <!--            <button  title="carrinho" class="menu">
             <span class="material-symbols-outlined">
                 menu
                 </span>
             </button>
+            -->
+
+
+          
+
 
 
         </div>

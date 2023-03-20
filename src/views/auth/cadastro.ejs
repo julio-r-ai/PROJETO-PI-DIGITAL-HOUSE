@@ -43,8 +43,8 @@
                     <div class="titulo-login">
                         <H2>Cadastrar Cliente</H2>
                     </div>
-                    <label for="fullname">Nome completo</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Digite nome completo...">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite nome...">
                     <label for="tel">Numero de contato</label>
                     <input type="tel" id="tel" name="tel" placeholder="(xx) 0 0000-0000 ">
                     <label for="email">Email</label>
@@ -76,9 +76,9 @@
                 <div class="alerteCadastro">
                     <% if(typeof error != "undefined" ) { %>
 
-                        <p>
-                           * <%= error %>
-                        </p>
+                        <h6>
+                            <%= error %>
+                        </h6>
     
                     <% } %>    
                 </div>

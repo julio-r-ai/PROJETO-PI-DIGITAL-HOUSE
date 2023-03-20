@@ -2,6 +2,12 @@ const express = require('express');
 const AdminController = require('../controllers/AdminController');
 const router = express.Router();
 const upload = require ('../middlewares/upload.js')
+const isLogin = require('../middlewares/isLogin')
+const isAdmin = require('../middlewares/isAdmin')
+
+router.use(isLogin);
+router.use(isAdmin);
+
 
 router.get('/admin/home', AdminController.showHome);
 router.get('/admin/produtos', AdminController.showProdutos);

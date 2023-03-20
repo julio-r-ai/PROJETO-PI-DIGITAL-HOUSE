@@ -1,4 +1,4 @@
-const User = require('../model/usersModel')
+const User = require('../database/usersModel')
 const bcrypt = require('bcryptjs');
 
 const AuthController ={
@@ -16,7 +16,7 @@ const AuthController ={
     },
 
     createUsuarios:(req, res) => {
-        const {fullname, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode} = req.body;
+        const {name, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode, isAdmin} = req.body;
 
         const verifyExists = User.findOne(email);
 
@@ -27,7 +27,7 @@ const AuthController ={
         const psw = bcrypt.hashSync(password, 10);              
 
         const newUser = {
-            fullname, 
+            name, 
             tel, 
             email, 
             psw, 
@@ -36,27 +36,30 @@ const AuthController ={
             complement, 
             neighborhood, 
             reference, 
-            zipcode
+            zipcode,
+            isAdmin
         };
 
         User.create(newUser);
 
-        return res.redirect('/admin/login');  
+        return res.redirect('/login');  
     },
 
     login: (req, res)=>{
         const {email, password} = req.body;
 
         const user = User.findOne(email);
-        const psw = User.verifyPassword(password)
+        const verifyPassword = bcrypt.compareSync(password, user.password)
 
-        //const verifyPassword = bcrypt.compareSync(password, user.password);
 
-        if(!user || !psw){
+
+        if(!user || !verifyPassword){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
         }
 
-        return res.redirect('/');
+        req.session.user = user;
+
+        return res.redirect('/admin/home');
     }
 
 }

@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "id": "e60f3229-2c02-4862-8858-14839b87007e",
+            "fullname": "debora",
+            "tel": "234567788",
+            "email": "d@gmail.com",
+            "password": "$2a$10$/NQR0gR/DZCqREZt6ZA7We7wu8yK.H8JmTVfjdF/16M9S5rK239hW",
+            "publicplace": "eeee",
+            "number": "200",
+            "neighborhood": "gggg",
+            "reference": "eeee",
+            "zipcode": "6000",
+            "isAdmin": false
+        },
+        {
+            "id": "8bcb220f-3865-44da-9e1a-5e186a2dd0e1",
+            "name": "Douglas",
+            "tel": "2020202020",
+            "email": "douglas@gmail.com",
+            "password": "$2a$10$x4o/eaAYYRDwq3y1LkJoOuEyRpnvLhe0i.98rFa4BpPzDqTIrisy2",
+            "publicplace": "rua sao joao",
+            "number": "6",
+            "neighborhood": "Peri",
+            "reference": "Escola ",
+            "zipcode": "021300000",
+            "isAdmin": true
+        },
+        {
+            "id": "9f372f85-88bd-4d73-b59d-52c0c04787bc",
+            "name": "Felipe",
+            "tel": "99999999",
+            "email": "felipe@gmail.com",
+            "password": "$2a$10$Yyi7UShywlCW0JVgK5bkreXLYxVvDacwmk8Vm8eOwRgwOeXF0OUS6",
+            "publicplace": "kkkkk",
+            "number": "56",
+            "neighborhood": "aaaaa",
+            "reference": "bbbbb",
+            "zipcode": "000000000",
+            "isAdmin": false
+        },
+        {
+            "id": "ef56fd6c-1d64-4533-90f6-3fd4c70061b7",
+            "name": "Julio",
+            "tel": "90909090",
+            "email": "julio@gmail.com",
+            "password": "$2a$10$V7yPnSNogRTr9.9lMkz6MOm4WUqEhCuwjpMo1Fc59LTMpsugBQjWK",
+            "publicplace": "av sao joao",
+            "number": "500",
+            "neighborhood": "morumbi",
+            "reference": "hospital",
+            "zipcode": "0900500",
+            "isAdmin": false
+        }
+    ]
+}

@@ -15,9 +15,13 @@
                     <span class="nav-item">Home</span>
                 </a></li>
 
+               
+
                 <li class=""><a href="">
                     <i class="fas fa-perfil"></i>
-                    <span class="nav-item">Perfil</span>
+                    <span class="nav-item"> <% if(locals.user && user) { %>
+                        <span><%= user.name %></span>
+                   <% } %></span>
                 </a></li>
 
                 <li class=""><a href="/admin/produtos">
@@ -30,17 +34,10 @@
                     <span class="nav-item">Cadastrar Produtos</span>
                 </a></li>
 
-                <li class=""><a href="">
-                    <i class="fas fa-clientes"></i>
-                    <span class="nav-item">Clientes</span>
-                </a></li>
 
-                <li class=""><a href="">
-                    <i class="fas fa-configuracoes"></i>
-                    <span class="nav-item">Configurações</span>
-                </a></li>
+                
 
-                <li ><a href="" class="sair">
+                <li ><a href="/home" class="sair">
                     <i class="fas fa-sair"></i>
                     <span class="nav-item">Sair</span>
                 </a></li>

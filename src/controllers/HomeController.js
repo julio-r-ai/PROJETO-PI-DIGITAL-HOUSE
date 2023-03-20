@@ -1,8 +1,9 @@
-const productModel = require('../model/productsModel');
+const productModel = require('../database/productsModel');
 
 const HomeController = {
     home: (req, res) =>{
         const products = productModel.findAll();
+        console.log(req.session)
 
         return res.render('home', {products})
     },
@@ -36,7 +37,7 @@ const HomeController = {
     },
 
     login:(req, res)=>{
-        res.render('/login')
+        res.render('home/login')
     },
 
     painelUsuario:(req, res)=>{

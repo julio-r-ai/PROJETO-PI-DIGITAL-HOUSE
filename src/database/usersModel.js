@@ -1,7 +1,7 @@
-const database = require('../database/db.json');
+const database = require('../database/users.json');
 const fs = require('fs');
 const path = require('path');
-const pathDb = path.resolve("src", "database", "db.json");
+const pathDb = path.resolve("src", "database", "users.json");
 const crypto = require('crypto')
 
 const User = {
@@ -25,7 +25,7 @@ const User = {
     create: (user) => {
         const newUsuario = {
             id: user.id =  crypto.randomUUID(),
-            fullname: user.fullname,
+            name: user.name,
             tel: user.tel,
             email: user.email,
             password: user.psw,
@@ -33,7 +33,9 @@ const User = {
             number: user.number,
             neighborhood: user.neighborhood,
             reference: user.reference,
-            zipcode: user.zipcode
+            zipcode: user.zipcode,
+            isAdmin: false
+
         };
 
         database.users.push(newUsuario);

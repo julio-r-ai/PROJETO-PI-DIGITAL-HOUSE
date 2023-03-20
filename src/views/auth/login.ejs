@@ -37,7 +37,7 @@
 
     <main>
             <div class="containe">
-                <form class="form-login"  action="/admin/login" method="POST">
+                <form class="form-login"  action="/login" method="POST">
 
                     <div class="titulo-login">
                         <H2>Olá, Bem vindo</H2>
@@ -68,7 +68,7 @@
 
 
                     <% if(typeof error !== "undefined") { %>
-                        <p style="color: red;"> * <%= error %> </p>
+                        <h6 style="color: red;">  <%= error %> </h6>
                     <% } %>
 
                 </form>

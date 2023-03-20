@@ -1,7 +1,6 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const session = require('express-session');
-const flash = require('connect-flash');
+const session = require('express-session')
 
 
 const { home } = require('./controllers/HomeController');
@@ -20,11 +19,7 @@ app.set('view engine', 'ejs');
 app.set("views", path.resolve("src", "views"));
 
 //Configurando 
-app.use(session({
-    secret: "projetoconfeitaria",
-    resave: true,       
-    saveUninitialized: true
-}))
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
@@ -32,7 +27,17 @@ app.use(methodOverride('_method'));
 
 app.use(express.static(path.resolve("src", "public")));
 
+
+
+app.use((session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+
+})));
+
 app.use(requestLog);
+
 
 app.use(homeRouter);
 app.use(usersRouter);
