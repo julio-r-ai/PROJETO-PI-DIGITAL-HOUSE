@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require('/../config/database.json')[env];
+const config = require('../config/config.json')[env];
 const db = {};
 
 let sequelize;
@@ -29,6 +29,7 @@ fs
   .forEach(file => {
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
+    console.log(model.name)
   });
 
 Object.keys(db).forEach(modelName => {

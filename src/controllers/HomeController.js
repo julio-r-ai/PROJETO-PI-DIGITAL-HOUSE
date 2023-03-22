@@ -1,10 +1,13 @@
 const productModel = require('../database/productsModel');
 
-const HomeController = {
-    home: (req, res) =>{
-        const products = productModel.findAll();
-        console.log(req.session)
+const  { Product }  = require('../models') 
 
+const HomeController = {
+    home: async (req, res) =>{
+        const products = productModel.findAll();
+        
+        const allProducts = await Product.findAll();
+        
         return res.render('home', {products})
     },
 
@@ -65,7 +68,5 @@ const HomeController = {
     }
 
 } 
-
-
 
 module.exports = HomeController;
