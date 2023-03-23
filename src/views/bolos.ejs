@@ -31,7 +31,7 @@
                 </div>
                 
                 <Section class="produtos">
-                    <% products.forEach(product => { %>
+                    <% allProducts.forEach(product => { %>
               
                     <div class="cards-produtos">
                       <article>
@@ -42,7 +42,7 @@
                           <span> <%= product.name %> </span>
                         </div>
                         <div class="preço">
-                          <p><%= product.price %></p>
+                          <p><%= product.price %></p> 
                         </div>
                         <div class="botões-produtos">
                           <a href="/descricaoProduto/<%= product.id %>"

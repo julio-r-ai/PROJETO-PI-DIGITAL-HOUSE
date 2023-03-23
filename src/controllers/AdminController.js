@@ -35,7 +35,7 @@ const AdminController = {
                 id: id
             }
         })
-
+        
         return res.render('admin/editar', { product: productFound});
 
     },
@@ -43,9 +43,8 @@ const AdminController = {
     cadastroProduto: (req, res)=>{
         
 
-        const {name, price, active, stock, description} = req.body
+        const {name, price, image, active, stock, description} = req.body
       
-        const image = `/images/${req.file.filename}`
 
         const newProduct = {
 
@@ -58,7 +57,7 @@ const AdminController = {
             description
         }
          
-        Product.create(newProduct);
+        Product.create(newProduct)
         
         res.redirect('/admin/produtos') 
         

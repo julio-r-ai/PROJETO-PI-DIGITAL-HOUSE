@@ -4,17 +4,15 @@ const  { Product }  = require('../models')
 
 const HomeController = {
     home: async (req, res) =>{
-        const products = productModel.findAll();
-        
         const allProducts = await Product.findAll();
        
-        return res.render('home', {products})
+        return res.render('home', {allProducts});
     },
 
-    bolos: (req, res) =>{
-        const products = productModel.findAll();
-
-        return res.render('bolos', {products})
+    bolos: async (req, res) =>{
+        const allProducts = await Product.findAll();
+       
+        return res.render('home', {allProducts})
     },
     
     contato: (req, res)=>{
@@ -25,9 +23,9 @@ const HomeController = {
         return res.render('sobre')
     },
 
-    seusPedidos: (req, res)=>{
+    seusPedidos: async (req, res)=>{
         const {id} = req.params;
-        const product = productModel.findByPk(id)
+        const product = await Product.findByPk(id)
 
         return res.render('seusPedidos', {product})
     },
@@ -51,9 +49,9 @@ const HomeController = {
         res.render('telaAdministrador')
     },
 
-    descricaoProduto:(req,res)=>{
+    descricaoProduto: async (req,res)=>{
         const { id } = req.params
-        const product = productModel.findByPk(id)
+        const product = await Product.findByPk(id)
         
         res.render('descricaoProduto', {product});
     },
@@ -62,8 +60,8 @@ const HomeController = {
         res.render('inserirCartao')
     },
 
-    listaProduto: (req,res)=>{
-        const products = database.products;
+    listaProduto: async (req,res)=>{
+        const products = await Product.findAll();
         res.render('listagemProdutos', {products})
     }
 
