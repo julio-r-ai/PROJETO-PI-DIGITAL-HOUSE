@@ -27,7 +27,6 @@ const productsModel = {
     update: (id, product) => {
         const indexProduct = database.products.findIndex(product => product.id === id)
         database.products[indexProduct] = product;
-        
 
         const dbJson = JSON.stringify(database, null, 4);
         fs.writeFileSync(pathDb, dbJson)

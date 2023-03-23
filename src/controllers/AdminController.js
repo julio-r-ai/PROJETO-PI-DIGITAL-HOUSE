@@ -2,6 +2,7 @@ const {randomUUID} = require('crypto')
 const productModel = require('../database/productsModel');
 const usersModel = require('../database/usersModel');
 
+const { Product } = require('../models');
 
 const AdminController = {
 
@@ -13,10 +14,11 @@ const AdminController = {
         res.render('admin/login')
     },
 
-    showProdutos: (req, res)=>{
+    showProdutos: async (req, res)=>{
     
-        const products = productModel.findAll();
-       
+        const products = await Product.findAll();
+
+   
         res.render('admin/produtos', {products});
 
     },
@@ -25,19 +27,24 @@ const AdminController = {
         res.render('admin/home')
     },
 
-    showEditarProduto:(req,res)=>{
-
+    showEditarProduto: async (req,res)=>{
         const {id} = req.params
-        const productFound = productModel.findAll().find(product => product.id === id)
+
+        const productFound = await Product.findOne({
+            where: {
+                id: id
+            }
+        })
+
         return res.render('admin/editar', { product: productFound});
 
     },
 
     cadastroProduto: (req, res)=>{
-
+        
 
         const {name, price, active, stock, description} = req.body
-
+      
         const image = `/images/${req.file.filename}`
 
         const newProduct = {
@@ -51,7 +58,7 @@ const AdminController = {
             description
         }
          
-        productModel.create(newProduct);
+        Product.create(newProduct);
         
         res.redirect('/admin/produtos') 
         
@@ -59,8 +66,8 @@ const AdminController = {
 
     updateProduto:(req, res)=>{
         
-        const { name, price, active, stock, description} = req.body;
-        const image = `/images/${req.file.filename}`
+        const { name, price, active, image, stock, description} = req.body;
+        //const image = `/images/${req.file.filename}`
         const {id} = req.params
         
 

@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             primaryKey: true
         },
-        name_producto: {        
+        name: {        
             type: DataTypes.STRING,
             allowNull: false
         },
-        preco: {
+        price: {
             type: DataTypes.DOUBLE,
             allowNull: false
         },

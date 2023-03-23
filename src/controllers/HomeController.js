@@ -7,7 +7,7 @@ const HomeController = {
         const products = productModel.findAll();
         
         const allProducts = await Product.findAll();
-        
+       
         return res.render('home', {products})
     },
 
