@@ -37,16 +37,12 @@ const AdminController = {
         })
         
         return res.render('admin/editar', { product: productFound});
-
     },
 
-    cadastroProduto: (req, res)=>{
-        
-
+    cadastroProduto: async (req, res)=>{
         const {name, price, image, active, stock, description} = req.body
-      
 
-        const newProduct = {
+        const resultado = await Product.create({
 
             id: randomUUID(),
             name,
@@ -54,53 +50,44 @@ const AdminController = {
             image,
             active: active === "on"? true : false,
             stock: stock === "on"? true : false,
-            description
-        }
-         
-        Product.create(newProduct)
-        
-        res.redirect('/admin/produtos') 
-        
+            description,
+            usuario_id:  randomUUID(),
+        });
+
+        res.redirect('/admin/produtos');
     },
 
-    updateProduto:(req, res)=>{
-        
-        const { name, price, active, image, stock, description} = req.body;
-        //const image = `/images/${req.file.filename}`
-        const {id} = req.params
-        
+    updateProduto: async (req, res)=>{
+        const { name, price, image, active, stock, description} = req.body;
+        const {id} = req.params;
 
-        const editedProduct = {
-            id,
+        const resultado = await Product.update({
             name,
             price,
             image,
-            active,
-            stock,
+            active: active === "on"? true : false,
+            stock: stock === "on"? true : false,
             description
-        }
-
-        productModel.update(id, editedProduct);
+        },{
+            where:{
+                id
+            }
+        });
 
         return res.redirect('/admin/produtos')
-
     },
 
-    deleteProduto:(req, res)=>{
-        const {id} = req.params
-
-        productModel.delete(id)
-
+    deleteProduto: async (req, res)=>{
+        const {id} = req.params;
+    
+        const resultado = await Product.destroy({
+            where:{
+                id
+            }    
+        })
         return res.redirect('/admin/produtos')
-
     }
 
 };
 
-
-module.exports = AdminController;
-
-
-    
-
-    
+module.exports = AdminController;    
