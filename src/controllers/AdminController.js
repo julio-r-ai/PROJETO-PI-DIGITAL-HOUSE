@@ -2,7 +2,7 @@ const {randomUUID} = require('crypto')
 const productModel = require('../database/productsModel');
 const usersModel = require('../database/usersModel');
 
-const { Product } = require('../models');
+const { Produto } = require('../models');
 
 const AdminController = {
 
@@ -15,12 +15,9 @@ const AdminController = {
     },
 
     showProdutos: async (req, res)=>{
-    
-        const products = await Product.findAll();
+        const products = await Produto.findAll();
 
-   
         res.render('admin/produtos', {products});
-
     },
 
     showHome: (req,res)=>{
@@ -30,7 +27,7 @@ const AdminController = {
     showEditarProduto: async (req,res)=>{
         const {id} = req.params
 
-        const productFound = await Product.findOne({
+        const productFound = await Produto.findOne({
             where: {
                 id: id
             }
@@ -42,16 +39,15 @@ const AdminController = {
     cadastroProduto: async (req, res)=>{
         const {name, price, image, active, stock, description} = req.body
 
-        const resultado = await Product.create({
+        const resultado = await Produto.create({
 
-            id: randomUUID(),
             name,
             price,
             image,
             active: active === "on"? true : false,
             stock: stock === "on"? true : false,
             description,
-            usuario_id:  randomUUID(),
+           
         });
 
         res.redirect('/admin/produtos');
@@ -61,7 +57,7 @@ const AdminController = {
         const { name, price, image, active, stock, description} = req.body;
         const {id} = req.params;
 
-        const resultado = await Product.update({
+        const resultado = await Produto.update({
             name,
             price,
             image,
@@ -80,14 +76,14 @@ const AdminController = {
     deleteProduto: async (req, res)=>{
         const {id} = req.params;
     
-        const resultado = await Product.destroy({
+        const resultado = await Produto.destroy({
             where:{
                 id
             }    
         })
+        
         return res.redirect('/admin/produtos')
     }
-
 };
 
 module.exports = AdminController;    

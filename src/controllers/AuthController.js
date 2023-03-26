@@ -1,6 +1,9 @@
 const User = require('../database/usersModel')
 const bcrypt = require('bcryptjs');
 
+const { Usuario } = require('../models');
+
+
 const AuthController ={
 
     showCadastroUsuario: (req, res) => {
@@ -15,52 +18,35 @@ const AuthController ={
         return res.render('loginAdmin')
     },
 
-    createUsuarios:(req, res) => {
-        const {name, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode, isAdmin} = req.body;
+    createUsuarios: async (req, res) => {
+        const {name, tel, email, password, isAdmin} = req.body;
+        // const psw = await bcrypt.hash(password, 10);
 
-        const verifyExists = User.findOne(email);
-
-        if(verifyExists){
-            return res.render('auth/cadastro', {error: "Nao e possivel realizar operacao"})
-        }
-
-        const psw = bcrypt.hashSync(password, 10);              
-
-        const newUser = {
-            name, 
-            tel, 
-            email, 
-            psw, 
-            publicplace, 
-            number, 
-            complement, 
-            neighborhood, 
-            reference, 
-            zipcode,
-            isAdmin
-        };
-
-        User.create(newUser);
+        await Usuario.create({
+            name,
+            tel,
+            email,
+            password,
+            isAdmin: isAdmin === "on"? true : false
+        })
 
         return res.redirect('/login');  
     },
 
     login: (req, res)=>{
-        const {email, password} = req.body;
+        /* const {email, password} = req.body;
 
-        const user = User.findOne(email);
+        const user = Usuario.findByPk(email);
         const verifyPassword = bcrypt.compareSync(password, user.password)
-
-
 
         if(!user || !verifyPassword){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
         }
 
-        req.session.user = user;
+        req.session.user = user; */
 
         return res.redirect('/admin/home');
-    }
+    } 
 
 }
 

@@ -35,7 +35,6 @@ const User = {
             reference: user.reference,
             zipcode: user.zipcode,
             isAdmin: false
-
         };
 
         database.users.push(newUsuario);

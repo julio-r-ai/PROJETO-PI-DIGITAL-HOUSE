@@ -1,16 +1,16 @@
 const productModel = require('../database/productsModel');
 
-const  { Product }  = require('../models') 
+const  { Produto }  = require('../models') 
 
 const HomeController = {
     home: async (req, res) =>{
-        const allProducts = await Product.findAll();
+        const allProducts = await Produto.findAll();
        
         return res.render('home', {allProducts});
     },
 
     bolos: async (req, res) =>{
-        const allProducts = await Product.findAll();
+        const allProducts = await Produto.findAll();
        
         return res.render('home', {allProducts})
     },
@@ -25,7 +25,7 @@ const HomeController = {
 
     seusPedidos: async (req, res)=>{
         const {id} = req.params;
-        const product = await Product.findByPk(id)
+        const product = await Produto.findByPk(id)
 
         return res.render('seusPedidos', {product})
     },
@@ -51,7 +51,7 @@ const HomeController = {
 
     descricaoProduto: async (req,res)=>{
         const { id } = req.params
-        const product = await Product.findByPk(id)
+        const product = await Produto.findByPk(id)
         
         res.render('descricaoProduto', {product});
     },
@@ -61,7 +61,7 @@ const HomeController = {
     },
 
     listaProduto: async (req,res)=>{
-        const products = await Product.findAll();
+        const products = await Produto.findAll();
         res.render('listagemProdutos', {products})
     }
 
