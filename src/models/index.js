@@ -1,44 +1,129 @@
-'use strict';
+const Sequelize = require('sequelize')
 
-const fs = require('fs');
-const path = require('path');
-const Sequelize = require('sequelize');
-const process = require('process');
-const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require('../config/config.json')[env];
-const db = {};
+const sequelize = new Sequelize('bolos','root','felipe22081955$',{
+  host: 'localhost', dialect: 'mysql'
 
-let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+})
 
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (
-      file.indexOf('.') !== 0 &&
-      file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
-  })
-  .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
-    console.log(model.name)
-  });
+sequelize.authenticate().then(function(){
+      console.log('conexão realizada com sucesso');
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
+}).catch(function(err){
 
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
+  console.log('Erro de conexão no banco de dados' + err);
 
-module.exports = db;
+})
+
+
+const Product = sequelize.define('Product', {
+
+      name:{
+      type: Sequelize.STRING,
+      allowNull: false
+
+},
+      price: {
+      type: Sequelize.DECIMAL,
+      allowNull: false
+},
+
+      image: {
+      type: Sequelize.STRING,
+      allowNull: false
+},
+
+     active: {
+     type: Sequelize.TINYINT,
+     allowNull: false
+},
+
+     stock: {
+     type: Sequelize.TINYINT,
+     allowNull: false
+},
+
+     description: {
+     type: Sequelize.STRING,
+     allowNull: false
+},
+
+
+})
+
+
+
+
+const User = sequelize.define('User', {
+
+  name:{
+  type: Sequelize.STRING,
+  allowNull: false
+
+},
+
+email:{
+  type: Sequelize.STRING,
+  allowNull: false
+
+},
+
+password:{
+  type: Sequelize.STRING,
+  allowNull: false
+
+},
+  isAdmin:{
+  type: Sequelize.TINYINT,
+  allowNull: false
+
+},
+
+})
+
+
+
+
+
+const Endereco = sequelize.define('Endereco', {
+
+  publicplace:{
+  type: Sequelize.STRING,
+  allowNull: false
+
+  },
+
+  complement:{
+    type: Sequelize.STRING,
+    allowNull: false
+  
+    },
+
+    neighborhood:{
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+
+      reference:{
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+
+    zipcode:{
+      type: Sequelize.STRING,
+      allowNull: false
+
+    }
+
+})
+
+//Endereco.sync({force: true})
+
+
+Endereco.create({
+  publicplace: "Felipe"
+})
+
+
+
+
+

@@ -1,38 +1,47 @@
-module.exports = (sequelize, DataTypes) => {
-    const Product = sequelize.define('Product', {
-        id: {
-            type: DataTypes.STRING,
-            primaryKey: true
-        },
-        name: {        
-            type: DataTypes.STRING,
+module.exports = (sequelize, DataTypes) =>{
+    const Product = sequelize.define("Product", {
+        id:{
+            type: DataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false
         },
-        price: {
-            type: DataTypes.DECIMAL,
+        name:{
+            type: DataTypes.STRING(45),
             allowNull: false
         },
-        image: {
-            type: DataTypes.STRING,
+        price:{
+            type: DataTypes.DOUBLE,
             allowNull: false
         },
-        active: {
+        active:{
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        stock: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false
+        description:{
+            type: DataTypes.STRING(255),
+            allowNull: false,
         },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: false
+        image:{
+            type: DataTypes.STRING(45),
+            allowNull: false,
+        },
+        orderId:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
         }
-    }, {
-        tableName: 'produto',
-        timestamps: false
-    })
+    },{
+        tableName: "products",
+        timestamps: true
+    });
+
+    Product.associate = (models)=>{
+        Product.belongsTo(models.Order, {
+            foreignKey: "orderId",
+            as: "order"
+        });
+
+    }
+
 
     return Product;
-
 }
