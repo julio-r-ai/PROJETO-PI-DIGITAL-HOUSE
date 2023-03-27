@@ -20,34 +20,58 @@ const AuthController ={
 
     createUsuarios: async (req, res) => {
         const {name, tel, email, password, isAdmin} = req.body;
-        // const psw = await bcrypt.hash(password, 10);
+        //const psw = await bcrypt.hash(password, 10);
 
-        await Usuario.create({
-            name,
-            tel,
-            email,
-            password,
-            isAdmin: isAdmin === "on"? true : false
+        const resul = await Usuario.findOne({
+            where:{
+                email: email
+            }
         })
+      
+        if(resul === null){
+            await Usuario.create({
+                name,
+                tel,
+                email,
+                password,
+                isAdmin: isAdmin === "on"? true : false
+            })
+            
+            return res.redirect('/login');  
 
-        return res.redirect('/login');  
+        }else{
+            return res.redirect('/cadastro')
+            console.log('Usuario invalido')
+        }  
+
     },
 
-    login: (req, res)=>{
-        /* const {email, password} = req.body;
+    login: async (req, res)=>{
+        const {email, password} = req.body;
 
-        const user = Usuario.findByPk(email);
-        const verifyPassword = bcrypt.compareSync(password, user.password)
+        const user = await Usuario.findOne({
+            attributes: ['email', 'password'],
+            where:{
+                email: email
+            }
+        })
 
-        if(!user || !verifyPassword){
+        const psw = await Usuario.findOne({
+            attributes: ['email', 'password'],
+            where:{
+                email: password
+            }
+        });
+
+        //const verifyPassword = bcrypt.compareSync(password, user.password)
+        if(!user || !psw === null){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
+        }else{
+            req.session.user = user; 
+
+            return res.redirect('/admin/home');  
         }
-
-        req.session.user = user; */
-
-        return res.redirect('/admin/home');
     } 
-
 }
 
 module.exports = AuthController;
