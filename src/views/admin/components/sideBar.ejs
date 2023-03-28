@@ -10,16 +10,13 @@
                     </a>
                 </li>
 
-                <li class=""><a href="/admin/home">
-                    <i class="fas fa-home"></i>
-                    <span class="nav-item">Home</span>
-                </a></li>
+               
 
                
 
                 <li class=""><a href="">
                     <i class="fas fa-perfil"></i>
-                    <span class="nav-item"> <% if(locals.user && user) { %>
+                    <span class="nav-item"> <% if(locals.user.name && user.name) { %>
                         <span><%= user.name %></span>
                    <% } %></span>
                 </a></li>

@@ -67,8 +67,6 @@
                     <input type="text" id="reference" name="reference" placeholder="Ponto de referencia...">
                     <label for="zipcode">Cep</label>
                     <input type="text" id="zipcode" name="zipcode" placeholder="Digite CEP...">
-                    <label for="">Administrador?</label>
-                    <input type="checkbox" name="isAdmin">
                 </div>
 
                 <div class="cadastro-botoes">
@@ -76,13 +74,9 @@
                 </div>
 
                 <div class="alerteCadastro">
-                    <% if(typeof error != "undefined" ) { %>
-
-                        <h6>
-                            <%= error %>
-                        </h6>
-    
-                    <% } %>    
+                    <% if(typeof error !== "undefined") { %>
+                        <h6 style="color: red;">  <%= error %> </h6>
+                    <% } %>
                 </div>
             
             </form>

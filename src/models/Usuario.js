@@ -1,5 +1,10 @@
+const { Endereco } = require('./index');
+
 module.exports = (sequelize, DataTypes) => {
+
+
     const Usuario = sequelize.define('Usuario', {
+        
 
         id:{
             type: DataTypes.INTEGER,
@@ -15,10 +20,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        tel: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+    
         password: {
             type: DataTypes.STRING,
             allowNull: false
@@ -26,13 +28,24 @@ module.exports = (sequelize, DataTypes) => {
         isAdmin: {
             type: DataTypes.TINYINT, 
             allowNull: false 
-        }
+        },
+        addressId:{
+            type: DataTypes.INTEGER,
+            references: {
+            model: Endereco, 
+            key: 'id'
+            }
+        }  
 
     }, {
         tableName: 'usuarios',
         timestamps: false
     })
 
-    return Usuario;
+    Usuario.associate = (models) => {
+        Usuario.hasOne(models.Endereco, {foreignKey: 'addressId'});
+    };
 
+    return Usuario;
 }
+

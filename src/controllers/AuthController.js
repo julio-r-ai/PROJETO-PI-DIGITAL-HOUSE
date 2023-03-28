@@ -1,7 +1,7 @@
-const User = require('../database/usersModel')
-const bcrypt = require('bcryptjs');
+const { Usuario, Endereco } = require('../models');
+const { param } = require('express-validator');
+const isAdmin = require('../middlewares/isAdmin');
 
-const { Usuario } = require('../models');
 
 
 const AuthController ={
@@ -19,8 +19,7 @@ const AuthController ={
     },
 
     createUsuarios: async (req, res) => {
-        const {name, tel, email, password, isAdmin} = req.body;
-        //const psw = await bcrypt.hash(password, 10);
+        const {name, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode} = req.body;
 
         const resul = await Usuario.findOne({
             where:{
@@ -29,19 +28,32 @@ const AuthController ={
         })
       
         if(resul === null){
+
+
+            const enderecoCriado = await Endereco.create({
+                publicplace, 
+                number, 
+                complement, 
+                neighborhood, 
+                reference, 
+                zipcode
+            })
+             
+
             await Usuario.create({
                 name,
                 tel,
                 email,
                 password,
-                isAdmin: isAdmin === "on"? true : false
+                isAdmin: true,
+                addressId: enderecoCriado.get("id")
             })
-            
+
+           
             return res.redirect('/login');  
 
         }else{
-            return res.redirect('/cadastro')
-            console.log('Usuario invalido')
+            return res.render('auth/cadastro', {error: 'Usuario ou senha ja existe'})
         }  
 
     },
@@ -50,28 +62,21 @@ const AuthController ={
         const {email, password} = req.body;
 
         const user = await Usuario.findOne({
-            attributes: ['email', 'password'],
+            attributes: ['name','email', 'password'],
             where:{
-                email: email
-            }
-        })
-
-        const psw = await Usuario.findOne({
-            attributes: ['email', 'password'],
-            where:{
-                email: password
+                email: email,
+                password: password,
             }
         });
-
-        //const verifyPassword = bcrypt.compareSync(password, user.password)
-        if(!user || !psw === null){
+      
+        if(!user || !password === null){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
         }else{
             req.session.user = user; 
 
             return res.redirect('/admin/home');  
-        }
+        };
     } 
-}
+};
 
 module.exports = AuthController;

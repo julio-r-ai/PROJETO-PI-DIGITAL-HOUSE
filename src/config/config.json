@@ -3,7 +3,7 @@
     "username": "root",
     "password": "1593",
     "database": "confeitaria",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql" 
   },
   "test": {
