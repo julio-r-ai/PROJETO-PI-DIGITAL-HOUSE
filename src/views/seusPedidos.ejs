@@ -27,8 +27,7 @@
         <main>
 
             <div class="containe">
-                <section class="lista-compras">
-
+                <form class="lista-compras" action="/pedidosFinalizados/<%= product.id %>" method="post">
 
                     <div class="organização-elementos">
                         <div class="suas-compras">
@@ -55,18 +54,12 @@
 
                     <div class="continuar-pedido">
                         <div class="login-botoes">
-                            <a href="/pedidosFinalizados/<%= product.id %>"><button id="#">Fechar pedido</button>
-                            </a>
+                           <button type="submit" id="#">Fechar pedido</button>
                         </div>
                     </div>
-
-
             </div>
-
-            </section>
-
+        </form>
         </main>
-
 
         <footer>
             <div class="containe">

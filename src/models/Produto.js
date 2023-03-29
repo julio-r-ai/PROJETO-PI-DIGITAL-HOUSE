@@ -11,26 +11,34 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        price: {
-            type: DataTypes.DECIMAL,
+       
+        price:{
+            type: DataTypes.TINYINT,
             allowNull: false
         },
-        image: {
-            type: DataTypes.STRING,
+        stock:{
+            type: DataTypes.TINYINT,
             allowNull: false
         },
-        active: {
+        active:{
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        stock: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        description: {
+        description:{
             type: DataTypes.STRING,
-            allowNull: false
-        }
+            allowNull: false,
+        },
+        image:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        addressId:{
+            type: DataTypes.INTEGER,
+            references: {
+            model: Endereco, 
+            key: 'id'
+            }
+        } 
 
     }, {
         tableName: 'produtos',

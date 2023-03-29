@@ -2,8 +2,6 @@ const { Usuario, Endereco } = require('../models');
 const { param } = require('express-validator');
 const isAdmin = require('../middlewares/isAdmin');
 
-
-
 const AuthController ={
 
     showCadastroUsuario: (req, res) => {
@@ -28,30 +26,25 @@ const AuthController ={
         })
       
         if(resul === null){
-
-
             const enderecoCriado = await Endereco.create({
                 publicplace, 
                 number, 
                 complement, 
                 neighborhood, 
                 reference, 
+                tel,
                 zipcode
             })
-             
 
             await Usuario.create({
                 name,
-                tel,
                 email,
                 password,
                 isAdmin: true,
                 addressId: enderecoCriado.get("id")
             })
-
            
             return res.redirect('/login');  
-
         }else{
             return res.render('auth/cadastro', {error: 'Usuario ou senha ja existe'})
         }  

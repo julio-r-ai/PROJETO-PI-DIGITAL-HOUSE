@@ -1,4 +1,3 @@
-const {randomUUID} = require('crypto')
 const productModel = require('../database/productsModel');
 const usersModel = require('../database/usersModel');
 

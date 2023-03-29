@@ -63,6 +63,11 @@ const HomeController = {
     listaProduto: async (req,res)=>{
         const products = await Produto.findAll();
         res.render('listagemProdutos', {products})
+    },
+
+    pedidoEnviado: async (req, res)=>{
+        const {id} = req.params
+        console.log(id)
     }
 
 } 

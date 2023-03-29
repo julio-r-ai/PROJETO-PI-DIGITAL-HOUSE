@@ -16,9 +16,9 @@ router.get('/painelUsuario', HomeController.painelUsuario);
 router.get('/descricaoProduto/:id', isLogin, HomeController.descricaoProduto);
 router.get('/inserirCartao', HomeController.inseirCartao);
 router.get('/pedidosFinalizados/:id', HomeController.pedidosFinalizados);
-
-//listagem produtos
 router.get('/listagemProdutos', HomeController.listaProduto);
+
+router.post('/seusPedidos/:id', HomeController.pedidoEnviado);
 
 
 module.exports = router;
