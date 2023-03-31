@@ -1,11 +1,12 @@
 const productModel = require('../database/productsModel');
 
 const  { Produto }  = require('../models') 
+const  { Usuario }  = require('../models') 
 
 const HomeController = {
     home: async (req, res) =>{
         const allProducts = await Produto.findAll();
-       
+
         return res.render('home', {allProducts});
     },
 
@@ -52,7 +53,7 @@ const HomeController = {
     descricaoProduto: async (req,res)=>{
         const { id } = req.params
         const product = await Produto.findByPk(id)
-        
+
         res.render('descricaoProduto', {product});
     },
     
@@ -73,3 +74,15 @@ const HomeController = {
 } 
 
 module.exports = HomeController;
+
+
+// Se a sua rota recebe o id do usuario que está "comprando"
+// então vc precisa pegar esse id e salvar na tabela pedido
+
+/**
+ * Pedido.create({
+ *      userId: id
+ * })
+ */
+
+// 

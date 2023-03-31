@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         },
        
         price:{
-            type: DataTypes.TINYINT,
+            type: DataTypes.STRING,
             allowNull: false
         },
         stock:{
@@ -32,16 +32,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        addressId:{
-            type: DataTypes.INTEGER,
-            references: {
-            model: Endereco, 
-            key: 'id'
-            }
-        } 
-
+      
     }, {
-        tableName: 'produtos',
+        tableName: 'produto',
         timestamps: false
     })
 

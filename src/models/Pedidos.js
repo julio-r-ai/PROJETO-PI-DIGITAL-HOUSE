@@ -29,13 +29,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     })
 
-    Pedidos.associate = (models) => {
-        Pedidos.hasOne(models.Usuario, {foreignKey: 'usuarioId'});
-    };
+    // Pedidos.associate = (models) => {
+    //     Pedidos.hasOne(models.Usuario, {foreignKey: 'usuarioId'});
+    // };
 
-    Pedidos.associate = (models) => {
-        Pedidos.hasOne(models.Produto, {foreignKey: 'produtoId'});
-    };
+    // Pedidos.associate = (models) => {
+    //     Pedidos.hasOne(models.Produto, {foreignKey: 'produtoId'});
+    // };
 
     return Pedidos;
 }

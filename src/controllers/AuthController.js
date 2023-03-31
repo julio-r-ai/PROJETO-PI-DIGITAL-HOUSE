@@ -24,6 +24,8 @@ const AuthController ={
                 email: email
             }
         })
+
+       
       
         if(resul === null){
             const enderecoCriado = await Endereco.create({
