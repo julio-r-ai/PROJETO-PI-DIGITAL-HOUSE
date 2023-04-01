@@ -37,6 +37,12 @@ const HomeController = {
         
         return res.render('pedidosFinalizados', {product});
     },
+    pedidosFinalizados: (req, res)=>{
+        const {id} = req.params;
+        const product = productModel.findByPk(id)
+        return res.render('pedidosFinalizados', {product})
+
+    },
 
     login:(req, res)=>{
         res.render('home/login')

@@ -10,17 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Pedido.hasOne(models.Usuario, {foreignKey: 'usuarioId'})
-      Pedido.belongsTo(models.Pedido_Produto,{foreignKey: 'pedidoId'})
+      Pedido.belongsTo(models.Usuario, {foreignKey: 'usuarioId'})
+      Pedido.belongsToMany(models.Produto,{ through: 'ProdutoPedido' })
     }
   }
   Pedido.init({
-    usuarioId:{
+      usuarioId:{
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "Usuario",
-        key: "id",
+      model: "Usuario",
+      key: "id",
       },
     },
     
@@ -34,5 +34,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Pedido',
     tableName: "pedido",
   });
+ 
   return Pedido;
 };

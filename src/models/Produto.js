@@ -40,7 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   Produto.associate = (models) => {
-    Produto.belongsTo(models.Pedido_Produto, { foreignKey: "produtoId" });
+    Produto.belongsToMany(models.Pedido, { through: 'ProdutoPedido' } );
   };
+ 
   return Produto;
 };

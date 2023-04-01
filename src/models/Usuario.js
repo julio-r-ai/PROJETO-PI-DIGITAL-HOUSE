@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
        enderecoId: {
          type: DataTypes.INTEGER,
          references: {
-          model: Endereco,
+          model: "Endereco",
           key: "id",
         },
        },
@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Usuario.associate = (models) => {
         Usuario.hasOne(models.Endereco, {foreignKey: 'enderecoId'});
+        Usuario.hasMany(models.Pedido, {foreignKey: 'usuarioId'} );
     };
 
   return Usuario;
