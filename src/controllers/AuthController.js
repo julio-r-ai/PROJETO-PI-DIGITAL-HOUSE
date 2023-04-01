@@ -42,8 +42,8 @@ const AuthController ={
                 name,
                 email,
                 password,
-                isAdmin: true,
-                addressId: enderecoCriado.get("id")
+                isAdmin: false,
+                enderecoId: enderecoCriado.get("id")
             })
            
             return res.redirect('/login');  

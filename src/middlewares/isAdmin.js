@@ -2,7 +2,7 @@ const isAdmin = (req, res, next)=>{
     const {user} = req.session;
 
     if (!user || user.isAdmin){
-        return res.redirect('/')
+        return res.redirect('/home')
     }  
     
     if (req.session.user){

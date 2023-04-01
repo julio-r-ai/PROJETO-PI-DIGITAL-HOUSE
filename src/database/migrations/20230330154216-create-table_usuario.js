@@ -26,6 +26,14 @@ module.exports = {
       type: Sequelize.TINYINT, 
       allowNull: false 
   },
+  enderecoId: {
+    type: Sequelize.INTEGER,
+    references: {
+      model: "Endereco",
+      key: "id",
+    },
+     allowNull: false,
+  },
    
   });
 },

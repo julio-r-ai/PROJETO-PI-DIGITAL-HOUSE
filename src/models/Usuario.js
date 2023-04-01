@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TINYINT,
         allowNull: false,
       },
-      // addressId: {
-        // type: DataTypes.INTEGER,
-        // references: {
-        //   model: Endereco,
-        //   key: "id",
-        // },
-      // },
+       enderecoId: {
+         type: DataTypes.INTEGER,
+         references: {
+          model: Endereco,
+          key: "id",
+        },
+       },
     },
     {
       tableName: "usuario",
@@ -40,9 +40,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  /*Usuario.associate = (models) => {
-        Usuario.hasOne(models.Endereco, {foreignKey: 'addressId'});
-    };*/
+  Usuario.associate = (models) => {
+        Usuario.hasOne(models.Endereco, {foreignKey: 'enderecoId'});
+    };
 
   return Usuario;
 };

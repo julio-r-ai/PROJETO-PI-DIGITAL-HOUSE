@@ -1,7 +1,7 @@
 const productModel = require('../database/productsModel');
 
 const  { Produto }  = require('../models') 
-const  { Usuario }  = require('../models') 
+
 
 const HomeController = {
     home: async (req, res) =>{
@@ -57,9 +57,7 @@ const HomeController = {
         res.render('descricaoProduto', {product});
     },
     
-    inseirCartao: (req, res)=>{
-        res.render('inserirCartao')
-    },
+   
 
     listaProduto: async (req,res)=>{
         const products = await Produto.findAll();
