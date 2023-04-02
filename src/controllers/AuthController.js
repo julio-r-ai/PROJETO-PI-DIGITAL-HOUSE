@@ -57,19 +57,27 @@ const AuthController ={
         const {email, password} = req.body;
 
         const user = await Usuario.findOne({
-            attributes: ['name','email', 'password'],
+            attributes: ['name','email', 'password', 'id', 'isAdmin'],
             where:{
                 email: email,
-                password: password,
+                password: password
+                
             }
         });
       
+        
+
         if(!user || !password === null){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
         }else{
             req.session.user = user; 
-
-            return res.redirect('/admin/home');  
+            
+            if(user.isAdmin){
+                return res.redirect('/admin/home'); 
+            }else{
+                return res.redirect('/home');
+            }
+             
         };
     } 
 };

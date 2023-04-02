@@ -16,8 +16,15 @@ module.exports = {
           key: "id",
         },
       },
+      produtoId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Produto",
+          key: "id",
+        },
+      },
       price: {
-        type: Sequelize.FLOAT
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Pedido.belongsTo(models.Usuario, {foreignKey: 'usuarioId'})
-      Pedido.belongsToMany(models.Produto,{ through: 'ProdutoPedido' })
+      Pedido.belongsTo(models.Produto ,{foreignKey: 'produtoId' })
     }
   }
   Pedido.init({
@@ -22,10 +22,18 @@ module.exports = (sequelize, DataTypes) => {
       model: "Usuario",
       key: "id",
       },
+      produtoId:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+        model: "Produto",
+        key: "id",
+        },
+      } 
     },
     
     price:{ 
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     
