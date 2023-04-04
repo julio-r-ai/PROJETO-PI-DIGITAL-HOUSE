@@ -68,13 +68,24 @@ main .containe{
     padding-bottom: 70px;
     margin-bottom: 365px;
     text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
 }
-.formulario-cadastro{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
 
+.form-cadastro input{
+    width: 100%;
 }
+
+.separar{
+    margin-bottom: 20px;
+}
+
+.centraliza-element{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}  
+
 .formulario-cadastro label{
     margin-top: 10px;
     display: flex;
@@ -101,8 +112,8 @@ main .containe{
 
 .cadastro-botoes{
     display: flex;
-    padding-left: 200px;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .cadastro-botoes button{
@@ -149,6 +160,9 @@ main .containe{
     margin-top: 40px;
 }
 
+.alerteCadastro{
+    margin: auto;
+}
 .alerteCadastro p{
     color: red;
     display: flex;
@@ -202,6 +216,19 @@ input{
 
 .esqueceu-senha a{
     color: #6c2e6a;
+}
+
+strong{
+    font-size: 12px;
+}
+
+.field {
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.field.--has-error {
+    border-color: #f00;
 }
 
 

@@ -169,9 +169,18 @@ button a:hover{
     color: #6c2e6a;
 }
 
+.field {
+    border: 1px solid #ccc;
+    outline: none;
+}
 
+.field.--has-error {
+    border-color: #f00;
+}
 
-
+strong{
+    font-size: 12px;
+}
 @media (max-width: 850px){
     footer .containe{
         justify-content: center;

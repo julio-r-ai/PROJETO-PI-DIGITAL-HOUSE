@@ -64,8 +64,6 @@ const AuthController ={
                 
             }
         });
-      
-        
 
         if(!user || !password === null){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});

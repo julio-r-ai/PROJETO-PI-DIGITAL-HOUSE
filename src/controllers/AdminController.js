@@ -1,7 +1,5 @@
-const productModel = require('../database/productsModel');
-const usersModel = require('../database/usersModel');
-
-const { Produto } = require('../models');
+const { Produto, Usuario, Pedido } = require('../models');
+const { use } = require('../routes/adminRouter');
 
 const AdminController = {
 
@@ -15,7 +13,7 @@ const AdminController = {
 
     showProdutos: async (req, res)=>{
         const products = await Produto.findAll();
-
+        console.log(products)
         res.render('admin/produtos', {products});
     },
 
@@ -74,15 +72,39 @@ const AdminController = {
 
     deleteProduto: async (req, res)=>{
         const {id} = req.params;
+
+        const deletPedido = await Pedido.destroy({
+            where: {
+                produtoId: id
+            }
+        })
     
-        const resultado = await Produto.destroy({
+        const deletProduto = await Produto.destroy({
             where:{
                 id
             }    
         })
         
         return res.redirect('/admin/produtos')
-    }
+    },
+
+    showUsuarios: async (req, res) =>{
+        const users = await Usuario.findAll(); 
+        
+        return res.render('admin/usuarios', {users} );
+    },
+
+    deleteUsuario: async (req, res) => {
+        const {id} = req.params;
+    
+        const resultado = await Usuario.destroy({
+            where:{
+                id
+            }    
+        }) 
+        
+        return res.redirect('/admin/usuarios') 
+    } 
 };
 
 module.exports = AdminController;    

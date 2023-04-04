@@ -70,20 +70,18 @@ const HomeController = {
         const arrayProduto = await Produto.findByPk(id)
         const priceProduto = arrayProduto.dataValues.price
         
-
-        console.log(priceProduto)
-        //console.log(arrayProduto.dataValues)
-      
-        const newPedido = await Pedido.create({
-             price: priceProduto,
-             usuarioId: use.id,
-             produtoId: id
-        })   
+        if(use === undefined){
+            res.redirect('/login')
+        }else{
+            const newPedido = await Pedido.create({
+                price: priceProduto,
+                usuarioId: use.id,
+                produtoId: id
+           }) 
+        }
 
         return res.render('pedidosFinalizados')
-
     }
-
 } 
 
 module.exports = HomeController;
