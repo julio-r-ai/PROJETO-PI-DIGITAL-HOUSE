@@ -18,16 +18,11 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.set("views", path.resolve("src", "views"));
 
-//Configurando 
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 
 app.use(express.static(path.resolve("src", "public")));
-
-
 
 app.use((session({
     secret: 'keyboard cat',
@@ -36,7 +31,6 @@ app.use((session({
 })));
 
 app.use(requestLog);
-
 
 app.use(homeRouter);
 app.use(usersRouter);
