@@ -17,17 +17,21 @@ const AuthController ={
     },
 
     createUsuarios: async (req, res) => {
-        const {name, tel, email, password, publicplace, number, complement, neighborhood, reference, zipcode} = req.body;
-
-        const resul = await Usuario.findOne({
+        const {name, tel, email, password, passworCheck, publicplace, number, complement, neighborhood, reference, zipcode} = req.body;
+        
+        const resulEmail = await Usuario.findOne({
             where:{
                 email: email
             }
-        })
+        }) 
 
-       
-      
-        if(resul === null){
+        if(name === '' || tel === '' || email === '' || password === '' || passworCheck === '' || publicplace === '' || number === '' || complement === '' || neighborhood === '' || reference === '' || zipcode === ''){
+
+            return res.render('auth/cadastro', {error: 'Preencha todos os campos'})
+
+        }else if(password !== passworCheck){
+            return res.render('auth/cadastro', {error: 'Senha não confere'})
+        }else if(resulEmail === null){
             const enderecoCriado = await Endereco.create({
                 publicplace, 
                 number, 

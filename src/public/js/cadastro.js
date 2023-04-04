@@ -14,16 +14,6 @@ window.onload = () => {
     const reference = document.getElementById('reference');
     const zipcode = document.getElementById('zipcode');
 
-    form.addEventListener('submit', function(event){
-        event.preventDefault();
-        
-        if(password.value !== passwordCheck.value){
-            alert('esta diferent')
-        }else{
-            alert('esta igual')
-        }
-    })
-
     name.addEventListener('keyup', function (event) {
         const input = event.target;
         const value = event.target.value;
