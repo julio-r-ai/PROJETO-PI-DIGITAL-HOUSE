@@ -1,4 +1,4 @@
-const { Produto, Usuario, Pedido } = require('../models');
+const { Produto, Usuario, Pedido, Endereco } = require('../models');
 const { use } = require('../routes/adminRouter');
 
 const AdminController = {
@@ -110,7 +110,15 @@ const AdminController = {
         }) 
         
         return res.redirect('/admin/usuarios') 
-    } 
+    } ,
+
+    /* showPedidos: async (req, res) => {
+        const infoPedido = await Pedido.findAll();
+    
+        
+
+        res.render('admin/pedidos');
+    } */
 };
 
 module.exports = AdminController;    
