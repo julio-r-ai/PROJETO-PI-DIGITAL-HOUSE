@@ -68,17 +68,14 @@ const HomeController = {
         const use = res.locals.user
 
         const arrayProduto = await Produto.findByPk(id)
-        const priceProduto = arrayProduto.dataValues.price
+        const priceProduto = arrayProduto.price
         
-        if(use === undefined){
-            res.redirect('/login')
-        }else{
             const newPedido = await Pedido.create({
                 price: priceProduto,
                 usuarioId: use.id,
                 produtoId: id
            }) 
-        }
+        
 
         return res.render('pedidosFinalizados')
     }
