@@ -96,7 +96,13 @@ const AdminController = {
 
     deleteUsuario: async (req, res) => {
         const {id} = req.params;
-    
+
+        const deletPedido = await Pedido.destroy({
+            where: {
+                usuarioId: id
+            }
+        })
+
         const resultado = await Usuario.destroy({
             where:{
                 id
