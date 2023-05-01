@@ -1,6 +1,9 @@
 const { Usuario, Endereco } = require('../models');
 const { param } = require('express-validator');
 const isAdmin = require('../middlewares/isAdmin');
+const bcrypt = require('bcryptjs');
+const { use } = require('../routes/homeRouter');
+let salt = bcrypt.genSaltSync(10)
 
 const AuthController ={
 
@@ -32,6 +35,8 @@ const AuthController ={
         }else if(password !== passworCheck){
             return res.render('auth/cadastro', {error: 'Senha não confere'})
         }else if(resulEmail === null){
+            const passwordCripto = bcrypt.hashSync(password, salt);
+
             const enderecoCriado = await Endereco.create({
                 publicplace, 
                 number, 
@@ -45,7 +50,7 @@ const AuthController ={
             await Usuario.create({
                 name,
                 email,
-                password,
+                password: passwordCripto,
                 isAdmin: false,
                 enderecoId: enderecoCriado.get("id")
             })
@@ -60,6 +65,9 @@ const AuthController ={
     login: async (req, res)=>{
         const {email, password} = req.body;
 
+        //const passwordValid = await bcrypt.compareSync(password, Usuario.password)
+        //console.log('RESULTADO DA SENHA COMPARADA: ', passwordValid)
+
         const user = await Usuario.findOne({
             attributes: ['name','email', 'password', 'id', 'isAdmin'],
             where:{
@@ -68,6 +76,8 @@ const AuthController ={
                 
             }
         });
+
+        
 
         if(!user || !password === null){
             return res.render("auth/login", {error: "Email esta incorreto ou senha esta incorreta."});
@@ -80,7 +90,7 @@ const AuthController ={
                 return res.redirect('/home');
             }
              
-        };
+        }; 
     } 
 };
 
