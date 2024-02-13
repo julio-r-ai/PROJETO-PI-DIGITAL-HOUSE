@@ -1,7 +1,7 @@
 # PROJETO-PI-DIGITAL-HOUSE
 Projeto integrador
 
-Baseado em e-commerce
+Baseado em um e-commerce
 
 Durante nosso envolvimento em um projeto de e-commerce, fomos responsável por desenvolver uma aplicação web robusta utilizando tecnologias chave como Node.js para o backend, CSS e HTML para o design responsivo, e MySQL como banco de dados.
 
